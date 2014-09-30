@@ -1,0 +1,81 @@
+<style>
+
+.contact-form{
+ display: block;
+ max-width: 445px;
+ margin: 0 auto;
+}
+
+.contact-info input{
+ display block;
+ width: 47%;
+ height: 1.5em;
+ margin-top: 10px;
+ margin-right: 2%;
+ float: left;
+}
+
+textarea{
+ margin: 15px 0px 10px;;
+ width: 96.5%;
+ min-height: 100px;
+}
+
+textarea, input{
+ outline-color: #Fd3434;
+}
+
+input[type="submit"]{
+ border: none;
+ background-color: #B40101;
+ color: white; 
+ box-shadow: 0 2px #600000;
+ display: block;
+ margin: 0 auto 10px;
+ width: 20%;
+ height: 1.5em;
+-webkit-transition: all .1s ease-in-out;
+-moz-transition: all .1s ease-in-out;
+-ms-transition: all .1s ease-in-out;
+-o-transition: all .1s ease-in-out;
+transition: all .1s ease-in-out;
+}
+
+input[type="submit"]:hover{
+ background-color: #Fd3434;
+ box-shadow: 0 2px #B40101;
+-moz-transform: scale(1.05);
+-webkit-transform: scale(1.05);
+-o-transform: scale(1.05);
+-ms-transform: scale(1.05);
+transform: scale(1.05);
+}
+
+input[type="submit"]:active{
+ background-color: #600000;
+ box-shadow: 0 2px #222;
+-moz-transform: scale(1);
+-webkit-transform: scale(1);
+-o-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1);
+}
+
+input[type="submit"]:focus{
+ outline: none;
+}
+
+</style>
+<form id="contact-form" method="post" action="//forms.brace.io/someone@email.com">
+<fieldset>
+<legend>Send me a message</legend>
+<div class="contact-info">
+<input placeholder="Name*" type="text" name="name" required>
+
+<input placeholder="Email*" type="Email" name="_replyto" required>
+</div>
+<textarea placeholder="Message*" name="message" required></textarea>
+<input type="submit" value="Submit">
+
+</fieldset>
+</form>

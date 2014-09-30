@@ -1,0 +1,196 @@
+<style>
+    .home-value label,
+    input,
+    select,
+    textarea {
+        display: block;
+        margin: 10px;
+    }
+    label {
+        text-align: left;
+        font-weight: bold;
+        font-size: large;
+    }
+    input {
+        border-width: 1px;
+        border-color: #aaa;
+        height: 2em;
+        width: 90%;
+    }
+    textarea {
+        border-color: #aaa;
+        min-height: 100px;
+        height: 40%;
+        width: 90%;
+    }
+    select {
+        border-color: #aaa;
+    }
+     input, textarea, select:focus{
+        outline-color: #Fd3434;
+    }
+    fieldset {
+        border-color: #aaa;
+        margin-top: 3em;
+    }
+    #asterix {
+        color: red;
+    }
+    #submit {
+        margin: 0 auto;
+        min-width: 10%;
+        max-width: 15%;
+        background-color: #B40101;
+        box-shadow: 0 2px #600000;
+        color: white;
+    }
+    #submit:hover {
+        background-color: #Fd3434;
+        box-shadow: 0 2px #B40101;
+    }
+    #submit:active {
+        background-color: #600000;
+        box-shadow: 0 2px #222;
+    }
+</style>
+
+<form method="post" class="home-value" action="//forms.brace.io/your@email.com">
+    <fieldset>
+        <!--1-->
+        <label for="What type of property are you selling?">What type of property are you selling?</label>
+        <select name="What type of property are you selling?">
+            <option value="-Select-" selected="selected">
+                -Select-
+            </option>
+            <option value="Single-Family Home">
+                Single-Family Home
+            </option>
+            <option value="Condo">
+                Condo
+            </option>
+            <option value="Villa/Townhouse">
+                Villa/Townhouse
+            </option>
+            <option value="Rentals">
+                Rentals
+            </option>
+            <option value="Manufactured">
+                Manufactured
+            </option>
+            <option value="Land/Lots">
+                Land/Lots
+            </option>
+        </select>
+        <!--2-->
+        <label for="What is the square footage? ">
+            What is the square footage?
+        </label>
+        <input type="text" name="What is the square footage?" />
+        <!--3-->
+        <label for="Number of bathrooms">Number of bathrooms</label>
+        <select name="Number of bathrooms">
+            <option value="-Select-" selected="selected">
+                -Select-
+            </option>
+            <option value="1">
+                1
+            </option>
+            <option value="2">
+                2
+            </option>
+            <option value="3">
+                3
+            </option>
+            <option value="4">
+                4
+            </option>
+            <option value="5">
+                5
+            </option>
+            <option value="6">
+                6
+            </option>
+            <option value="7+">
+                7+
+            </option>
+        </select>
+        <!--4-->
+        <label for="Number of bedrooms">Number of bedrooms</label>
+        <select name="Number of bedrooms">
+            <option value="-Select-" selected="selected">
+                -Select-
+            </option>
+            <option value="1">
+                1
+            </option>
+            <option value="2">
+                2
+            </option>
+            <option value="3">
+                3
+            </option>
+            <option value="4">
+                4
+            </option>
+            <option value="5">
+                5
+            </option>
+            <option value="6">
+                6
+            </option>
+            <option value="7+">
+                7+
+            </option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <!--5-->
+        <label for="Any important features or comments?">
+            Any important features or comments?
+        </label>
+        <textarea name="Any important features or comments?"></textarea>
+    </fieldset>
+    <fieldset>
+        <!--5-->
+        <label for="When are you looking to move?">
+            When are you looking to move?
+        </label>
+        <select name="When are you looking to move?">
+            <option value="Undetermined" selected="selected">
+                Undetermined
+            </option>
+            <option value="Less than one month">
+                Less than one month
+            </option>
+            <option value="1-3 months">
+                1-3 months
+            </option>
+            <option value="3-6 months">
+                3-6 months
+            </option>
+            <option value="6 months+">
+                6 months+
+            </option>
+        </select>
+        <!--7-->
+        <label for="What is your desired asking price?">
+            What is your desired asking price?
+        </label>
+        <input name="What is your desired asking price?">
+        <!--8-->
+        <label for="name">Name<span id="asterix">*</span>
+        </label>
+        <input type="text" name="name" required>
+
+        <!--9-->
+        <label for="email">Email<span id="asterix">*</span>
+        </label>
+        <input type="email" name="_replyto" required>
+        <!--10-->
+        <label for="phone">Number<span id="asterix">*</span>
+        </label>
+        <input type="tel" name="phone" required>
+        <input id="submit" type="submit" value="Submit">
+        <span id="asterix">*</span>required
+    </fieldset>
+</form>
