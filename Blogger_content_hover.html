@@ -63,23 +63,24 @@ box-shadow: 0 2px #600000;
 -ms-transform: scale(1.05);
 transform: scale(1.05);
 }
-.yelp{
-width: 115px;
-}
-.zillow{
-width: 115px;
-}
-.trulia{
+.yelp, .zillow, .trulia{
 width: 115px;
 }
 .itunes{
-fill: red;
+fill: #323232;
+box-shadow: 0px 2px #222;
 height: 54px;
 width: 358px;
 margin-top: 3px;
 }
 .itunes:hover{
-fill: green;
+fill: #B40101;
+box-shadow: 0 2px #600000;
+-moz-transform: scale(1.05);
+-webkit-transform: scale(1.05);
+-o-transform: scale(1.05);
+-ms-transform: scale(1.05);
+transform: scale(1.05);
 }
 </style>
 
@@ -429,7 +430,12 @@ text-decoration: none;
 </script>
 <!--end question box-->
 
-
+<!--table of contents-->
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<script src="https://trickspunch.googlecode.com/svn/trunk/Trickspunch.js"></script>
+<script src="/feeds/posts/summary?alt=json-in-script&amp;max-results=1000&amp;callback=loadtoc" type="text/javascript"></script>
+</div>
+<!--End Table of Contents-->
 
 <!--Description-->
 If you are looking to buy or sell a home, get all the information and the latest updates, tips, and tricks from The Stern Team- your professional Salt Lake City Real Estate Agents.
