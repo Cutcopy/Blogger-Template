@@ -253,8 +253,8 @@
         padding: 10px;
         border: none;
         margin: 0;
-        background: #b40101;
-        box-shadow: 0 2px #600000;
+        background: #323232;
+        box-shadow: 0 2px #222;
         color: #ffffff;
         -webkit-transition: all .1s ease-in-out;
         -moz-transition: all .1s ease-in-out;
@@ -263,11 +263,13 @@
         transition: all .1s ease-in-out;
     }
     #form-submit:hover{
-    -moz-transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-     transform: scale(1.05);
+        background-color: #B40101;
+        box-shadow: 0 2px #600000;
+        -moz-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+         transform: scale(1.05);
     }
     #form-submit:focus{
     outline: none;
@@ -337,16 +339,6 @@
             $(this).val(curval + "-");
         }
     });
-
-    $('#form-submit').hover(
-        function() {
-            $(this).css('background', '#FD3434');
-            $(this).css('color', '#ffffff');
-        }, function() {
-            $(this).css('background', '#b40101');
-            $(this).css('color', '#ffffff');
-        }
-    );
 
     function setWidths() {
         var formw = $('#form-wrapper').width();
