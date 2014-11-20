@@ -671,6 +671,7 @@ user is not using shrink to fit then we expand the header.
                               <div id='header-inner'>
                                 <a expr:href='data:blog.homepageUrl' style='display: block'>
                                   <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_headerimg&quot;' expr:src='data:sourceUrl' expr:width='data:width' style='display: block'/>
+                                  <h1 class='title' style='display: none;'><b:include name='title'/></h1>
                                 </a>
                                 <!--Show the description-->
                                 <b:if cond='data:imagePlacement == &quot;BEFORE_DESCRIPTION&quot;'>
