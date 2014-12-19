@@ -1,3 +1,5 @@
+
+
 <style>
 
 .contact-form{
@@ -63,17 +65,34 @@ input[type="submit"]:focus{
  outline: none;
 }
 
+#thanks{
+ font-style: italic;
+ font-weight: bolder;
+ color: green;
+}
 </style>
-<form id="contact-form" method="post" action="//forms.brace.io/someone@email.com">
+
+<form id="contact-form" method="post" action="http://vyralmarketing.com/staticforms/sendEmail.php" onsubmit="return setReturn()">
+<input type="hidden" value="someone@email.com" name="emailTo">
+
 <fieldset>
-<legend>Send me a maessage</legend>
+<p id="thanks"></p>
+<legend>Send me a message</legend>
 <div class="contact-info">
 <input placeholder="Name*" type="text" name="name" required>
 
-<input placeholder="Email*" type="Email" name="_replyto" required>
+<input placeholder="Email*" type="Email" name="email" required>
 </div>
 <textarea placeholder="Message*" name="message" required></textarea>
-<input type="submit" value="Submit" id="light-light">
+<input type="submit" value="Submit" name="submitContact" id="light-light">
 
 </fieldset>
 </form>
+<script>
+function setReturn(){
+ localStorage.setItem("thanks", "Your request was sent successfully!");
+}
+
+document.getElementById("thanks").innerHTML = localStorage.getItem("thanks");
+localStorage.clear();
+</script>

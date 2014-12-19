@@ -52,13 +52,22 @@
         background-color: #600000;
         box-shadow: 0 2px #222;
     }
+
+    #thanks{
+        font-style: italic;
+        font-weight: bolder;
+        color: green;
+    }
 </style>
 
-<form method="post" class="home-value" action="//forms.brace.io/your@email.com">
+<form method="post" class="home-value" action="http://vyralmarketing.com/staticforms/sendEmail.php" onsubmit="return setReturn()">
+    <input type="hidden" value="someone@email.com" name="emailTo">
+
     <fieldset>
+        <p id="thanks"></p>
         <!--1-->
-        <label for="What type of property are you selling?">What type of property are you selling?</label>
-        <select name="What type of property are you selling?">
+        <label for="type">What type of property are you selling?</label>
+        <select name="type">
             <option value="-Select-" selected="selected">
                 -Select-
             </option>
@@ -82,13 +91,13 @@
             </option>
         </select>
         <!--2-->
-        <label for="What is the square footage? ">
+        <label for="footage">
             What is the square footage?
         </label>
-        <input type="text" name="What is the square footage?" />
+        <input type="text" name="footage" />
         <!--3-->
-        <label for="Number of bathrooms">Number of bathrooms</label>
-        <select name="Number of bathrooms">
+        <label for="bathrooms">Number of bathrooms</label>
+        <select name="bathrooms">
             <option value="-Select-" selected="selected">
                 -Select-
             </option>
@@ -115,8 +124,8 @@
             </option>
         </select>
         <!--4-->
-        <label for="Number of bedrooms">Number of bedrooms</label>
-        <select name="Number of bedrooms">
+        <label for="bedrooms">Number of bedrooms</label>
+        <select name="bedrooms">
             <option value="-Select-" selected="selected">
                 -Select-
             </option>
@@ -145,17 +154,17 @@
     </fieldset>
     <fieldset>
         <!--5-->
-        <label for="Any important features or comments?">
+        <label for="comments">
             Any important features or comments?
         </label>
-        <textarea name="Any important features or comments?"></textarea>
+        <textarea name="comments"></textarea>
     </fieldset>
     <fieldset>
         <!--5-->
-        <label for="When are you looking to move?">
+        <label for="when">
             When are you looking to move?
         </label>
-        <select name="When are you looking to move?">
+        <select name="when">
             <option value="Undetermined" selected="selected">
                 Undetermined
             </option>
@@ -173,10 +182,10 @@
             </option>
         </select>
         <!--7-->
-        <label for="What is your desired asking price?">
+        <label for="range">
             What is your desired asking price?
         </label>
-        <input name="What is your desired asking price?">
+        <input name="range">
         <!--8-->
         <label for="name">Name<span id="asterix">*</span>
         </label>
@@ -190,7 +199,15 @@
         <label for="phone">Number<span id="asterix">*</span>
         </label>
         <input type="tel" name="phone" required>
-        <input id="submit" type="submit" value="Submit">
+        <input id="submit" type="submit" value="Submit" name="submitSellerForm">
         <span id="asterix">*</span>required
     </fieldset>
 </form>
+<script>
+function setReturn(){
+    localStorage.setItem("thanks", "Your request was sent successfully!");
+}
+
+document.getElementById("thanks").innerHTML = localStorage.getItem("thanks");
+localStorage.clear();
+</script>

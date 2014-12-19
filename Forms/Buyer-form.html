@@ -1,5 +1,5 @@
 <style>
-    .home-search label,
+    .home-value label,
     input,
     select,
     textarea {
@@ -13,24 +13,24 @@
     }
     input {
         border-width: 1px;
-        border-color: #777;
+        border-color: #aaa;
         height: 2em;
         width: 90%;
     }
     textarea {
-        border-color: #777;
+        border-color: #aaa;
         min-height: 100px;
         height: 40%;
         width: 90%;
     }
     select {
-        border-color: #777;
+        border-color: #aaa;
     }
-    input, textarea, select:focus{
+     input, textarea, select:focus{
         outline-color: #Fd3434;
     }
     fieldset {
-        border-color: #777;
+        border-color: #aaa;
         margin-top: 3em;
     }
     #asterix {
@@ -52,18 +52,26 @@
         background-color: #600000;
         box-shadow: 0 2px #222;
     }
+
+    #thanks{
+        font-style: italic;
+        font-weight: bolder;
+        color: green;
+    }
 </style>
 
-<form method="post" class="home-search" action="//forms.brace.io/your@email.com">
-    <fieldset>
+<form method="post" class="home-value" action="http://vyralmarketing.com/staticforms/sendEmail.php" onsubmit="return setReturn()">
+    <input type="hidden" value="someone@email.com" name="emailTo">
 
+    <fieldset>
+        <p id="thanks"></p>
         <!--1-->
-        <label for="What type of property are you selling?">What type of property are you looking for?</label>
-        <select name="What type of property are you looking for?">
-            <option value="-Any-" selected="selected">
-                -Any-
+        <label for="type">What type of property are you selling?</label>
+        <select name="type">
+            <option value="-Select-" selected="selected">
+                -Select-
             </option>
-            <option value="-Any-">
+            <option value="Single-Family Home">
                 Single-Family Home
             </option>
             <option value="Condo">
@@ -75,57 +83,21 @@
             <option value="Rentals">
                 Rentals
             </option>
+            <option value="Manufactured">
+                Manufactured
+            </option>
+            <option value="Land/Lots">
+                Land/Lots
+            </option>
         </select>
-
         <!--2-->
-        <label for="What is your desired price range? ">
-            What is your desired price range?
+        <label for="footage">
+            What is the square footage?
         </label>
-        <select name="What is your desired price range?">
-            <option value="-Any-" selected="selected">
-                -Any-
-            </option>
-            <option value="under 100k">
-                under 100k
-            </option>
-            <option value="in the $100's">
-                in the $100's
-            </option>
-            <option value="in the $200's">
-                in the $200's
-            </option>
-            <option value="in the $300's">
-                in the $300's
-            </option>
-            <option value="in the $400's">
-                in the $400's
-            </option>
-            <option value="in the $500's">
-                in the $500's
-            </option>
-            <option value="in the $600's">
-                in the $600's
-            </option>
-            <option value="in the $700's">
-                in the $700's
-            </option>
-            <option value="in the $800's">
-                in the $800's
-            </option>
-            <option value="in the $900's">
-                in the $900's
-            </option>
-            <option value="in $1Mil's">
-                in $1Mil's
-            </option>
-            <option value="more than 2M">
-                more than 2M
-            </option>
-        </select>
-
+        <input type="text" name="footage" />
         <!--3-->
-        <label for="Number of bathrooms">Minimum number of bathrooms?</label>
-        <select name="Number of bathrooms">
+        <label for="bathrooms">Number of bathrooms</label>
+        <select name="bathrooms">
             <option value="-Select-" selected="selected">
                 -Select-
             </option>
@@ -152,8 +124,8 @@
             </option>
         </select>
         <!--4-->
-        <label for="Number of bedrooms">Minimum number of bedrooms?</label>
-        <select name="Number of bedrooms">
+        <label for="bedrooms">Number of bedrooms</label>
+        <select name="bedrooms">
             <option value="-Select-" selected="selected">
                 -Select-
             </option>
@@ -182,19 +154,19 @@
     </fieldset>
     <fieldset>
         <!--5-->
-        <label for="Any important features or comments?">
+        <label for="comments">
             Any important features or comments?
         </label>
-        <textarea name="Any important features or comments?"></textarea>
+        <textarea name="comments"></textarea>
     </fieldset>
     <fieldset>
         <!--5-->
-        <label for="When are you looking to move?">
+        <label for="when">
             When are you looking to move?
         </label>
-        <select name="When are you looking to move?">
-            <option value="Just Browsing" selected="selected">
-                Just Browsing
+        <select name="when">
+            <option value="Undetermined" selected="selected">
+                Undetermined
             </option>
             <option value="Less than one month">
                 Less than one month
@@ -210,10 +182,10 @@
             </option>
         </select>
         <!--7-->
-        <label for="What do you think your pricerange is?">
-            What do you think your pricerange is?
+        <label for="range">
+            What is your desired asking price?
         </label>
-        <input name="What do you think your pricerange is?">
+        <input name="range">
         <!--8-->
         <label for="name">Name<span id="asterix">*</span>
         </label>
@@ -227,7 +199,15 @@
         <label for="phone">Number<span id="asterix">*</span>
         </label>
         <input type="tel" name="phone" required>
-        <input id="submit" type="submit" value="Submit">
+        <input id="submit" type="submit" value="Submit" name="submitSellerForm">
         <span id="asterix">*</span>required
     </fieldset>
 </form>
+<script>
+function setReturn(){
+    localStorage.setItem("thanks", "Your request was sent successfully!");
+}
+
+document.getElementById("thanks").innerHTML = localStorage.getItem("thanks");
+localStorage.clear();
+</script>
