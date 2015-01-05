@@ -36,27 +36,17 @@
     #asterix {
         color: red;
     }
-    #submit {
+    .submit {
         margin: 0 auto;
         min-width: 10%;
         max-width: 15%;
-        background-color: #B40101;
-        box-shadow: 0 2px #600000;
         color: white;
-    }
-    #submit:hover {
-        background-color: #Fd3434;
-        box-shadow: 0 2px #B40101;
-    }
-    #submit:active {
-        background-color: #600000;
-        box-shadow: 0 2px #222;
     }
 
     #thanks{
         font-style: italic;
         font-weight: bolder;
-        color: green;
+        color: #B40101;
     }
 </style>
 
@@ -199,7 +189,7 @@
         <label for="phone">Number<span id="asterix">*</span>
         </label>
         <input type="tel" name="phone" required>
-        <input id="submit" type="submit" value="Submit" name="submitSellerForm">
+        <input class="submit" id="light-light" type="submit" value="Submit" name="submitSellerForm">
         <span id="asterix">*</span>required
     </fieldset>
 </form>
