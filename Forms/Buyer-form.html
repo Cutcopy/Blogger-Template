@@ -50,18 +50,18 @@
     }
 </style>
 
-<form method="post" class="home-value" action="http://vyralmarketing.com/staticforms/sendEmail.php" onsubmit="return setReturn()">
+<form method="post" class="home-search" action="sendEmail.php" onsubmit="return setReturn()">
     <input type="hidden" value="someone@email.com" name="emailTo">
-
+    
     <fieldset>
         <p id="thanks"></p>
         <!--1-->
-        <label for="type">What type of property are you selling?</label>
+        <label for="type">What type of property are you looking for?</label>
         <select name="type">
-            <option value="-Select-" selected="selected">
-                -Select-
+            <option value="-Any-" selected="selected">
+                -Any-
             </option>
-            <option value="Single-Family Home">
+            <option value="-Any-">
                 Single-Family Home
             </option>
             <option value="Condo">
@@ -73,20 +73,56 @@
             <option value="Rentals">
                 Rentals
             </option>
-            <option value="Manufactured">
-                Manufactured
+        </select>
+
+        <!--2-->
+        <label for="price">
+            What is your desired price range?
+        </label>
+        <select name="price">
+            <option value="-Any-" selected="selected">
+                -Any-
             </option>
-            <option value="Land/Lots">
-                Land/Lots
+            <option value="under 100k">
+                under 100k
+            </option>
+            <option value="in the $100's">
+                in the $100's
+            </option>
+            <option value="in the $200's">
+                in the $200's
+            </option>
+            <option value="in the $300's">
+                in the $300's
+            </option>
+            <option value="in the $400's">
+                in the $400's
+            </option>
+            <option value="in the $500's">
+                in the $500's
+            </option>
+            <option value="in the $600's">
+                in the $600's
+            </option>
+            <option value="in the $700's">
+                in the $700's
+            </option>
+            <option value="in the $800's">
+                in the $800's
+            </option>
+            <option value="in the $900's">
+                in the $900's
+            </option>
+            <option value="in $1Mil's">
+                in $1Mil's
+            </option>
+            <option value="more than 2M">
+                more than 2M
             </option>
         </select>
-        <!--2-->
-        <label for="footage">
-            What is the square footage?
-        </label>
-        <input type="text" name="footage" />
+
         <!--3-->
-        <label for="bathrooms">Number of bathrooms</label>
+        <label for="bathrooms">Minimum number of bathrooms?</label>
         <select name="bathrooms">
             <option value="-Select-" selected="selected">
                 -Select-
@@ -114,7 +150,7 @@
             </option>
         </select>
         <!--4-->
-        <label for="bedrooms">Number of bedrooms</label>
+        <label for="bedrooms">Minimum number of bedrooms?</label>
         <select name="bedrooms">
             <option value="-Select-" selected="selected">
                 -Select-
@@ -144,19 +180,19 @@
     </fieldset>
     <fieldset>
         <!--5-->
-        <label for="comments">
+        <label for="comments?">
             Any important features or comments?
         </label>
         <textarea name="comments"></textarea>
     </fieldset>
     <fieldset>
         <!--5-->
-        <label for="when">
+        <label for="when?">
             When are you looking to move?
         </label>
         <select name="when">
-            <option value="Undetermined" selected="selected">
-                Undetermined
+            <option value="Just Browsing" selected="selected">
+                Just Browsing
             </option>
             <option value="Less than one month">
                 Less than one month
@@ -173,7 +209,7 @@
         </select>
         <!--7-->
         <label for="range">
-            What is your desired asking price?
+            What do you think your pricerange is?
         </label>
         <input name="range">
         <!--8-->
@@ -189,10 +225,10 @@
         <label for="phone">Number<span id="asterix">*</span>
         </label>
         <input type="tel" name="phone" required>
-        <input class="submit" id="light-light" type="submit" value="Submit" name="submitSellerForm">
+        <input id="light-light" type="submit" class="submit" value="Submit" name="submitBuyerForm">
         <span id="asterix">*</span>required
     </fieldset>
-</form>
+    </form>
 <script>
 function setReturn(){
     localStorage.setItem("thanks", "Your request was sent successfully!");
