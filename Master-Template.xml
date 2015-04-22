@@ -2156,7 +2156,7 @@ for good G+/FB snippeting. -->
         <b:include name='quickedit'/>
       </b:includable>
   </b:widget>
-  <b:widget id='HTML6' locked='false' title='What our happy ___ clients have to say' type='HTML'>
+  <b:widget id='HTML6' locked='false' title='What our clients have to say' type='HTML'>
     <b:includable id='main'>
         <!-- only display title if it's non-empty -->
         <b:if cond='data:title != &quot;&quot;'>
