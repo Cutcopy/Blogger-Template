@@ -477,6 +477,25 @@ border-$startSide: 1px solid $(tabs.border.color);
 #Attribution1 {display: none;}
 .PageList {text-align:center !important;}
 .PageList li {display:inline !important; float:none !important;
+
+ .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        height: auto;
+    }
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     ]]></b:skin>
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='1000px'/>
