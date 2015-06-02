@@ -263,7 +263,8 @@ border-$endSide: $(tabs.bevel.border.width) solid $(tabs.border.color);
 border-$startSide: none;
 }
 .tabs-inner .widget li.selected a, .tabs-inner .widget li a:hover {
-color: $(tabs.selected.text.color);
+color: $(link.color);
+//$(tabs.selected.text.color)
 background-color: $(tabs.selected.background.color);
 text-decoration: none;
 }
