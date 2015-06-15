@@ -33,7 +33,7 @@
         border-color: #aaa;
         margin-top: 3em;
     }
-    #asterix {
+    .asterix {
         color: red;
     }
     .submit {
@@ -210,20 +210,20 @@
             </option>
         </select>
         <!--7-->
-        <label for="name">Name<span id="asterix">*</span>
+        <label for="name">Name<span class="asterix">*</span>
         </label>
         <input type="text" name="name" required>
 
         <!--9-->
-        <label for="email">Email<span id="asterix">*</span>
+        <label for="email">Email<span class="asterix">*</span>
         </label>
         <input type="email" name="_replyto" required>
         <!--10-->
-        <label for="phone">Number<span id="asterix">*</span>
+        <label for="phone">Number<span class="asterix">*</span>
         </label>
         <input type="tel" name="phone" required>
-        <input id="light-light" type="submit" class="submit" value="Submit" name="submitBuyerForm">
-        <span id="asterix">*</span>required
+        <input type="submit" class="submit light-light" value="Submit" name="submitBuyerForm">
+        <span class="asterix">*</span>required
     </fieldset>
     </form>
 <script>
