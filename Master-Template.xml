@@ -1061,7 +1061,7 @@ user is not using shrink to fit then we expand the header.
                       <div class='column-center-outer'>
                         <div class='column-center-inner'>
                           <b:section class='main' id='main' showaddelement='no'>
-                            <b:widget id='HTML1' locked='false' title='We Specialize In These ___ Area Communities' type='HTML'>
+                            <b:widget id='HTML1' locked='false' title='We Specialize In These ___ Area Communities' itemscope='realestateagent' itemtype='http://schema.org/RealEstateAgent' type='HTML'>
                               <b:includable id='main'>
                                 <b:if cond='data:blog.url == data:blog.homepageUrl'>
                                   <!-- only display title if it's non-empty -->
@@ -2359,7 +2359,7 @@ for good G+/FB snippeting. -->
         <b:include name='quickedit'/>
       </b:includable>
   </b:widget>
-  <b:widget id='HTML5' locked='false' title='Why work with us?' type='HTML'>
+  <b:widget id='HTML5' locked='false' title='Why work with us?' itemscope='realestateagent' itemtype='http://schema.org/RealEstateAgent' type='HTML'>
     <b:includable id='main'>
         <!-- only display title if it's non-empty -->
         <b:if cond='data:title != &quot;&quot;'>
@@ -2373,7 +2373,7 @@ for good G+/FB snippeting. -->
         <b:include name='quickedit'/>
       </b:includable>
   </b:widget>
-  <b:widget id='HTML6' locked='false' title='What our clients have to say' type='HTML'>
+  <b:widget id='HTML6' locked='false' title='What our clients have to say'  itemscope='realestateagent' itemtype='http://schema.org/RealEstateAgent' type='HTML'>
     <b:includable id='main'>
         <!-- only display title if it's non-empty -->
         <b:if cond='data:title != &quot;&quot;'>
