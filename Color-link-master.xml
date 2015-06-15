@@ -663,7 +663,9 @@ border-$startSide: 1px solid $(tabs.border.color);
         font: normal bold 1.5em Verdana, Arial, sans-serif;
         display: none;
     }
-
+    .header-inner .Header #header-inner{
+		overflow: visible;
+	}
    
       #HTML1 .widget-content{
         text-align: center;
