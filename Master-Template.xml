@@ -750,7 +750,7 @@ width: auto;
     </b:template-skin>
     <b:include data='blog' name='google-analytics'/>
   </head>
-  <body expr:class='&quot;loading&quot; + data:blog.mobileClass' itemscope='realestateagent' itemtype='http://schema.org/RealEstateAgent'>
+  <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
     <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
       <b:widget id='Navbar1' locked='true' title='Navbar' type='Navbar'>
         <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
@@ -2237,7 +2237,7 @@ for good G+/FB snippeting. -->
                 <div class='cap-right'/>
               </div>
             </div>
-            <footer>
+            <footer itemscope='realestateagent' itemtype='http://schema.org/RealEstateAgent'>
               <div class='footer-outer'>
                 <div class='footer-cap-top cap-top'>
                   <div class='cap-left'/>
