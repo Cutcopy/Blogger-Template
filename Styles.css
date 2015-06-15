@@ -1,5 +1,5 @@
-﻿// Social CTA styles
-    #dark-light{
+/* Social CTA styles */
+    .dark-light{
         background: #323232;
         box-shadow: 0px 2px #000;
         color: white;
@@ -9,7 +9,7 @@
         -o-transition: all .1s ease-in-out;
         transition: all .1s ease-in-out;
     }
-    #dark-light:hover{
+    .dark-light:hover{
         background-color: #B40101;
         box-shadow: 0px 2px #600000;
         -moz-transform: scale(1.05);
@@ -18,11 +18,11 @@
         -ms-transform: scale(1.05);
         transform: scale(1.05);
     }
-    #light-light{
+    .light-light{
         background-color: #B40101;
         box-shadow: 0px 3px #600000;
     }
-    #light-light:hover{
+    .light-light:hover{
         background-color: #FD3434;
         box-shadow: 0px 3px #B40101;
     }
@@ -130,7 +130,7 @@
     }
 
 
-//Form Styles
+/* Form Styles */
 
 
     #form-wrapper {
