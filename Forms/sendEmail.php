@@ -69,4 +69,23 @@ if (isset($_POST['submitSellerForm'])) {
 
 	header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
+
+//Name Your Pricd
+if (isset($_POST['submitSellerForm'])) {
+	$headers = 'From: ' . $_POST['_replyto'] . "\r\n" .
+	'Reply-To: ' . $_POST['_replyto'] . "\r\n" .
+	'X-Mailer: PHP/' . phpversion(). "\r\n".
+    'Content-type: text/html';
+
+    $message .= "<b>Enter Home Address: </b>" . $_POST['address'] . "<br>";
+    $message .= "<b>Enter Selling Price: </b>" . $_POST['price'] . "<br>";
+	$message .= "<b>Name: </b>" . $_POST['name'] . "<br>";
+	$message .= "<b>Email: </b>" . $_POST['_replyto'] . "<br>";
+	$message .= "<b>Phone number: </b>" . $_POST['phone'] . "<br>";
+
+	mail($_POST['emailTo'], "Name Your Price: Message From Your Site" , $message, $headers);
+
+	header('Location: ' . $_SERVER['HTTP_REFERER']);
+}
+
 ?>
