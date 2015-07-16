@@ -679,6 +679,7 @@ border-$startSide: 1px solid $(tabs.border.color);
    
       #HTML1 .widget-content{
         text-align: center;
+        text-transform: capitalize;
     } #HTML12 .widget-content{
         text-align: center;
     }

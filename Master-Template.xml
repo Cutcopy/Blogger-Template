@@ -477,10 +477,9 @@ border-bottom: $(tabs.border.width) solid $(tabs.border.color);
 .mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
 border-$startSide: 1px solid $(tabs.border.color);
 }
-#Attribution1 {display: none;}
-.PageList {text-align:center !important;}
-.PageList li {display:inline !important; float:none !important;
-
+/* //////////////////////////////////////////////////////////////////////////Custom styles yo~! */
+/* Socials/Review buttons
+    --------------------------------------------------  */
     .dark-light{
         background: #323232;
         box-shadow: 0px 2px #000;
@@ -559,6 +558,8 @@ border-$startSide: 1px solid $(tabs.border.color);
         height: 54px;
         width: 359px;
     }
+    /* CTA's 
+    --------------------------------------------------  */
     .cta,
     .cta2 {
         height: 90px;
@@ -605,6 +606,8 @@ border-$startSide: 1px solid $(tabs.border.color);
     .acta:hover {
         text-decoration: none;
     }
+    /* Question Form for the home page
+    --------------------------------------------------  */
 
     #form-wrapper {
         width: 98%;
@@ -669,13 +672,17 @@ border-$startSide: 1px solid $(tabs.border.color);
     .header-inner .Header #header-inner{
 		overflow: visible;
 	}
+  /* Specialties and Footer Styling
+    --------------------------------------------------  */
    
       #HTML1 .widget-content{
         text-align: center;
+        text-transform: capitalize;
     } #HTML12 .widget-content{
         text-align: center;
     }
-
+/* Responsive Embed
+    --------------------------------------------------  */
      .embed-container {
         position: relative;
         padding-bottom: 56.25%;
@@ -693,10 +700,27 @@ border-$startSide: 1px solid $(tabs.border.color);
         width: 100%;
         height: 100%;
     }
+    /* Overriding Blogger styles. 
+    --------------------------------------------------  */
+    /* Gets rid of annoying default italics */
     address{
 		font-style: normal;
 	}
-
+    /* Capitalizes the tabs and widget titles */
+    .tabs .widget li, .title {
+        text-transform: capitalize;
+    }
+    /* Removes "powered by blogger" in footer */
+    #Attribution1 {
+        display: none;
+        }
+    /* Centers Tabs */    
+    .PageList {
+        text-align:center !important;
+        }
+    .PageList li {
+        display:inline !important; float:none !important
+        ;
     ]]></b:skin>
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='1000px'/>

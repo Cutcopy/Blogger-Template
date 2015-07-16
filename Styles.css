@@ -1,4 +1,6 @@
-// Social CTA styles 
+/* //////////////////////////////////////////////////////////////////////////Custom styles yo~! */
+/* Socials/Review buttons
+    --------------------------------------------------  */
     .dark-light{
         background: #323232;
         box-shadow: 0px 2px #000;
@@ -10,8 +12,8 @@
         transition: all .1s ease-in-out;
     }
     .dark-light:hover{
-        background-color: #B40101;
-        box-shadow: 0px 2px #600000;
+        background-color: $(link.color);
+        box-shadow: 0px 2px $(link.visited.color);
         -moz-transform: scale(1.05);
         -webkit-transform: scale(1.05);
         -o-transform: scale(1.05);
@@ -19,12 +21,12 @@
         transform: scale(1.05);
     }
     .light-light{
-        background-color: #B40101;
-        box-shadow: 0px 3px #600000;
+        background-color: $(link.color);
+        box-shadow: 0px 3px $(link.visited.color);
     }
     .light-light:hover{
-        background-color: #FD3434;
-        box-shadow: 0px 3px #B40101;
+        background-color: $(link.hover.color);
+        box-shadow: 0px 3px $(link.color);
     }
     .social-icons {
         display: inline-block;
@@ -77,6 +79,8 @@
         height: 54px;
         width: 359px;
     }
+    /* CTA's 
+    --------------------------------------------------  */
     .cta,
     .cta2 {
         height: 90px;
@@ -123,15 +127,8 @@
     .acta:hover {
         text-decoration: none;
     }
-      #HTML1 .widget-content{
-        text-align: center;
-    } #HTML12 .widget-content{
-        text-align: center;
-    }
-
-
-/* Form Styles */
-
+    /* Question Form for the home page
+    --------------------------------------------------  */
 
     #form-wrapper {
         width: 98%;
@@ -192,4 +189,56 @@
         color: #ffffff;
         font: normal bold 1.5em Verdana, Arial, sans-serif;
         display: none;
+    }
+    .header-inner .Header #header-inner{
+		overflow: visible;
+	}
+  /* Specialties and Footer Styling
+    --------------------------------------------------  */
+   
+      #HTML1 .widget-content{
+        text-align: center;
+        text-transform: capitalize;
+    } #HTML12 .widget-content{
+        text-align: center;
+    }
+/* Responsive Embed
+    --------------------------------------------------  */
+     .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        height: auto;
+    }
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    /* Overriding Blogger styles. 
+    --------------------------------------------------  */
+    /* Gets rid of annoying default italics */
+    address{
+		font-style: normal;
+	}
+    /* Capitalizes the tabs and widget titles */
+    .tabs .widget li, .title {
+        text-transform: capitalize;
+    }
+    /* Removes "powered by blogger" in footer */
+    #Attribution1 {
+        display: none;
+        }
+    /* Centers Tabs */    
+    .PageList {
+        text-align:center !important;
+        }
+    .PageList li {
+        display:inline !important; float:none !important;
     }
