@@ -778,6 +778,26 @@ width: auto;
 ]]>
     </b:template-skin>
     <b:include data='blog' name='google-analytics'/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type='text/javascript'>
+    $(document).ready(function() { 
+      $("a[href^='http://']").each( 
+        function(){ 
+         if(this.href.indexOf(location.hostname) == -1) { 
+            $(this).attr('target', '_blank'); 
+          } 
+        } 
+      );
+    $("a[href^='https://']").each( 
+    function(){ 
+    if(this.href.indexOf(location.hostname) == -1) { 
+    $(this).attr('target', '_blank'); 
+    } 
+    } 
+    );
+
+    });
+    </script>
   </head>
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
     <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
