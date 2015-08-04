@@ -431,6 +431,24 @@ box-shadow: 0 0 3px rgba(0, 0, 0, .15);
 body.mobile .AdSense {
 margin: 0 -$(content.shadow.spread);
 }
+
+.mobile #navbar{
+ display: none;
+}
+
+.mobile .header-outer {
+  margin: 0;
+}
+
+.mobile #crosscol {
+ background-color: $(link.color);
+}
+
+.mobile #PageList1_select{
+  background-color: $(link.color);
+  color: white;
+}
+
 .mobile .tabs-inner .widget ul {
 margin-left: 0;
 margin-right: 0;
@@ -464,7 +482,7 @@ color: $(body.text.color);
 background-color: $(link.color);
 }
 .mobile-link-button a:link, .mobile-link-button a:visited {
-color: $(mobile.button.color);
+color: white;
 }
 .mobile .tabs-inner .section:first-child {
 border-top: none;
@@ -477,6 +495,8 @@ border-bottom: $(tabs.border.width) solid $(tabs.border.color);
 }
 .mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
 border-$startSide: 1px solid $(tabs.border.color);
+color: white;
+z-index: 10;
 }
 
 /* //////////////////////////////////////////////////////////////////////////Custom styles yo~! */
