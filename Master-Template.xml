@@ -263,7 +263,8 @@ border-$endSide: $(tabs.bevel.border.width) solid $(tabs.border.color);
 border-$startSide: none;
 }
 .tabs-inner .widget li.selected a, .tabs-inner .widget li a:hover {
-color: $(tabs.selected.text.color);
+color: $(link.color);
+//$(tabs.selected.text.color)
 background-color: $(tabs.selected.background.color);
 text-decoration: none;
 }
@@ -325,8 +326,6 @@ font-size: 110%;
 line-height: 1.4;
 position: relative;
 }
-/*  Annoying img presets that are hella ugly
-------------------------------------------------------------------------
 .post-body img, .post-body .tr-caption-container, .Profile img, .Image img,
 .BlogList .item-thumbnail img {
 padding: $(image.border.small.size);
@@ -336,13 +335,14 @@ border: 1px solid $(image.border.color);
 -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
 box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
 }
-*/
 .post-body img, .post-body .tr-caption-container {
 padding: $(image.border.large.size);
 }
 .post-body .tr-caption-container {
 color: $(image.text.color);
 }
+/*  Annoying img presets that are hella ugly
+------------------------------------------------------------------------ 
 .post-body .tr-caption-container img {
 padding: 0;
 background: transparent;
@@ -351,6 +351,7 @@ border: none;
 -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .1);
 box-shadow: 0 0 0 rgba(0, 0, 0, .1);
 }
+*/
 .post-header {
 margin: 0 0 1.5em;
 line-height: 1.6;
@@ -430,6 +431,24 @@ box-shadow: 0 0 3px rgba(0, 0, 0, .15);
 body.mobile .AdSense {
 margin: 0 -$(content.shadow.spread);
 }
+
+.mobile #navbar{
+ display: none;
+}
+
+.mobile .header-outer {
+  margin: 0;
+}
+
+.mobile #crosscol {
+ background-color: $(link.color);
+}
+
+.mobile #PageList1_select{
+  background-color: $(link.color);
+  color: white;
+}
+
 .mobile .tabs-inner .widget ul {
 margin-left: 0;
 margin-right: 0;
@@ -463,7 +482,7 @@ color: $(body.text.color);
 background-color: $(link.color);
 }
 .mobile-link-button a:link, .mobile-link-button a:visited {
-color: $(mobile.button.color);
+color: white;
 }
 .mobile .tabs-inner .section:first-child {
 border-top: none;
@@ -476,7 +495,10 @@ border-bottom: $(tabs.border.width) solid $(tabs.border.color);
 }
 .mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
 border-$startSide: 1px solid $(tabs.border.color);
+color: white;
+z-index: 10;
 }
+
 /* //////////////////////////////////////////////////////////////////////////Custom styles yo~! */
 /* Socials/Review buttons
     --------------------------------------------------  */
@@ -719,8 +741,8 @@ border-$startSide: 1px solid $(tabs.border.color);
         text-align:center !important;
         }
     .PageList li {
-        display:inline !important; float:none !important
-        ;
+        display:inline !important; float:none !important;
+        }
     ]]></b:skin>
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='1000px'/>
@@ -816,7 +838,7 @@ width: auto;
         gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
           if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
             gapi.iframes.getContext().openChild({
-                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0754063306258219640526\46blogName\75Miami+Real+Estate+Video+Blog+with+Osm...\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://osmanygarcia.blogspot.com/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://osmanygarcia.blogspot.com/\46blogFollowUrl\75https://plus.google.com/114605758757266279663\46vt\0757957116186984262107&#39;,
+                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0751048346628614378922\46blogName\75Birmingham+Real+Estate+Video+Blog+wit...\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://birminghamrealty.blogspot.com/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://birminghamrealty.blogspot.com/\46blogFollowUrl\75https://plus.google.com/114605758757266279663\46vt\0755140692971592334998&#39;,
                 where: document.getElementById(&quot;navbar-iframe-container&quot;),
                 id: &quot;navbar-iframe&quot;
             });
@@ -899,7 +921,7 @@ head.appendChild(script);
                   <div class='fauxborder-right header-fauxborder-right'/>
                   <div class='region-inner header-inner'>
                     <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
-                      <b:widget id='Header1' locked='true' title='Miami Real Estate Video Blog with Osmany Garcia (Header)' type='Header'>
+                      <b:widget id='Header1' locked='true' title='Birmingham Real Estate Video Blog with Paul Mychalowych (Header)' type='Header'>
                         <b:includable id='main'>
                           <b:if cond='data:useImage'>
                             <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
@@ -2420,7 +2442,7 @@ for good G+/FB snippeting. -->
         <b:include name='quickedit'/>
       </b:includable>
   </b:widget>
-  <b:widget id='HTML6' locked='false' title='What our clients have to say'  itemscope='realestateagent' itemtype='http://schema.org/RealEstateAgent' type='HTML'>
+  <b:widget id='HTML6' locked='false' title='What our clients have to say' itemscope='realestateagent' itemtype='http://schema.org/RealEstateAgent' type='HTML'>
     <b:includable id='main'>
         <!-- only display title if it's non-empty -->
         <b:if cond='data:title != &quot;&quot;'>
