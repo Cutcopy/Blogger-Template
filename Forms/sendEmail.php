@@ -64,7 +64,7 @@ if (isset($_POST['submitSellerForm'])) {
 	$message .= "<b>Name: </b>" . $_POST['name'] . "<br>";
 	$message .= "<b>Email: </b>" . $_POST['_replyto'] . "<br>";
 	$message .= "<b>Phone number: </b>" . $_POST['phone'] . "<br>";
-
+    $message .= "<br><br><b>Address: </b>" . $_POST['address'] . "<br>";
 	mail($_POST['emailTo'], "Seller Request From your blog" , $message, $headers);
 
 	header('Location: ' . $_SERVER['HTTP_REFERER']);
