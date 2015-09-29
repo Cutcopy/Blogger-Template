@@ -9,7 +9,7 @@
       <b:else/>
       <title>
         <data:blog.pageName/>
-        | 
+        |
         <data:blog.title/>
       </title>
     </b:if>
@@ -342,7 +342,7 @@ padding: $(image.border.large.size);
 color: $(image.text.color);
 }
 /*  Annoying img presets that are hella ugly
------------------------------------------------------------------------- 
+------------------------------------------------------------------------
 .post-body .tr-caption-container img {
 padding: 0;
 background: transparent;
@@ -543,7 +543,7 @@ z-index: 10;
         margin-right: 7px;
         line-height: 54px;
     }
- 
+
     .review-wrapper {
         margin-top: 3px;
         margin-bottom: 3px;
@@ -580,7 +580,7 @@ z-index: 10;
         height: 54px;
         width: 359px;
     }
-    /* CTA's 
+    /* CTA's
     --------------------------------------------------  */
     .cta,
     .cta2 {
@@ -696,7 +696,7 @@ z-index: 10;
 	}
   /* Specialties and Footer Styling
     --------------------------------------------------  */
-   
+
       #HTML1 .widget-content{
         text-align: center;
         text-transform: capitalize;
@@ -722,7 +722,7 @@ z-index: 10;
         width: 100%;
         height: 100%;
     }
-    /* Overriding Blogger styles. 
+    /* Overriding Blogger styles.
     --------------------------------------------------  */
     /* Gets rid of annoying default italics */
     address{
@@ -736,7 +736,7 @@ z-index: 10;
     #Attribution1 {
         display: none;
         }
-    /* Centers Tabs */    
+    /* Centers Tabs */
     .PageList {
         text-align:center !important;
         }
@@ -800,20 +800,20 @@ width: auto;
     <b:include data='blog' name='google-analytics'/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type='text/javascript'>
-    $(document).ready(function() { 
-      $("a[href^='http://']").each( 
-        function(){ 
-         if(this.href.indexOf(location.hostname) == -1) { 
-            $(this).attr('target', '_blank'); 
-          } 
-        } 
+    $(document).ready(function() {
+      $("a[href^='http://']").each(
+        function(){
+         if(this.href.indexOf(location.hostname) == -1) {
+            $(this).attr('target', '_blank');
+          }
+        }
       );
-    $("a[href^='https://']").each( 
-    function(){ 
-    if(this.href.indexOf(location.hostname) == -1) { 
-    $(this).attr('target', '_blank'); 
-    } 
-    } 
+    $("a[href^='https://']").each(
+    function(){
+    if(this.href.indexOf(location.hostname) == -1) {
+    $(this).attr('target', '_blank');
+    }
+    }
     );
 
     });
@@ -862,7 +862,7 @@ head.appendChild(script);
         <meta content='' itemprop='keywords'/>
         <meta content='' itemprop='author'/>
         <meta content='Bryce Stradling' itemprop='creator'/>
-        <meta expr:content='data:blog.title' itemprop='name'/>
+        <meta expr:content='data:blog.title' itemprop='headline'/>
         <b:if cond='data:blog.metaDescription'>
           <meta expr:content='data:blog.metaDescription' itemprop='description'/>
         </b:if>
@@ -957,7 +957,7 @@ user is not using shrink to fit then we expand the header.
                               <div id='header-inner'>
                                 <a expr:href='data:blog.homepageUrl' style='display: block'>
                                   <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_headerimg&quot;' expr:src='data:sourceUrl' expr:width='data:width' style='display: block'/>
-                                  <h1 class='title' style='display: none;'><b:include name='title'/></h1>
+                                  <h1 class='title' style='display: none;' itemprop='name'><b:include name='title'/></h1>
                                 </a>
                                 <!--Show the description-->
                                 <b:if cond='data:imagePlacement == &quot;BEFORE_DESCRIPTION&quot;'>
@@ -1170,24 +1170,6 @@ user is not using shrink to fit then we expand the header.
                                     <b:include data='top' name='status-message'/>
                                     <data:defaultAdStart/>
                                     <b:loop values='data:posts' var='post'>
-                                      <b:if cond='data:post.isDateStart'>
-                                        <b:if cond='data:post.isFirstPost == &quot;false&quot;'>
-                                          &lt;/div&gt;&lt;/div&gt;
-                                        </b:if>
-                                      </b:if>
-                                      <b:if cond='data:post.isDateStart'>
-                                        &lt;div class=&quot;date-outer&quot;&gt;
-                                      </b:if>
-                                      <b:if cond='data:post.dateHeader'>
-                                        <h2 class='date-header'>
-                                          <span>
-                                            <data:post.dateHeader/>
-                                          </span>
-                                        </h2>
-                                      </b:if>
-                                      <b:if cond='data:post.isDateStart'>
-                                        &lt;div class=&quot;date-posts&quot;&gt;
-                                      </b:if>
                                       <div class='post-outer'>
                                         <b:include data='post' name='post'/>
                                         <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
@@ -1662,6 +1644,24 @@ user is not using shrink to fit then we expand the header.
                                         </div>
                                         <div class='post-footer'>
                                           <div class='post-footer-line post-footer-line-1'>
+                                            <b:if cond='data:post.isDateStart'>
+                                              <b:if cond='data:post.isFirstPost == &quot;false&quot;'>
+                                                &lt;/div&gt;&lt;/div&gt;
+                                              </b:if>
+                                            </b:if>
+                                            <b:if cond='data:post.isDateStart'>
+                                              &lt;div class=&quot;date-outer&quot;&gt;
+                                            </b:if>
+                                            <b:if cond='data:post.dateHeader'>
+                                              <h4 style='display: none;'>
+                                                <span itemprop='datePublished'>
+                                                  <data:post.dateHeader/>
+                                                </span>
+                                              </h4>
+                                            </b:if>
+                                            <b:if cond='data:post.isDateStart'>
+                                              &lt;div class=&quot;date-posts&quot;&gt;
+                                            </b:if>
                                             <span class='post-author vcard'>
                                               <b:if cond='data:top.showAuthor'>
                                                 <b:if cond='data:post.authorProfileUrl'>
@@ -1763,10 +1763,8 @@ user is not using shrink to fit then we expand the header.
                               <b:includable id='post' var='post'>
                                 <div class='post hentry uncustomized-post-template' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
                                   <b:if cond='data:post.firstImageUrl'>
-                                    <meta expr:content='data:post.firstImageUrl' itemprop='image_url'/>
+                                    <meta expr:content='data:post.firstImageUrl' itemprop='image'/>
                                   </b:if>
-                                  <meta expr:content='data:blog.blogId' itemprop='blogId'/>
-                                  <meta expr:content='data:post.id' itemprop='postId'/>
                                   <a expr:name='data:post.id'/>
                                   <b:if cond='data:post.title'>
                                     <h3 class='post-title entry-title' itemprop='name'>
@@ -2411,8 +2409,8 @@ for good G+/FB snippeting. -->
       </macro:if>
     </macro:if>
   </macro:includable>
-  
-  
+
+
 <b:section-contents id='sidebar-right-1'>
   <b:widget id='HTML2' locked='false' title='' type='HTML'>
     <b:includable id='main'>
