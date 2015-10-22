@@ -628,6 +628,19 @@ z-index: 10;
     .acta:hover {
         text-decoration: none;
     }
+
+    /* Headshot
+    --------------------------------------------------  */
+    .headshot {
+        background-image: url('http://fillmurray.com/400/400');
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+    }
+    
+
     /* Question Form for the home page
     --------------------------------------------------  */
 
