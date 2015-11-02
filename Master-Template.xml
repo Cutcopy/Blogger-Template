@@ -1143,7 +1143,7 @@ user is not using shrink to fit then we expand the header.
                       <div class='column-center-outer'>
                         <div class='column-center-inner'>
                           <b:section class='main' id='main' showaddelement='no'>
-                            <b:widget id='HTML1' locked='false' title='We Specialize In These ___ Area Communities' itemscope='realestateagent' itemtype='http://schema.org/RealEstateAgent' type='HTML'>
+                            <b:widget id='HTML1' locked='false' title='We Specialize In These Area Communities' itemscope='realestateagent' itemtype='http://schema.org/RealEstateAgent' type='HTML'>
                               <b:includable id='main'>
                                 <b:if cond='data:blog.url == data:blog.homepageUrl'>
                                   <!-- only display title if it's non-empty -->
