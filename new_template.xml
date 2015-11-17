@@ -80,7 +80,7 @@ default="normal normal 14px Arial, Tahoma, Helvetica, FreeSans, sans-serif" valu
 </Group>
 <Group description="Post Title" selector="h3.post-title, .comments h4">
 <Variable name="post.title.font" description="Font" type="font"
-default="normal normal 22px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 22px Josefin Sans"/>
+default="normal normal 22px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal bold 22px Arial, Tahoma, Helvetica, FreeSans, sans-serif"/>
 </Group>
 <Group description="Date Header" selector=".date-header">
 <Variable name="date.header.color" description="Text Color" type="color"
@@ -96,7 +96,7 @@ default="#f9f9f9" value="#eeeeee"/>
 </Group>
 <Group description="Gadgets" selector="h2">
 <Variable name="widget.title.font" description="Title Font" type="font"
-default="normal bold 11px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal bold 24px Josefin Sans"/>
+default="normal bold 11px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal bold 20px Arial, Tahoma, Helvetica, FreeSans, sans-serif"/>
 <Variable name="widget.title.text.color" description="Title Color" type="color" default="#000000" value="#070707"/>
 <Variable name="widget.alternate.text.color" description="Alternate Color" type="color" default="#999999" value="#000000"/>
 </Group>
@@ -635,7 +635,7 @@ body.mobile .AdSense {
 }
 .review-wrapper {
   width: 300px;
-  margin-top: 1em;
+  margin: 1em 0;
 }
 .review {
   width: 70px;
@@ -1230,7 +1230,7 @@ width: auto;
                           <b:include name='quickedit'/>
                         </b:includable>
                       </b:widget>
-                      <b:widget id='Header1' locked='false' title='Tri-Cities Real Estate Video Blog with Jim Griffin (Header)' type='Header'>
+                      <b:widget id='Header1' locked='false' title='Torrance Group Recruiting Blog (Header)' type='Header'>
                         <b:includable id='main'>
                           <b:if cond='data:useImage'>
                             <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
@@ -2611,7 +2611,7 @@ for good G+/FB snippeting. -->
         gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
           if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
             gapi.iframes.getContext().openChild({
-                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0755701848980885409664\46blogName\75Tri-Cities+Real+Estate+Video+Blog+wit...\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75DISABLED\46layoutType\75LAYOUTS\46searchRoot\75//jimgriffinteam.blogspot.com/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://jimgriffinteam.blogspot.com/\46vt\75-8145236654291164191&#39;,
+                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0751108490329014510438\46blogName\75Torrance+Group+Recruiting+Blog\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75//torrancegrouprecruiting.blogspot.com/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://torrancegrouprecruiting.blogspot.com/\46vt\75-8343875465651036000&#39;,
                 where: document.getElementById(&quot;navbar-iframe-container&quot;),
                 id: &quot;navbar-iframe&quot;
             });
