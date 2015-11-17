@@ -33,6 +33,10 @@ URL:      www.noaesthetic.com
 ----------------------------------------------- */
 /* Variable definitions
 ====================
+<Group description="Background Gradient" selector=".background-fauxcolumns">
+<Variable name="background.gradient.light" description="Background Gradient Light" type="color" default="#797979"  value="#797979"/>
+<Variable name="background.gradient.dark" description="Background Gradient Dark" type="color" default="#323232"  value="#323232"/>
+</Group>
 <Group description="Dark Brand Color" selector=".dark-brand">
 <Variable name="darkbrand.color" description="Dark Footer/Nav Color" type="color" default="#000000" value="#070707"/>
 <Variable name="nav.hover" description="Nav hover Color" type="color" default="#323232" value="#666666"/>
@@ -461,9 +465,20 @@ body.mobile .AdSense {
   padding-top: 10px;
   line-height: 35px;
 }
+
+.mobile .cta-wrapper {
+	display: block;
+}
+
+.mobile .cta {
+  margin: 4px;
+  padding: 10px;
+}
+
 .mobile .newsletter {
   float: none;
 }
+
 .mobile #HTML4 {
   background: #b40101;
   text-align: center;
@@ -475,10 +490,7 @@ body.mobile .AdSense {
   margin: 10px;
   text-decoration: underline;
 }
-.mobile .cta {
-  margin: 4px;
-  padding: 10px;
-}
+
 .mobile #crosscol {
   background-color: $(link.color);
 }
@@ -1060,7 +1072,7 @@ footer {
     --------------------------------------------------  */
 
 .body-fauxcolumns {
-  background: linear-gradient(#797979, #323232);
+  background: linear-gradient($(background.gradient.light), $(background.gradient.dark));
 }
 #Header1_headerimg {
   width: 1000px;

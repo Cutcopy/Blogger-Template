@@ -1,49 +1,49 @@
 <style>
-    .home-value label,
-    input,
-    select,
-    textarea {
+    .home-search label,
+    .home-search input,
+    .home-search select,
+    .home-search textarea {
         display: block;
         margin: 10px;
     }
-    label {
+    .home-search label {
         text-align: left;
         font-weight: bold;
         font-size: large;
     }
-    input {
+    .home-search input {
         border-width: 1px;
         border-color: #aaa;
         height: 2em;
         width: 90%;
     }
-    textarea {
+    .home-search textarea {
         border-color: #aaa;
         min-height: 100px;
         height: 40%;
         width: 90%;
     }
-    select {
+    .home-search select {
         border-color: #aaa;
     }
     /* input, textarea, select:focus{
         outline-color: #Fd3434;
     } */
-    fieldset {
+    .home-search fieldset {
         border-color: #aaa;
         margin-top: 3em;
     }
     .asterisk {
         color: red;
     }
-    .submit {
+    .home-search .submit {
         margin: 0 auto;
         min-width: 10%;
         max-width: 15%;
         color: white;
         border: 0px;
     }
-   
+
     #thanks{
         font-style: italic;
         font-weight: bolder;
@@ -54,7 +54,7 @@
 
 <form method="post" class="home-search" action="http://vyralmarketing.com/staticforms/sendEmail.php" onsubmit="return setReturn()">
     <input type="hidden" value="someone@email.com" name="emailTo">
-    
+
     <fieldset>
         <p id="thanks"></p>
         <!--1-->
