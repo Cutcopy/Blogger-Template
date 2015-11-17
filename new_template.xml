@@ -33,6 +33,10 @@ URL:      www.noaesthetic.com
 ----------------------------------------------- */
 /* Variable definitions
 ====================
+
+<Variable name="client.headshot" description="client.headshot" type="string" default="http://fillmurray.com/200/200" value="http://placehold.it/200x200"/>
+
+
 <Group description="Background Gradient" selector=".background-fauxcolumns">
 <Variable name="background.gradient.light" description="Background Gradient Light" type="color" default="#797979"  value="#797979"/>
 <Variable name="background.gradient.dark" description="Background Gradient Dark" type="color" default="#323232"  value="#323232"/>
@@ -550,6 +554,20 @@ body.mobile .AdSense {
 
 /* //////////////////////////////////////////////////////////////////////////Custom styles yo~! */
 
+/*Head Shot */
+
+.headshot {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-image: url($(client.headshot));
+  background-size: cover;
+  margin: 20px 0;
+  border: 2px solid white;
+  box-shadow: 0px 0px 0px 3px #323232;
+}
+
+
 .date-header {
   display: none;
 }
@@ -879,6 +897,64 @@ input.field {
   overflow: visible;
 }
 
+/* Form styling */
+
+.home-value label,
+    .home-value input,
+    .home-value select,
+    .home-value textarea {
+        display: block;
+        margin: 10px;
+    }
+    .home-value label {
+        text-align: left;
+        font-weight: bold;
+        font-size: large;
+    }
+    .home-value input {
+        border-width: 1px;
+        border-color: #aaa;
+        height: 2em;
+        width: 90%;
+    }
+    .home-value textarea {
+        border-color: #aaa;
+        min-height: 100px;
+        height: 40%;
+        width: 90%;
+    }
+    .home-value select {
+        border-color: #aaa;
+    }
+
+    .home-value fieldset {
+        border-color: #aaa;
+        margin-top: 3em;
+    }
+    .home-value .asterisk {
+        color: red;
+    }
+    .home-value .submit {
+        margin: 0 auto;
+        min-width: 10%;
+        max-width: 15%;
+        font-size: initial;
+        background: linear-gradient($(cta.color), $(cta.dark.color));
+        border: 2px solid $(cta.dark.color);
+        color: white;
+        padding: 0.3em;
+        font-size: 15px;
+        border-radius: 5px;
+    }
+    .home-value .submit:hover {
+      background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
+    }
+    #thanks{
+        font-style: italic;
+        font-weight: bolder;
+        color: #B40101;
+    }
+
 /* Specialties and Footer Styling
     --------------------------------------------------  */
 
@@ -1007,18 +1083,6 @@ footer {
   border-radius: 0px 0px 4px 4px;
 }
 
-/*Head Shot */
-
-.headshot {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  background-image: url('http://fillmurray.com/200/200');
-  background-size: cover;
-  margin: 20px 0;
-  border: 2px solid white;
-  box-shadow: 0px 0px 0px 3px #323232;
-}
 
 /*Banner CTA */
 
