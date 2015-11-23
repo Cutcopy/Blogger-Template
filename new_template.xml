@@ -641,6 +641,7 @@ body.mobile .AdSense {
   width: 200px;
   border-radius: 50%;
   background-image: url($(client.headshot));
+  background-position: center center;
   background-size: cover;
   margin: 20px 0;
   border: 2px solid white;
@@ -698,13 +699,12 @@ body.mobile .AdSense {
 }
 
 .socials {
-  width: 240px;
+  width: 245px;
   float: right;
 }
 
 .socials a {
   color: white;
-  font-size: 15px;
 }
 
 /* Review buttons */
