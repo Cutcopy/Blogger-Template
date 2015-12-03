@@ -645,7 +645,7 @@ body.mobile .AdSense {
   background-size: cover;
   margin: 20px 0;
   border: 2px solid white;
-  box-shadow: 0px 0px 0px 3px #323232;
+  box-shadow: 0px 0px 0px 3px $(darkbrand.color);;
 }
 
 .date-header {

@@ -277,6 +277,13 @@ Real Estate for sale, Real Estate agents, top real estate agents, local real est
 real estate market, estate agent, realestate, real estate listings, buying a house, homes for sale, mls, home buyer
 <!--End Generic Keywords-->
 
+<!-- make a widget appear only on the homepage. switch data:blog.homepageurl to a different page if need be. add in element's id i.e. "#HTML1"-->
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+  #ID {
+    display: none
+  }
+</b:if>
+
 <!-- Make Blogger one column. Find for </b:skin> - Paste the following directly below </b:skin> - Change the address in Line 1 to the address of your page. -->
 <b:if cond='data:blog.url == "Page URL"'>
     <style>
@@ -512,8 +519,8 @@ real estate market, estate agent, realestate, real estate listings, buying a hou
     <h3>Subscribe to our Newsletter</h3>
 
     <input name="email_address" class="opt-in-email" placeholder="Email*" />
-    <p><span id="starred">*</span>Required</p>
     <input type="submit" value="Join Now" class="light-light" />
+    <p><span id="starred">*</span>Required</p>
 </form>
 <style>
     .opt-in {
