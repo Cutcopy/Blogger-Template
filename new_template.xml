@@ -675,8 +675,8 @@ body.mobile .AdSense {
 }
 
 .top-navbar ul li {
-  display: inline;
-  padding: 12px;
+  display: inline-block;
+  padding: 0px 12px;
 }
 
 .top-navbar ul li:hover {
@@ -686,7 +686,8 @@ body.mobile .AdSense {
 }
 
 .top-navbar ul li a {
-  Color: white !important;
+  color: white !important;
+  display: inline-block;
 }
 
 .top-navbar ul li a:hover {
