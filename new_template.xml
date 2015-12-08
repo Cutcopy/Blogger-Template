@@ -356,7 +356,7 @@ h2 {
 }
 
 .main-inner .column-center-inner {
-  padding: 0 $(main.padding);
+  padding: 0 15px;
 }
 
 .main-inner .column-center-inner .section {
@@ -643,7 +643,7 @@ body.mobile .AdSense {
   background-image: url($(client.headshot));
   background-position: center center;
   background-size: cover;
-  margin: 20px 0;
+  margin: 20px auto;
   border: 2px solid white;
   box-shadow: 0px 0px 0px 3px $(darkbrand.color);;
 }
@@ -660,7 +660,7 @@ body.mobile .AdSense {
   margin: 5px 0 0 0;
   width: 1000px;
   position: relative;
-  right: 40px;
+//right: 40px;
   border-radius: 5px 5px 0px 0px;
   background: $(darkbrand.color);
   color: white;
@@ -710,17 +710,19 @@ body.mobile .AdSense {
 
 /* Review buttons */
 .review-wrapper {
-  width: 300px;
+//width: 240px;
   margin: 1em 0;
 }
 
 .review {
-  width: 70px;
-  height: 30px;
-  padding: 3px;
-  border-radius: 6px;
-  border: 2px solid;
-  display: inline-block;
+    width: 96%;
+    max-width: 222px;
+    height: 30px;
+    padding: 3px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 2px solid;
+    text-align: center;
 }
 
 .review svg {
@@ -744,7 +746,6 @@ body.mobile .AdSense {
   background: -webkit-linear-gradient(#0074e4, #0051a0);
   background: linear-gradient(#0074e4, #0051a0);
   border-color: #0051a0;
-  margin-left: 2px;
 }
 
 .zillow:hover {
@@ -756,7 +757,6 @@ body.mobile .AdSense {
   background: -webkit-linear-gradient(#53b50a, #429108);
   background: linear-gradient(#53b50a, #429108);
   border-color: #429108;
-  margin-left: 2px;
 }
 
 .trulia:hover {
@@ -778,10 +778,18 @@ body.mobile .AdSense {
 /* CTA's
 --------------------------------------------------  */
 
+.tabs-inner {
+	padding: 0px;
+}
+
+#crosscol {
+	margin: 0;
+}
+
 #HTML3 {
   line-height: 60px;
   width: 1000px;
-  right: 70px;
+/*right: 70px; */
   position: relative;
   background: $(darkbrand.color);
 }
@@ -859,7 +867,7 @@ body.mobile .AdSense {
 
 .contact-info input {
   display: block;
-  width: 100%;
+  width: 90%;
   height: 1.5em;
   margin-top: 10px;
   margin-right: 2%;
@@ -872,7 +880,7 @@ body.mobile .AdSense {
 #contact-form textarea {
   margin: 15px 0px 10px;
   ;
-  width: 100%;
+  width: 90%;
   min-height: 100px;
   border: 1px solid black;
   border-radius: 5px;
@@ -884,10 +892,10 @@ body.mobile .AdSense {
   font-size: initial;
   border-radius: 5px;
   background: linear-gradient($(cta.color), $(cta.dark.color));
-  border: 2px solid $(cta.dark.color);
+  border: 2px solid $(cta.dark.color);96%
   display: block;
   margin: 0 auto 10px;
-  width: 110%;
+  width: 100%;
   height: 1.5em;
   padding: 1em;
   line-height: 1px;
@@ -1088,6 +1096,11 @@ input.field {
 --------------------------------------------------  */
 /* Gets rid of annoying default italics */
 
+.column-right-inner aside {
+	padding: 0;
+}
+
+
 address {
   font-style: normal;
 }
@@ -1108,7 +1121,7 @@ address {
   padding: 14px;
   width: 972px;
   background: #000;
-  right: 40px;
+//right: 40px;
   border-radius: 4px 4px 0px 0px;
   margin: 0px;
   margin-left: 0px !important;
@@ -1178,7 +1191,7 @@ bottom: 296px;
 footer {
   background-color: $(darkbrand.color);
   width: 1000px;
-  right: 40px;
+/* right: 40px; */
   position: relative;
   border-radius: 0px 0px 4px 4px;
 }
@@ -1242,13 +1255,13 @@ footer {
 
 #Header1_headerimg {
   width: 1000px;
-  right: 40px;
+/* right: 40px;*/
 }
 
 .content-inner {
   border-radius: 6px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.45);
-  padding: 0px 40px;
+  padding: 0px;
 }
 
 .content-outer {
@@ -1407,7 +1420,7 @@ width: auto;
   <b:include name='quickedit'/>
 </b:includable>
                       </b:widget>
-                      <b:widget id='Header1' locked='false' title='Flathead Valley Real Estate Video Blog with Brett Kelly (Header)' type='Header'>
+                      <b:widget id='Header1' locked='false' title='Greater Richmond Area Real Estate Video Blog with Ryan Sanford (Header)' type='Header'>
                         <b:includable id='main'>
                           <b:if cond='data:useImage'>
                             <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
@@ -1516,7 +1529,21 @@ user is not using shrink to fit then we expand the header.
 </b:includable>
                     </b:widget>
                   </b:section>
-                  <b:section class='tabs' id='crosscol-overflow' showaddelement='no'/>
+                  <b:section class='tabs' id='crosscol-overflow' showaddelement='no'>
+                    <b:widget id='HTML4' locked='false' mobile='only' title='' type='HTML'>
+                      <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+                    </b:widget>
+                  </b:section>
                 </div>
               </div>
               <div class='tabs-cap-bottom cap-bottom'>
@@ -2774,7 +2801,7 @@ for good G+/FB snippeting. -->
         gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
           if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
             gapi.iframes.getContext().openChild({
-                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0753650010380682952822\46blogName\75Flathead+Valley+Real+Estate+Video+Blo...\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75//brettkellygroup.blogspot.com/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://brettkellygroup.blogspot.com/\46vt\75-5709434653044344473&#39;,
+                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0756873069708082444363\46blogName\75Greater+Richmond+Area+Real+Estate+Vid...\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75//unusedvyral.blogspot.com/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://unusedvyral.blogspot.com/\46readAccessMode\75PRIVATE\46vt\75-3690409278187132295&#39;,
                 where: document.getElementById(&quot;navbar-iframe-container&quot;),
                 id: &quot;navbar-iframe&quot;
             });
