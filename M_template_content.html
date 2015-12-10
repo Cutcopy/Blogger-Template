@@ -1,0 +1,193 @@
+<!-- Main Nav -->
+
+<nav class="top-navbar">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="#">Our Listings</a></li>
+    <li><a href="#">Get a Loan</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <ul class="socials">
+    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="/feeds/posts/default?alt=rss"><i class="fa fa-rss"></i></a></li>
+  </ul>
+</nav>
+
+<!-- Call To Action section -->
+<span class="cta-wrapper">
+  <a href="#" class="cta">Free Home Value Report</a>
+  <a href="#" class="cta">Search For Homes</a>
+</span>
+<!-- Add action from VR -->
+<form class="newsletter" method="post" action="#" target="vr_optin_popup" onsubmit="window.open( 'http://www.verticalresponse.com', 'vr_optin_popup', 'scrollbars=yes,width=600,height=450' ); return true;">
+ <label>Sign up for our Free Newsletter! &nbsp;&nbsp;</label>
+ <input name="email_address" type="text" placeholder="Enter Your Email" />
+ <input type="submit" />
+</form>
+
+<!-- Headshot -->
+<div class="headshot"></div>
+
+<!-- review buttons -->
+<div class="review-wrapper">
+    <div class="review yelp">
+      <a href="http://www.yelp.com/">
+        <i class="vm  icon-yelp"></i>
+         </a>
+        </div>
+      <div class="review zillow">
+      <a href="http://www.zillow.com/">
+         <i class="vm icon-zillow"></i>
+      </a>
+     </div>
+    <div class="review trulia">
+      <a href="http://www.trulia.com/">
+        <i class="vm icon-trulia">
+      </i></a>
+    </div>
+    <div class="review itunes">
+       <a href="#">
+          <i class="vm icon-podcast"></i><span>Subscribe to our Podcast</span>
+       </a>
+    </div>
+</div>
+
+<!-- Client Info -->
+<strong>Client Name</strong>
+<br>
+Client Brand
+<br>
+Client Company
+<br>
+<address>
+123 Fake St.
+<br>
+Chicago, IL 60652
+</address>
+<a href="tel:1-234-567-8910">234-567-8910</a>
+<br>
+<a href="mailto:someone@email.com">Someone@email.com</a>
+<br>
+<a href="http://getvyral.com">Client's URL</a>
+
+
+<!-- Contact Form -->
+<form id="contact-form" method="post" action="http://vyralmarketing.com/staticforms/sendEmail.php" onsubmit="return setReturn()">
+<input type="hidden" value="someone@email.com" name="emailTo" />
+
+<p id="thanks"></p>
+<div class="contact-info">
+<input placeholder="Name*" type="text" name="name" required />
+
+<input placeholder="Email*" type="Email" name="email" required />
+</div>
+<textarea placeholder="Message*" name="message" required></textarea>
+<input type="submit" value="Submit" name="submitContact" />
+
+
+</form>
+<script>
+function setReturn(){
+ localStorage.setItem("thanks", "Your request was sent successfully!");
+}
+
+document.getElementById("thanks").innerHTML = localStorage.getItem("thanks");
+localStorage.clear();
+</script>
+
+<!-- Footer -->
+
+<strong><span itemprop="founder">Client Name</span> - <span itemprop="brand">Client Brand</span> - <span itemprop="branchof">Keller Williams Realty</span></strong>
+<br>
+<address itemprop="address">123 Fake St. Chicago, IL 60652</address>
+<a href="tel:1-234-567-8910" itemprop="telephone">234-567-8910</a>
+•
+<a href="mailto:someone@email.com" itemprop="email">Someone@email.com</a>
+•
+<a href="http://www.getvyral.com " itemprop="URL">www.ClientURl.com </a>
+
+<p>
+<a href="https://www.blogger.com/blogger.g?blogID={ID}#editor">New Post</a> • <a href="https://www.blogger.com/blogger.g?blogID={ID}#template">Design</a>
+</p>
+
+
+<!--Podcast subtitle-->
+Learn all the tips, tricks and more for buyers and sellers in Corpus Christi Area Real Estate Market
+
+<!--Description-->
+If you are looking to buy or sell a home, get all the information and the latest updates, tips, and tricks from The Stern Team- your professional Salt Lake City Real Estate Agents.
+
+<!-- Mortgage -->
+
+A podcast for home buyers curious about the lending process. Learn Tips, tricks and more educational material from Omaha's own Mortgage Doctor- Terry Williams Get all the information and and the latest updates, tips, and tricks of Personal Finance and
+Mortgages from Jay Moderski - your professional Horsham Mortgage Consultant
+<!-- Mortgage Keywords -->
+Omaha,real,estate,Mortgage,brokers,buying,your,first,home,lenders,finance
+
+<!-- Titling -->
+
+Learn all the tips tricks about Austin Title and Real Estate Development from Mint Title
+
+<!-- Recruiting -->
+A Podcast about Midvale Utah Real Estate; It's industry, and the people working in it. Whether you're just starting out, aspiring to begin, or been working in the field for a few years, tune in to get updates, tips, tricks and more!
+<!-- Recruiting Subtitle -->
+Boost your Career with Veteran Real Estate Agent Nancy Seraphin Midvale Real Estate, Real Estate Careers, Real Estate Professionals, Realtors, Real estate industry, how much do realtors make A Video Blog about the Omaha Nebraska Real Estate Market for
+buyers and sellers By Omaha's premiere Realtor Adam Briley of Briley Homes.
+<!--End Descripitons-->
+
+<!--Generic Keywords-->
+Real Estate for sale, Real Estate agents, top real estate agents, local real estate agents, find a real estate agent, houses for sale in (location) home selling tips, home for sale, home buying, home buying process, property finder, property search, property,
+real estate market, estate agent, realestate, real estate listings, buying a house, homes for sale, mls, home buyer
+<!--End Generic Keywords-->
+
+<!-- make a widget appear only on the homepage. switch data:blog.homepageurl to a different page if need be. add in element's id i.e. "#HTML1"-->
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+  #ID {
+    display: none
+  }
+</b:if>
+
+<!-- Make Blogger one column. Find for </b:skin> - Paste the following directly below </b:skin> - Change the address in Line 1 to the address of your page. -->
+<b:if cond='data:blog.url == "Page URL"'>
+    <style>
+        .main-inner .columns {
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+        .main-inner .fauxcolumn-center-outer {
+            left: 0px !important;
+            right: 0px !important;
+        }
+        .main-inner .fauxcolumn-left-outer,
+        .main-inner .fauxcolumn-right-outer,
+        .main-inner .column-left-outer,
+        .main-inner .column-right-outer {
+            display: none !important;
+        }
+    </style>
+</b:if>
+
+<!-- Make all static pages one column. Goes in the same place. Before b:skin -->
+<b:if cond='data:blog.pageType == "static_page"'>
+    <style>
+        .main-inner .columns {
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+        .main-inner .fauxcolumn-center-outer {
+            left: 0px !important;
+            right: 0px !important;
+        }
+        .main-inner .fauxcolumn-left-outer,
+        .main-inner .fauxcolumn-right-outer,
+        .main-inner .column-left-outer,
+        .main-inner .column-right-outer {
+            display: none !important;
+        }
+    </style>
+</b:if>

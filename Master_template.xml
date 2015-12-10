@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns='http://www.w3.org/1999/xhtml'>
   <head>
     <b:if cond='data:blog.pageType == &quot;index&quot;'>
       <title>
@@ -13,17 +13,16 @@
         <data:blog.title/>
       </title>
     </b:if>
-    <b:if cond='data:blog.isMobile'>
-      <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
-      <b:else/>
-      <meta content='width=1100' name='viewport'/>
-      <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet'/>
-    </b:if>
-    <b:include data='blog' name='all-head-content'/>
-    <title>
-      <data:blog.pageTitle/>
-    </title>
-    <b:skin><![CDATA[
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
+    <meta content='width=1100' name='viewport'/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://file.myfontastic.com/AGdMHYPf5fbfSxbxhsCEam/icons.css" rel="stylesheet"/>
+      <b:include data='blog' name='all-head-content'/>
+      <title>
+        <data:blog.pageTitle/>
+      </title>
+      <b:skin>
+        <![CDATA[
 
 /*
 -----------------------------------------------
@@ -725,21 +724,26 @@ body.mobile .AdSense {
     text-align: center;
 }
 
-.review svg {
-  fill: #fff;
-  width: 70px;
-  height: 30px;
+.review a:hover {
+  text-decoration: none;
 }
-
+.vm {
+  color: white;
+  font-size: 5em;
+  position: relative;
+}
 .yelp {
   background: -webkit-linear-gradient(#c21100, #9b0e00);
   background: linear-gradient(#c21100, #9b0e00);
   border-color: #9b0e00;
 }
-
 .yelp:hover {
   background: -webkit-linear-gradient(#ff1802, #c21100);
   background: linear-gradient(#ff1802, #c21100);
+}
+
+.icon-yelp {
+  bottom: 23px;
 }
 
 .zillow {
@@ -747,10 +751,14 @@ body.mobile .AdSense {
   background: linear-gradient(#0074e4, #0051a0);
   border-color: #0051a0;
 }
-
 .zillow:hover {
   background: -webkit-linear-gradient(#1d90ff, #0074e4, #00f);
   background: linear-gradient(#1d90ff, #0074e4, #00f);
+}
+
+.icon-zillow {
+    font-size: 6em;
+    bottom: 29px;
 }
 
 .trulia {
@@ -758,22 +766,37 @@ body.mobile .AdSense {
   background: linear-gradient(#53b50a, #429108);
   border-color: #429108;
 }
-
 .trulia:hover {
   background: -webkit-linear-gradient(#6ff10d, #53b50a);
   background: linear-gradient(#6ff10d, #53b50a);
 }
-
-.itunes-wrapper {
-  width: 359px;
-  height: 54px;
-  margin-top: 3px;
+.icon-trulia {
+  bottom: 24px;
 }
-
+.review a:hover {
+  text-decoration: none;
+}
 .itunes {
-  fill: white;
-  height: 54px;
-  width: 359px;
+  background: -webkit-linear-gradient(#303030, #000);
+  background: linear-gradient(#303030, #000);
+  border-color: #000;
+}
+.itunes:hover {
+  background: -webkit-linear-gradient(#444, #303030);
+  background: linear-gradient(#444, #303030);
+}
+.itunes a {
+  color: white;
+}
+.icon-podcast {
+  font-size: 2em;
+  margin-right: 5px;
+}
+.itunes span {
+  text-transform: uppercase;
+  position: relative;
+  bottom: 9px;
+  font-size: 11px;
 }
 /* CTA's
 --------------------------------------------------  */
@@ -1277,6 +1300,18 @@ footer a {
   color: white !important;
   text-decoration: underline !important;
 }
+
+.attribution {
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.icon-vyral {
+  font-size: 20px;
+  top: 5px;
+  position: relative;
+}
+
 
     ]]></b:skin>
     <b:template-skin>
@@ -2780,10 +2815,11 @@ for good G+/FB snippeting. -->
   <div class='widget-content'>
     <data:content/>
   </div>
-
+  <p class="attribution">Proudly Brought To You By <i class="icon-vyral"></i><a href="http://getvyral.com">yral Marketing</a></p>
   <b:include name='quickedit'/>
 </b:includable>
                       </b:widget>
+
                       <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar'>
                         <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
     function setAttributeOnload(object, attribute, val) {
@@ -2819,7 +2855,7 @@ head.appendChild(script);
 &lt;/script&gt;
 </b:includable>
                       </b:widget>
-                      <b:widget id='Attribution1' locked='true' title='' type='Attribution'>
+                      <b:widget id='Attribution1' locked='false' title='' type='Attribution'>
                         <b:includable id='main'>
     <b:if cond='data:feedbackSurveyLink'>
       <div class='mobile-survey-link' style='text-align: center;'>
