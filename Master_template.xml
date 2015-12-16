@@ -167,7 +167,7 @@ default="transparent none repeat scroll top left" value="transparent none repeat
 <Variable name="startSide" description="Side where text starts in blog language" type="automatic" default="left" value="left"/>
 <Variable name="endSide" description="Side where text ends in blog language" type="automatic" default="right" value="right"/>
 */
-/* Content
+/* Content & General
 ----------------------------------------------- */
 
 body {
@@ -633,23 +633,7 @@ body.mobile .AdSense {
   z-index: 10;
 }
 /* //////////////////////////////////////////////////////////////////////////Custom styles yo~! */
-/*Head Shot */
 
-.headshot {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  background-image: url($(client.headshot));
-  background-position: center center;
-  background-size: cover;
-  margin: 20px auto;
-  border: 2px solid white;
-  box-shadow: 0px 0px 0px 3px $(darkbrand.color);;
-}
-
-.date-header {
-  display: none;
-}
 /* Navbar
 ------------------------------- */
 
@@ -705,6 +689,139 @@ body.mobile .AdSense {
 
 .socials a {
   color: white;
+}
+
+.socials ul {
+  padding-left: 0px;
+}
+
+.socials {}
+
+.socials ul {
+  list-style-type: none;
+}
+
+.socials ul li {
+  display: inline;
+}
+
+.socials ul li a {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  -webkit-transition: all 00.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.socials ul li a i {
+  height: 14px;
+  width: 14px;
+  padding: 14px;
+}
+
+.socials ul li a i:hover {
+  background: #37393E;
+}
+
+
+
+/* CTA's
+--------------------------------------------------  */
+
+.tabs-inner {
+	padding: 0px;
+}
+
+#crosscol {
+	margin: 0;
+}
+
+#HTML3 {
+  line-height: 60px;
+  width: 1000px;
+/*right: 70px; */
+  position: relative;
+  background: $(darkbrand.color);
+}
+
+.cta {
+  background: linear-gradient($(cta.color), $(cta.dark.color));
+  border: 2px solid $(cta.dark.color);
+  margin: 1em;
+  padding: 13px;
+  text-align: center;
+  color: white !important;
+  border-radius: 6px;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.cta:hover {
+  text-decoration: none;
+  background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
+}
+
+.button {
+  background: linear-gradient($(cta.color), $(cta.dark.color));
+  border: 2px solid $(cta.dark.color);
+  padding: 7px;
+  text-align: center;
+  color: white !important;
+  border-radius: 6px;
+}
+
+.button:hover {
+  text-decoration: none;
+  background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
+}
+
+.newsletter {
+  display: inline;
+  float: right;
+  margin-right: 1em;
+}
+
+.newsletter label {
+  color: white;
+  text-transform: uppercase;
+}
+
+.newsletter input[type="text"] {
+  border-radius: 5px;
+  width: 155px;
+  padding: 0.4em;
+  margin-right: 1em;
+}
+
+.newsletter input[type="submit"] {
+  background: linear-gradient($(cta.color), $(cta.dark.color));
+  border: 2px solid $(cta.dark.color);
+  color: white;
+  padding: 0.3em;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.newsletter input[type="submit"]:hover {
+  background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Right Column XXXXXXXXXXXXXX */
+/*Head Shot */
+
+.headshot {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-image: url($(client.headshot));
+  background-position: center center;
+  background-size: cover;
+  margin: 20px auto;
+  border: 2px solid white;
+  box-shadow: 0px 0px 0px 3px $(darkbrand.color);;
 }
 
 /* Review buttons */
@@ -798,89 +915,7 @@ body.mobile .AdSense {
   bottom: 9px;
   font-size: 11px;
 }
-/* CTA's
---------------------------------------------------  */
 
-.tabs-inner {
-	padding: 0px;
-}
-
-#crosscol {
-	margin: 0;
-}
-
-#HTML3 {
-  line-height: 60px;
-  width: 1000px;
-/*right: 70px; */
-  position: relative;
-  background: $(darkbrand.color);
-}
-
-.cta {
-  background: linear-gradient($(cta.color), $(cta.dark.color));
-  border: 2px solid $(cta.dark.color);
-  margin: 1em;
-  padding: 13px;
-  text-align: center;
-  color: white !important;
-  border-radius: 6px;
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  -ms-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
-
-.cta:hover {
-  text-decoration: none;
-  background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
-}
-
-.button {
-  background: linear-gradient($(cta.color), $(cta.dark.color));
-  border: 2px solid $(cta.dark.color);
-  padding: 7px;
-  text-align: center;
-  color: white !important;
-  border-radius: 6px;
-}
-
-.button:hover {
-  text-decoration: none;
-  background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
-}
-
-.newsletter {
-  display: inline;
-  float: right;
-  margin-right: 1em;
-}
-
-.newsletter label {
-  color: white;
-  text-transform: uppercase;
-}
-
-.newsletter input[type="text"] {
-  border-radius: 5px;
-  width: 155px;
-  padding: 0.4em;
-  margin-right: 1em;
-}
-
-.newsletter input[type="submit"] {
-  background: linear-gradient($(cta.color), $(cta.dark.color));
-  border: 2px solid $(cta.dark.color);
-  color: white;
-  padding: 0.3em;
-  font-size: 15px;
-  border-radius: 5px;
-}
-
-.newsletter input[type="submit"]:hover {
-  background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
-}
 /* Contact Form
 --------------------------------- */
 
@@ -1123,6 +1158,9 @@ input.field {
 	padding: 0;
 }
 
+.date-header {
+  display: none;
+}
 
 address {
   font-style: normal;
@@ -1177,37 +1215,7 @@ left: 631px;
 bottom: 296px;
 } */
 
-.socials ul {
-  padding-left: 0px;
-}
 
-.socials {}
-
-.socials ul {
-  list-style-type: none;
-}
-
-.socials ul li {
-  display: inline;
-}
-
-.socials ul li a {
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  -webkit-transition: all 00.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.socials ul li a i {
-  height: 14px;
-  width: 14px;
-  padding: 14px;
-}
-
-.socials ul li a i:hover {
-  background: #37393E;
-}
 /* Footer
 -------------------------------- */
 
@@ -1311,8 +1319,6 @@ footer a {
   top: 5px;
   position: relative;
 }
-
-
     ]]></b:skin>
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='1000px'/>

@@ -93,11 +93,10 @@ Chicago, IL 60652
 </form>
 <script>
 function setReturn(){
- localStorage.setItem("thanks", "Your request was sent successfully!");
+  localStorage.setItem("thanks", "Your request was sent successfully!");
+  document.getElementById("thanks").innerHTML =    localStorage.getItem("thanks");
+  localStorage.clear();
 }
-
-document.getElementById("thanks").innerHTML = localStorage.getItem("thanks");
-localStorage.clear();
 </script>
 
 <!-- Footer -->
