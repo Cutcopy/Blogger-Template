@@ -660,6 +660,8 @@ body.mobile .AdSense {
 .top-navbar ul li {
   display: inline-block;
   padding: 0px 12px;
+  -webkit-transition: 0.3s;
+  transition: 0.3;
 }
 
 .top-navbar ul li:hover {
@@ -771,6 +773,8 @@ body.mobile .AdSense {
   text-align: center;
   color: white !important;
   border-radius: 6px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .button:hover {
@@ -803,6 +807,8 @@ body.mobile .AdSense {
   padding: 0.3em;
   font-size: 15px;
   border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .newsletter input[type="submit"]:hover {
