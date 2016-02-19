@@ -17,7 +17,7 @@
       <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
       <b:else/>
       <meta content='width=1100' name='viewport'/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     </b:if>
     <b:include data='blog' name='all-head-content'/>
     <title>
