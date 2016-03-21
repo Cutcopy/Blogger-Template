@@ -661,7 +661,7 @@ body.mobile .AdSense {
   display: inline-block;
   padding: 0px 12px;
   -webkit-transition: 0.3s;
-  transition: 0.3;
+  transition: 0.3s;
 }
 
 .top-navbar ul li:hover {
@@ -747,6 +747,7 @@ body.mobile .AdSense {
 }
 
 .cta {
+  background-color: ($cta.color);
   background: linear-gradient($(cta.color), $(cta.dark.color));
   border: 2px solid $(cta.dark.color);
   margin: 1em;
@@ -763,10 +764,12 @@ body.mobile .AdSense {
 
 .cta:hover {
   text-decoration: none;
+  background-color: $(cta.hover.light);
   background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
 }
 
 .button {
+  background-color:$(cta.color);
   background: linear-gradient($(cta.color), $(cta.dark.color));
   border: 2px solid $(cta.dark.color);
   padding: 7px;
@@ -778,6 +781,7 @@ body.mobile .AdSense {
 }
 
 .button:hover {
+  background-color: $(cta.hover.light);
   text-decoration: none;
   background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
 }
@@ -801,6 +805,7 @@ body.mobile .AdSense {
 }
 
 .newsletter input[type="submit"] {
+  background-color: $(cta.color);
   background: linear-gradient($(cta.color), $(cta.dark.color));
   border: 2px solid $(cta.dark.color);
   color: white;
@@ -812,6 +817,7 @@ body.mobile .AdSense {
 }
 
 .newsletter input[type="submit"]:hover {
+  background-color: $(cta.hover.light);
   background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
 }
 
@@ -856,11 +862,13 @@ body.mobile .AdSense {
   position: relative;
 }
 .yelp {
+  background-color: #c21100;
   background: -webkit-linear-gradient(#c21100, #9b0e00);
   background: linear-gradient(#c21100, #9b0e00);
   border-color: #9b0e00;
 }
 .yelp:hover {
+  background-color: #ff1802;
   background: -webkit-linear-gradient(#ff1802, #c21100);
   background: linear-gradient(#ff1802, #c21100);
 }
@@ -870,11 +878,13 @@ body.mobile .AdSense {
 }
 
 .zillow {
+  background-color: #0051a0;
   background: -webkit-linear-gradient(#0074e4, #0051a0);
   background: linear-gradient(#0074e4, #0051a0);
   border-color: #0051a0;
 }
 .zillow:hover {
+  background-color: #1d90ff;
   background: -webkit-linear-gradient(#1d90ff, #0074e4, #00f);
   background: linear-gradient(#1d90ff, #0074e4, #00f);
 }
@@ -885,11 +895,13 @@ body.mobile .AdSense {
 }
 
 .trulia {
+  background-color: #429108;
   background: -webkit-linear-gradient(#53b50a, #429108);
   background: linear-gradient(#53b50a, #429108);
   border-color: #429108;
 }
 .trulia:hover {
+  background-color: #6ff10d;
   background: -webkit-linear-gradient(#6ff10d, #53b50a);
   background: linear-gradient(#6ff10d, #53b50a);
 }
@@ -900,11 +912,13 @@ body.mobile .AdSense {
   text-decoration: none;
 }
 .itunes {
+  background-color: black;
   background: -webkit-linear-gradient(#303030, #000);
   background: linear-gradient(#303030, #000);
   border-color: #000;
 }
 .itunes:hover {
+  background-color: grey;
   background: -webkit-linear-gradient(#444, #303030);
   background: linear-gradient(#444, #303030);
 }
@@ -955,6 +969,7 @@ body.mobile .AdSense {
   color: white;
   font-size: initial;
   border-radius: 5px;
+  background-color: $(cta.color)
   background: linear-gradient($(cta.color), $(cta.dark.color));
   border: 2px solid $(cta.dark.color);96%
   display: block;
@@ -972,6 +987,7 @@ body.mobile .AdSense {
 
 #contact-form input[type="submit"]:hover {
   outline: none;
+  background-color: $(cta.hover.light)
   background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
 }
 
@@ -1104,6 +1120,7 @@ input.field {
   min-width: 25%;
   max-width: 30%;
   font-size: initial;
+  background-color: $(cta.color);
   background: linear-gradient($(cta.color), $(cta.dark.color));
   border: 2px solid $(cta.dark.color);
   color: white;
@@ -1113,6 +1130,7 @@ input.field {
 }
 
 .home-value .submit:hover {
+  background-color: $(cta.hover.light);
   background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
 }
 
@@ -1287,6 +1305,7 @@ footer {
 --------------------------------------------------  */
 
 .body-fauxcolumns {
+  background-color: $(background.gradient.light);
   background: linear-gradient($(background.gradient.light), $(background.gradient.dark));
 }
 
@@ -2944,7 +2963,7 @@ head.appendChild(script);
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
-  <b:widget id='HTML5' locked='false' title='Send Me A Message' type='HTML'>
+  <b:widget id='HTML5' locked='false' title='Ask Me A Question' type='HTML'>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
