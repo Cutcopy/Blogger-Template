@@ -747,7 +747,7 @@ body.mobile .AdSense {
 }
 
 .cta {
-  background-color: ($cta.color);
+  background-color: $(cta.color);
   background: linear-gradient($(cta.color), $(cta.dark.color));
   border: 2px solid $(cta.dark.color);
   margin: 1em;
@@ -756,7 +756,7 @@ body.mobile .AdSense {
   color: white !important;
   border-radius: 6px;
   -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;ß
   -ms-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -969,9 +969,9 @@ body.mobile .AdSense {
   color: white;
   font-size: initial;
   border-radius: 5px;
-  background-color: $(cta.color)
+  background-color: $(cta.color);
   background: linear-gradient($(cta.color), $(cta.dark.color));
-  border: 2px solid $(cta.dark.color);96%
+  border: 2px solid $(cta.dark.color);
   display: block;
   margin: 0 auto 10px;
   width: 100%;
