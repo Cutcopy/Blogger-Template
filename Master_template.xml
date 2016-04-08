@@ -2855,7 +2855,7 @@ for good G+/FB snippeting. -->
                     </macro:include>
                     <!-- outside of the include in order to lock Attribution widget -->
                     <b:section class='foot' id='footer-3' showaddelement='no'>
-                      <b:widget id='HTML12' locked='false' title='' type='HTML'>
+                      <b:widget id='HTML12' locked='false' title='' type='HTML' mobile='yes'>
                         <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
