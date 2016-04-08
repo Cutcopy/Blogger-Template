@@ -13,8 +13,7 @@
         <data:blog.title/>
       </title>
     </b:if>
-    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
-    <meta content='width=1100' name='viewport'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://file.myfontastic.com/AGdMHYPf5fbfSxbxhsCEam/icons.css" rel="stylesheet"/>
       <b:include data='blog' name='all-head-content'/>
@@ -636,6 +635,10 @@ body.mobile .AdSense {
   border-$startSide: 1px solid $(tabs.border.color);
   color: white;
   z-index: 10;
+}
+
+.mobile footer {
+ width: 100%;
 }
 /* //////////////////////////////////////////////////////////////////////////Custom styles yo~! */
 
