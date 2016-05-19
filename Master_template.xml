@@ -965,7 +965,6 @@ body.mobile .AdSense {
 
 #contact-form textarea {
   margin: 15px 0px 10px;
-  ;
   width: 90%;
   min-height: 100px;
   border: 1px solid black;
@@ -996,7 +995,7 @@ body.mobile .AdSense {
 
 #contact-form input[type="submit"]:hover {
   outline: none;
-  background-color: $(cta.hover.light)
+  background-color: $(cta.hover.light);
   background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
 }
 
