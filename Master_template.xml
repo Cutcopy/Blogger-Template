@@ -13,15 +13,15 @@
         <data:blog.title/>
       </title>
     </b:if>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="https://file.myfontastic.com/AGdMHYPf5fbfSxbxhsCEam/icons.css" rel="stylesheet"/>
-      <b:include data='blog' name='all-head-content'/>
-      <title>
-        <data:blog.pageTitle/>
-      </title>
-      <b:skin>
-        <![CDATA[
+    <b:include data='blog' name='all-head-content'/>
+    <title>
+      <data:blog.pageTitle/>
+    </title>
+    <b:skin>
+      <![CDATA[
 
 /*
 -----------------------------------------------
@@ -1370,10 +1370,47 @@ footer a {
   margin: 0 auto;
   font-weight: bold;
 }
+/* For Mobile version */
+
+.mobile .quote-box {
+  width: 80%;
+  border: solid 1px #C9C9C9;
+  padding: 20px 10px;
+  display: block;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.mobile .quote{
+  font-family: Arial, sans-serif;
+  line-height: 50px;
+  font-size: 100px;
+  color: $(link.color);
+  display: block;
+
+}
+
+.mobile .quote-left{
+  float: left;
+  position: absolute;
+}
+
+.mobile .quote-right{
+  float: right;
+}
+
+.mobile .quote-text{
+  text-align: center;
+  font-size: 20px;
+  padding: 0 10px;
+  margin: 0 auto;
+  font-weight: bold;
+}
 
 
 
-    ]]></b:skin>
+    ]]>
+    </b:skin>
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='1000px'/>
       <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
@@ -1431,22 +1468,29 @@ width: auto;
     <b:include data='blog' name='google-analytics'/>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'/>
     <script type='text/javascript'>
-      $(document).ready(function() {
-        $(&quot;a[href^=&#39;http://&#39;]&quot;).each(
-          function(){
-          if(this.href.indexOf(location.hostname) == -1) {
-            $(this).attr(&#39;target&#39;, &#39;_blank&#39;);
-                         }
-                         }
-                        );
-            $(&quot;a[href^=&#39;https://&#39;]&quot;).each(
-              function(){
-              if(this.href.indexOf(location.hostname) == -1) {
-                $(this).attr(&#39;target&#39;, &#39;_blank&#39;);
-                             }
-                             }
-                            );
-              });
+      $(document).ready(function () {
+        $(& quot;
+        a[
+          href ^=& #39;
+          http : //&#39;]&quot;).each(
+          function () {
+            if (this.href.indexOf(location.hostname) == -1) {
+              $(this).attr(& #39;
+              target & #39;, & #39;
+              _blank & #39;);
+            }
+          });
+          $(& quot;
+          a[
+            href ^=& #39;
+            https : //&#39;]&quot;).each(
+            function () {
+              if (this.href.indexOf(location.hostname) == -1) {
+                $(this).attr(& #39;
+                target & #39;, & #39;
+                _blank & #39;);
+              }
+            });});
     </script>
   </head>
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
@@ -1458,8 +1502,7 @@ width: auto;
         </div>
         <div class='fauxborder-left'>
           <div class='fauxborder-right'/>
-          <div class='fauxcolumn-inner'>
-          </div>
+          <div class='fauxcolumn-inner'></div>
         </div>
         <div class='cap-bottom'>
           <div class='cap-left'/>
@@ -1476,8 +1519,7 @@ width: auto;
           </div>
           <div class='fauxborder-left'>
             <div class='fauxborder-right'/>
-            <div class='fauxcolumn-inner'>
-            </div>
+            <div class='fauxcolumn-inner'></div>
           </div>
           <div class='cap-bottom'>
             <div class='cap-left'/>
@@ -1505,16 +1547,16 @@ width: auto;
                     <b:section class='header' id='header' maxwidgets='3' showaddelement='no'>
                       <b:widget id='HTML1' locked='false' title='' type='HTML'>
                         <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
+                          <!-- only display title if it's non-empty -->
+                          <b:if cond='data:title != &quot;&quot;'>
+                            <h2 class='title'><data:title/></h2>
+                          </b:if>
+                          <div class='widget-content'>
+                            <data:content/>
+                          </div>
 
-  <b:include name='quickedit'/>
-</b:includable>
+                          <b:include name='quickedit'/>
+                        </b:includable>
                       </b:widget>
                       <b:widget id='Header1' locked='false' title='Greater Richmond Area Real Estate Video Blog with Ryan Sanford (Header)' type='Header'>
                         <b:includable id='main'>
@@ -1538,7 +1580,9 @@ user is not using shrink to fit then we expand the header.
                                   <b:include name='description'/>
                                 </div>
                                 <b:else/>
-                                <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                        + &quot;background-position: &quot;                        + data:backgroundPositionStyleStr + &quot;; &quot;                        + data:widthStyleStr                        + &quot;min-height: &quot; + data:height                        + &quot;_height: &quot; + data:height                        + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
+                                <div
+                                  expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                        + &quot;background-position: &quot;                        + data:backgroundPositionStyleStr + &quot;; &quot;                        + data:widthStyleStr                        + &quot;min-height: &quot; + data:height                        + &quot;_height: &quot; + data:height                        + &quot;background-repeat: no-repeat; &quot;'
+                                  id='header-inner'>
                                   <div class='titlewrapper' style='background: transparent'>
                                     <h1 class='title' style='background: transparent; border-width: 0px'>
                                       <b:include name='title'/>
@@ -1613,20 +1657,19 @@ user is not using shrink to fit then we expand the header.
                   <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'>
                     <b:widget id='HTML3' locked='false' mobile='yes' title='' type='HTML'>
                       <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
+                        <!-- only display title if it's non-empty -->
+                        <b:if cond='data:title != &quot;&quot;'>
+                          <h2 class='title'><data:title/></h2>
+                        </b:if>
+                        <div class='widget-content'>
+                          <data:content/>
+                        </div>
 
-  <b:include name='quickedit'/>
-</b:includable>
+                        <b:include name='quickedit'/>
+                      </b:includable>
                     </b:widget>
                   </b:section>
-                  <b:section class='tabs' id='crosscol-overflow' showaddelement='no'>
-                  </b:section>
+                  <b:section class='tabs' id='crosscol-overflow' showaddelement='no'></b:section>
                 </div>
               </div>
               <div class='tabs-cap-bottom cap-bottom'>
@@ -1650,8 +1693,7 @@ user is not using shrink to fit then we expand the header.
                       </div>
                       <div class='fauxborder-left'>
                         <div class='fauxborder-right'/>
-                        <div class='fauxcolumn-inner'>
-                        </div>
+                        <div class='fauxcolumn-inner'></div>
                       </div>
                       <div class='cap-bottom'>
                         <div class='cap-left'/>
@@ -1665,8 +1707,7 @@ user is not using shrink to fit then we expand the header.
                       </div>
                       <div class='fauxborder-left'>
                         <div class='fauxborder-right'/>
-                        <div class='fauxcolumn-inner'>
-                        </div>
+                        <div class='fauxcolumn-inner'></div>
                       </div>
                       <div class='cap-bottom'>
                         <div class='cap-left'/>
@@ -1680,8 +1721,7 @@ user is not using shrink to fit then we expand the header.
                       </div>
                       <div class='fauxborder-left'>
                         <div class='fauxborder-right'/>
-                        <div class='fauxcolumn-inner'>
-                        </div>
+                        <div class='fauxcolumn-inner'></div>
                       </div>
                       <div class='cap-bottom'>
                         <div class='cap-left'/>
@@ -1752,7 +1792,13 @@ user is not using shrink to fit then we expand the header.
                                   <b:if cond='data:top.showStars'>
                                     <script src='//www.google.com/jsapi' type='text/javascript'/>
                                     <script type='text/javascript'>
-                                      google.load(&quot;annotations&quot;, &quot;1&quot;, {&quot;locale&quot;: &quot;<data:top.languageCode/>&quot;});
+                                      google.load(& quot;
+                                      annotations & quot;, & quot;
+                                      1 & quot;, { & quot;
+                                        locale & quot;
+                                        : & quot;
+                                        <data: top.languageCode />& quot;
+                                      });
                                       function initialize() {
                                         google.annotations.setApplicationId(<data:top.blogspotReviews/>);
                                         google.annotations.createAll();
@@ -1845,7 +1891,9 @@ user is not using shrink to fit then we expand the header.
                                   <data:post.friendConnectJs/>
                                   <data:post.cmtfpIframe/>
                                   <script type='text/javascript'>
-                                    BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
+                                    BLOG_CMT_createIframe(& #39;
+                                    <data : post.appRpcRelayPath />& #39;, & #39;
+                                    <data : post.communityId />& #39;);
                                   </script>
                                 </div>
                               </b:includable>
@@ -1864,8 +1912,7 @@ user is not using shrink to fit then we expand the header.
                               </b:includable>
                               <b:includable id='comment_count_picker' var='post'>
                                 <b:if cond='data:post.commentSource == 1'>
-                                  <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.canonicalUrl'>
-                                  </span>
+                                  <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.canonicalUrl'></span>
                                   <b:else/>
                                   <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
                                     <data:post.commentLabelFull/>
@@ -1996,8 +2043,7 @@ user is not using shrink to fit then we expand the header.
                                   </b:if>
                                   <b:if cond='data:showCmtPopup'>
                                     <div id='comment-popup'>
-                                      <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
-                                      </iframe>
+                                      <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'></iframe>
                                     </div>
                                   </b:if>
                                   <div id='backlinks-container'>
@@ -2508,7 +2554,12 @@ for good G+/FB snippeting. -->
                                   </a>
                                 </b:if>
                                 <b:if cond='data:top.showBlogThisButton'>
-                                  <a class='goog-inline-block share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'>
+                                  <a
+                                    class='goog-inline-block share-button sb-blog'
+                                    expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;'
+                                    expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;'
+                                    expr:title='data:top.blogThisMsg'
+                                    target='_blank'>
                                     <span class='share-button-link-text'>
                                       <data:top.blogThisMsg/>
                                     </span>
@@ -2522,7 +2573,12 @@ for good G+/FB snippeting. -->
                                   </a>
                                 </b:if>
                                 <b:if cond='data:top.showFacebookButton'>
-                                  <a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'>
+                                  <a
+                                    class='goog-inline-block share-button sb-facebook'
+                                    expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;'
+                                    expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;'
+                                    expr:title='data:top.shareToFacebookMsg'
+                                    target='_blank'>
                                     <span class='share-button-link-text'>
                                       <data:top.shareToFacebookMsg/>
                                     </span>
@@ -2586,14 +2642,16 @@ for good G+/FB snippeting. -->
                                   <data:post.friendConnectJs/>
                                   <data:post.cmtfpIframe/>
                                   <script type='text/javascript'>
-                                    BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
+                                    BLOG_CMT_createIframe(& #39;
+                                    <data : post.appRpcRelayPath />& #39;, & #39;
+                                    <data : post.communityId />& #39;);
                                   </script>
                                 </div>
                               </b:includable>
                               <b:includable id='threaded_comment_js' var='post'>
                                 <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
                                 <script type='text/javascript'>
-                                  (function() {
+                                  (function () {
                                     var items = <data:post.commentJso/>;
                                     var msgs = <data:post.commentMsgs/>;
                                     var config = <data:post.commentConfig/>;
@@ -2602,7 +2660,7 @@ for good G+/FB snippeting. -->
                                     if (items && items.length > 0) {
                                       cursor = parseInt(items[items.length - 1].timestamp) + 1;
                                     }
-                                    var bodyFromEntry = function(entry) {
+                                    var bodyFromEntry = function (entry) {
                                       if (entry.gd$extendedProperty) {
                                         for (var k in entry.gd$extendedProperty) {
                                           if (entry.gd$extendedProperty[k].name == 'blogger.contentRemoved') {
@@ -2612,7 +2670,7 @@ for good G+/FB snippeting. -->
                                       }
                                       return entry.content.$t;
                                     }
-                                    var parse = function(data) {
+                                    var parse = function (data) {
                                       cursor = null;
                                       var comments = [];
                                       if (data && data.feed && data.feed.entry) {
@@ -2620,16 +2678,24 @@ for good G+/FB snippeting. -->
                                           var comment = {};
                                           // comment ID, parsed out of the original id format
                                           var id = /blog-(\d+).post-(\d+)/.exec(entry.id.$t);
-                                          comment.id = id ? id[2] : null;
+                                          comment.id = id
+                                            ? id[2]
+                                            : null;
                                           comment.body = bodyFromEntry(entry);
                                           comment.timestamp = Date.parse(entry.published.$t) + '';
                                           if (entry.author && entry.author.constructor === Array) {
                                             var auth = entry.author[0];
                                             if (auth) {
                                               comment.author = {
-                                                name: (auth.name ? auth.name.$t : undefined),
-                                                profileUrl: (auth.uri ? auth.uri.$t : undefined),
-                                                avatarUrl: (auth.gd$image ? auth.gd$image.src : undefined)
+                                                name: (auth.name
+                                                  ? auth.name.$t
+                                                  : undefined),
+                                                profileUrl: (auth.uri
+                                                  ? auth.uri.$t
+                                                  : undefined),
+                                                avatarUrl: (auth.gd$image
+                                                  ? auth.gd$image.src
+                                                  : undefined)
                                               };
                                             }
                                           }
@@ -2659,16 +2725,17 @@ for good G+/FB snippeting. -->
                                       }
                                       return comments;
                                     };
-                                    var paginator = function(callback) {
+                                    var paginator = function (callback) {
                                       if (hasMore()) {
                                         var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
                                         if (cursor) {
                                           url += '&published-min=' + new Date(cursor).toISOString();
                                         }
-                                        window.bloggercomments = function(data) {
+                                        window.bloggercomments = function (data) {
                                           var parsed = parse(data);
-                                          cursor = parsed.length < 50 ? null
-                                          : parseInt(parsed[parsed.length - 1].timestamp) + 1
+                                          cursor = parsed.length < 50
+                                            ? null
+                                            : parseInt(parsed[parsed.length - 1].timestamp) + 1
                                           callback(parsed);
                                           window.bloggercomments = null;
                                         }
@@ -2679,18 +2746,17 @@ for good G+/FB snippeting. -->
                                         document.getElementsByTagName('head')[0].appendChild(script);
                                       }
                                     };
-                                    var hasMore = function() {
+                                    var hasMore = function () {
                                       return !!cursor;
                                     };
-                                    var getMeta = function(key, comment) {
+                                    var getMeta = function (key, comment) {
                                       if ('iswriter' == key) {
-                                        var matches = !!comment.author
-                                        && comment.author.name == config.authorName
-                                        && comment.author.profileUrl == config.authorUrl;
-                                        return matches ? 'true' : '';
+                                        var matches = !!comment.author && comment.author.name == config.authorName && comment.author.profileUrl == config.authorUrl;
+                                        return matches
+                                          ? 'true'
+                                          : '';
                                       } else if ('deletelink' == key) {
-                                        return config.baseUri + '/delete-comment.g?blogID='
-                                        + config.blogId + '&postID=' + comment.id;
+                                        return config.baseUri + '/delete-comment.g?blogID=' + config.blogId + '&postID=' + comment.id;
                                       } else if ('deleteclass' == key) {
                                         return comment.deleteclass;
                                       }
@@ -2699,7 +2765,7 @@ for good G+/FB snippeting. -->
                                     var replybox = null;
                                     var replyUrlParts = null;
                                     var replyParent = undefined;
-                                    var onReply = function(commentId, domId) {
+                                    var onReply = function (commentId, domId) {
                                       if (replybox == null) {
                                         // lazily cache replybox, and adjust to suit this style:
                                         replybox = document.getElementById('comment-editor');
@@ -2711,14 +2777,15 @@ for good G+/FB snippeting. -->
                                       }
                                       if (replybox && (commentId !== replyParent)) {
                                         document.getElementById(domId).insertBefore(replybox, null);
-                                        replybox.src = replyUrlParts[0]
-                                        + (commentId ? '&parentID=' + commentId : '')
-                                        + '#' + replyUrlParts[1];
+                                        replybox.src = replyUrlParts[0] + (commentId
+                                          ? '&parentID=' + commentId
+                                          : '') + '#' + replyUrlParts[1];
                                         replyParent = commentId;
                                       }
                                     };
                                     var hash = (window.location.hash || '#').substring(1);
-                                    var startThread, targetComment;
+                                    var startThread,
+                                      targetComment;
                                     if (/^comment-form_/.test(hash)) {
                                       startThread = hash.substring('comment-form_'.length);
                                     } else if (/^c[0-9]+$/.test(hash)) {
@@ -2741,7 +2808,7 @@ for good G+/FB snippeting. -->
                                       'config': configJso,
                                       'messages': msgs
                                     };
-                                    var render = function() {
+                                    var render = function () {
                                       if (window.goog && window.goog.comments) {
                                         var holder = document.getElementById('comment-holder');
                                         window.goog.comments.render(holder, provider);
@@ -2757,7 +2824,8 @@ for good G+/FB snippeting. -->
                                       window.goog.comments.loadQueue.push(render);
                                     }
                                   })();
-                                  // ]]>
+                                  //
+                                  ]]>
                                 </script>
                               </b:includable>
                               <b:includable id='threaded_comments' var='post'>
@@ -2784,8 +2852,7 @@ for good G+/FB snippeting. -->
                                   </p>
                                   <b:if cond='data:showCmtPopup'>
                                     <div id='comment-popup'>
-                                      <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
-                                      </iframe>
+                                      <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'></iframe>
                                     </div>
                                   </b:if>
                                   <div id='backlinks-container'>
@@ -2856,69 +2923,47 @@ for good G+/FB snippeting. -->
                     <b:section class='foot' id='footer-3' showaddelement='no'>
                       <b:widget id='HTML12' locked='false' title='' type='HTML' mobile='yes'>
                         <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-  <p class="attribution">Proudly Brought To You By <i class="icon-vyral"></i><a href="http://getvyral.com">yral Marketing</a></p>
-  <b:include name='quickedit'/>
-</b:includable>
+                          <!-- only display title if it's non-empty -->
+                          <b:if cond='data:title != &quot;&quot;'>
+                            <h2 class='title'><data:title/></h2>
+                          </b:if>
+                          <div class='widget-content'>
+                            <data:content/>
+                          </div>
+                          <p class="attribution">Proudly Brought To You By
+                            <i class="icon-vyral"></i>
+                            <a href="http://getvyral.com">yral Marketing</a>
+                          </p>
+                          <b:include name='quickedit'/>
+                        </b:includable>
                       </b:widget>
 
                       <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar'>
-                        <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
-    function setAttributeOnload(object, attribute, val) {
-      if(window.addEventListener) {
-        window.addEventListener(&#39;load&#39;,
-          function(){ object[attribute] = val; }, false);
-      } else {
-        window.attachEvent(&#39;onload&#39;, function(){ object[attribute] = val; });
-      }
-    }
-  &lt;/script&gt;
-&lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-        gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
-          if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
-            gapi.iframes.getContext().openChild({
-                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0756873069708082444363\46blogName\75Greater+Richmond+Area+Real+Estate+Vid...\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75//unusedvyral.blogspot.com/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://unusedvyral.blogspot.com/\46readAccessMode\75PRIVATE\46vt\75-3690409278187132295&#39;,
-                where: document.getElementById(&quot;navbar-iframe-container&quot;),
-                id: &quot;navbar-iframe&quot;
-            });
-          }
-        });
-      &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
-(function() {
-var script = document.createElement(&#39;script&#39;);
-script.type = &#39;text/javascript&#39;;
-script.src = &#39;//pagead2.googlesyndication.com/pagead/js/google_top_exp.js&#39;;
-var head = document.getElementsByTagName(&#39;head&#39;)[0];
-if (head) {
-head.appendChild(script);
-}})();
-&lt;/script&gt;
-</b:includable>
+                        <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt; function setAttributeOnload(object, attribute, val) { if(window.addEventListener) { window.addEventListener(&#39;load&#39;, function(){ object[attribute] = val; }, false); } else
+                          { window.attachEvent(&#39;onload&#39;, function(){ object[attribute] = val; }); } } &lt;/script&gt; &lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt; &lt;script type=&quot;text/javascript&quot;
+                          src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt; &lt;script type=&quot;text/javascript&quot;&gt; gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() { if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
+                          gapi.iframes.getContext().openChild({ url:
+                          &#39;https://www.blogger.com/navbar.g?targetBlogID\0756873069708082444363\46blogName\75Greater+Richmond+Area+Real+Estate+Vid...\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75//unusedvyral.blogspot.com/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://unusedvyral.blogspot.com/\46readAccessMode\75PRIVATE\46vt\75-3690409278187132295&#39;,
+                          where: document.getElementById(&quot;navbar-iframe-container&quot;), id: &quot;navbar-iframe&quot; }); } }); &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt; (function() { var script = document.createElement(&#39;script&#39;);
+                          script.type = &#39;text/javascript&#39;; script.src = &#39;//pagead2.googlesyndication.com/pagead/js/google_top_exp.js&#39;; var head = document.getElementsByTagName(&#39;head&#39;)[0]; if (head) { head.appendChild(script); }})(); &lt;/script&gt;
+                        </b:includable>
                       </b:widget>
                       <b:widget id='Attribution1' locked='false' title='' type='Attribution'>
                         <b:includable id='main'>
-    <b:if cond='data:feedbackSurveyLink'>
-      <div class='mobile-survey-link' style='text-align: center;'>
-        <data:feedbackSurveyLink/>
-      </div>
-    </b:if>
+                          <b:if cond='data:feedbackSurveyLink'>
+                            <div class='mobile-survey-link' style='text-align: center;'>
+                              <data:feedbackSurveyLink/>
+                            </div>
+                          </b:if>
 
-    <div class='widget-content' style='text-align: center;'>
-      <b:if cond='data:attribution != &quot;&quot;'>
-       <data:attribution/>
-      </b:if>
-    </div>
+                          <div class='widget-content' style='text-align: center;'>
+                            <b:if cond='data:attribution != &quot;&quot;'>
+                              <data:attribution/>
+                            </b:if>
+                          </div>
 
-    <b:include name='quickedit'/>
-  </b:includable>
+                          <b:include name='quickedit'/>
+                        </b:includable>
                       </b:widget>
                     </b:section>
                   </div>
@@ -2939,9 +2984,11 @@ head.appendChild(script);
       </div>
     </div>
     <script type='text/javascript'>
-      window.setTimeout(function() {
-        document.body.className = document.body.className.replace(&#39;loading&#39;, &#39;&#39;);
-                                                                  }, 10);
+      window.setTimeout(function () {
+        document.body.className = document.body.className.replace(& #39;
+        loading & #39;, & #39;
+        &#39;);
+      }, 10);
     </script>
   </body>
   <macro:includable id='sections' var='col'>
@@ -2978,36 +3025,35 @@ head.appendChild(script);
     </macro:if>
   </macro:includable>
 
+  <b:section-contents id='sidebar-right-1'>
+    <b:widget id='HTML2' locked='false' title='About' type='HTML'>
+      <b:includable id='main'>
+        <!-- only display title if it's non-empty -->
+        <b:if cond='data:title != &quot;&quot;'>
+          <h2 class='title'><data:title/></h2>
+        </b:if>
+        <div class='widget-content'>
+          <data:content/>
+        </div>
 
-<b:section-contents id='sidebar-right-1'>
-  <b:widget id='HTML2' locked='false' title='About' type='HTML'>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
+        <b:include name='quickedit'/>
+      </b:includable>
+    </b:widget>
+    <b:widget id='HTML5' locked='false' title='Ask Me A Question' type='HTML'>
+      <b:includable id='main'>
+        <!-- only display title if it's non-empty -->
+        <b:if cond='data:title != &quot;&quot;'>
+          <h2 class='title'><data:title/></h2>
+        </b:if>
+        <div class='widget-content'>
+          <data:content/>
+        </div>
 
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
-  <b:widget id='HTML5' locked='false' title='Ask Me A Question' type='HTML'>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
-  <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
-    <b:includable id='main'>
+        <b:include name='quickedit'/>
+      </b:includable>
+    </b:widget>
+    <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
+      <b:includable id='main'>
         <b:if cond='data:title'>
           <h2>
             <data:title/>
@@ -3030,7 +3076,7 @@ head.appendChild(script);
           <b:include name='quickedit'/>
         </div>
       </b:includable>
-    <b:includable id='flat' var='data'>
+      <b:includable id='flat' var='data'>
         <ul class='flat'>
           <b:loop values='data:data' var='i'>
             <li class='archivedate'>
@@ -3044,7 +3090,7 @@ head.appendChild(script);
           </b:loop>
         </ul>
       </b:includable>
-    <b:includable id='interval' var='intervalData'>
+      <b:includable id='interval' var='intervalData'>
         <b:loop values='data:intervalData' var='i'>
           <ul class='hierarchy'>
             <li expr:class='&quot;archivedate &quot; + data:i.expclass'>
@@ -3067,7 +3113,7 @@ head.appendChild(script);
           </ul>
         </b:loop>
       </b:includable>
-    <b:includable id='menu' var='data'>
+      <b:includable id='menu' var='data'>
         <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
           <option value=''>
             <data:title/>
@@ -3082,7 +3128,7 @@ head.appendChild(script);
           </b:loop>
         </select>
       </b:includable>
-    <b:includable id='posts' var='posts'>
+      <b:includable id='posts' var='posts'>
         <ul class='posts'>
           <b:loop values='data:posts' var='i'>
             <li>
@@ -3093,7 +3139,7 @@ head.appendChild(script);
           </b:loop>
         </ul>
       </b:includable>
-    <b:includable id='toggle' var='interval'>
+      <b:includable id='toggle' var='interval'>
         <b:if cond='data:interval.toggleId'>
           <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
             <a class='toggle' href='javascript:void(0)'>
@@ -3114,5 +3160,5 @@ head.appendChild(script);
           </b:if>
         </b:if>
       </b:includable>
-  </b:widget>
-</b:section-contents><b:section-contents id='footer-1'/></html>
+    </b:widget>
+  </b:section-contents><b:section-contents id='footer-1'/></html>
