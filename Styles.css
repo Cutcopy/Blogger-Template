@@ -805,7 +805,7 @@ body.mobile .AdSense {
 
 #contact-form textarea {
   margin: 15px 0px 10px;
-  ;
+  font-family: Verdana, sans-serif;
   width: 90%;
   min-height: 100px;
   border: 1px solid black;
