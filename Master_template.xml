@@ -970,6 +970,7 @@ body.mobile .AdSense {
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px;
+  font-family: Verdana, sans-serif;
 }
 
 #contact-form input[type="submit"] {
