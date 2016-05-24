@@ -13,16 +13,15 @@
         <data:blog.title/>
       </title>
     </b:if>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://file.myfontastic.com/AGdMHYPf5fbfSxbxhsCEam/icons.css" rel="stylesheet"/>
-    <b:include data='blog' name='all-head-content'/>
-    <title>
-      <data:blog.pageTitle/>
-    </title>
-    <b:skin>
-      <![CDATA[
-
+      <b:include data='blog' name='all-head-content'/>
+      <title>
+        <data:blog.pageTitle/>
+      </title>
+      <b:skin>
+        <![CDATA[
 /*
 -----------------------------------------------
 Blogger Template Style
@@ -169,7 +168,6 @@ default="transparent none repeat scroll top left" value="transparent none repeat
 */
 /* Content & General
 ----------------------------------------------- */
-
 body {
   font: $(body.font);
   color: $(body.text.color);
@@ -177,33 +175,27 @@ body {
   padding: 0 $(content.shadow.spread) $(content.shadow.spread) $(content.shadow.spread);
   $(body.background.override)
 }
-
 html body $(page.width.selector) {
   min-width: 0;
   max-width: 100%;
   width: $(page.width);
 }
-
 a:link {
   text-decoration: none;
   color: $(link.color);
 }
-
 a:visited {
   text-decoration: none;
   color: $(link.visited.color);
 }
-
 a:hover {
   text-decoration: underline;
   color: $(link.hover.color);
 }
-
 .body-fauxcolumn-outer .fauxcolumn-inner {
   background: transparent $(body.background.gradient.tile) repeat scroll top left;
   _background-image: none;
 }
-
 .body-fauxcolumn-outer .cap-top {
   position: absolute;
   z-index: 1;
@@ -212,13 +204,11 @@ a:hover {
   background: $(body.background);
   $(body.background.override)
 }
-
 .body-fauxcolumn-outer .cap-top .cap-left {
   width: 100%;
   background: transparent $(body.background.gradient.cap) repeat-x scroll top left;
   _background-image: none;
 }
-
 .content-outer {
   -moz-box-shadow: 0 0 $(content.shadow.spread) rgba(0, 0, 0, .15);
   -webkit-box-shadow: 0 0 $(content.shadow.spread.webkit) rgba(0, 0, 0, .15);
@@ -226,58 +216,47 @@ a:hover {
   box-shadow: 0 0 $(content.shadow.spread) rgba(0, 0, 0, .15);
   margin-bottom: 1px;
 }
-
 .content-inner {
   padding: $(content.padding) $(content.padding.horizontal);
 }
-
 $(content.background.color.selector) {
   background-color: $(content.background.color);
 }
 /* Header
 ----------------------------------------------- */
-
 .header-outer {
   background: $(header.background.color) $(header.background.gradient) repeat-x scroll 0 -400px;
   _background-image: none;
 }
-
 .Header h1 {
   font: $(header.font);
   color: $(header.text.color);
   text-shadow: $(header.shadow.offset.left) $(header.shadow.offset.top) $(header.shadow.spread) rgba(0, 0, 0, .2);
 }
-
 .Header h1 a {
   color: $(header.text.color);
 }
-
 .Header .description {
   font-size: $(description.text.size);
   color: $(description.text.color);
 }
-
 .header-inner .Header .titlewrapper {
   padding: 22px $(header.padding);
 }
-
 .header-inner .Header .descriptionwrapper {
   padding: 0 $(header.padding);
 }
 /* Tabs
 ----------------------------------------------- */
-
 .tabs-inner .section:first-child {
   border-top: $(header.bottom.border.size) solid $(tabs.border.color);
 }
-
 .tabs-inner .section:first-child ul {
   margin-top: -$(header.border.size);
   border-top: $(header.border.size) solid $(tabs.border.color);
   border-left: $(header.border.horizontalsize) solid $(tabs.border.color);
   border-right: $(header.border.horizontalsize) solid $(tabs.border.color);
 }
-
 .tabs-inner .widget ul {
   background: $(tabs.background.color) $(tabs.background.gradient) repeat-x scroll 0 -800px;
   _background-image: none;
@@ -286,7 +265,6 @@ $(content.background.color.selector) {
   margin-left: -$(tabs.margin.side);
   margin-right: -$(tabs.margin.side);
 }
-
 .tabs-inner .widget li a {
   display: inline-block;
   padding: .6em 1em;
@@ -295,11 +273,9 @@ $(content.background.color.selector) {
   border-$startSide: $(tabs.border.width) solid $(content.background.color);
   border-$endSide: $(tabs.bevel.border.width) solid $(tabs.border.color);
 }
-
 .tabs-inner .widget li:first-child a {
   border-$startSide: none;
 }
-
 .tabs-inner .widget li.selected a,
 .tabs-inner .widget li a:hover {
   color: $(tabs.selected.text.color) background-color: $(tabs.selected.background.color);
@@ -307,21 +283,17 @@ $(content.background.color.selector) {
 }
 /* Columns
 ----------------------------------------------- */
-
 .main-outer {
   border-top: $(main.border.width) solid $(body.rule.color);
 }
-
 .fauxcolumn-left-outer .fauxcolumn-inner {
   border-right: 1px solid $(body.rule.color);
 }
-
 .fauxcolumn-right-outer .fauxcolumn-inner {
   border-left: 1px solid $(body.rule.color);
 }
 /* Headings
 ----------------------------------------------- */
-
 h2 {
   margin: 0 0 1em 0;
   font: $(widget.title.font);
@@ -329,18 +301,15 @@ h2 {
 }
 /* Widgets
 ----------------------------------------------- */
-
 .widget .zippy {
   color: $(widget.alternate.text.color);
   text-shadow: 2px 2px 1px rgba(0, 0, 0, .1);
 }
-
 .widget .popular-posts ul {
   list-style: none;
 }
 /* Posts
 ----------------------------------------------- */
-
 .date-header span {
   background-color: $(date.header.background.color);
   color: $(date.header.color);
@@ -348,36 +317,29 @@ h2 {
   letter-spacing: $(date.header.letterspacing);
   margin: $(date.header.margin);
 }
-
 .main-inner {
   padding-top: $(main.padding.top);
   padding-bottom: $(main.padding.bottom);
 }
-
 .main-inner .column-center-inner {
   padding: 0 15px;
 }
-
 .main-inner .column-center-inner .section {
   margin: 0 $(main.section.margin);
 }
-
 .post {
   margin: 0 0 $(post.margin.bottom) 0;
 }
-
 h3.post-title,
 .comments h4 {
   font: $(post.title.font);
   margin: .75em 0 0;
 }
-
 .post-body {
   font-size: 110%;
   line-height: 1.4;
   position: relative;
 }
-
 .post-body img,
 .post-body .tr-caption-container,
 .Profile img,
@@ -390,12 +352,10 @@ h3.post-title,
   -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
   box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
 }
-
 .post-body img,
 .post-body .tr-caption-container {
   padding: $(image.border.large.size);
 }
-
 .post-body .tr-caption-container {
   color: $(image.text.color);
 }
@@ -410,13 +370,11 @@ border: none;
 box-shadow: 0 0 0 rgba(0, 0, 0, .1);
 }
 */
-
 .post-header {
   margin: 0 0 1.5em;
   line-height: 1.6;
   font-size: 90%;
 }
-
 .post-footer {
   margin: 20px -2px 0;
   padding: 5px 10px;
@@ -426,56 +384,45 @@ box-shadow: 0 0 0 rgba(0, 0, 0, .1);
   line-height: 1.6;
   font-size: 90%;
 }
-
 #comments .comment-author {
   padding-top: 1.5em;
   border-top: 1px solid $(body.rule.color);
   background-position: 0 1.5em;
 }
-
 #comments .comment-author:first-child {
   padding-top: 0;
   border-top: none;
 }
-
 .avatar-image-container {
   margin: .2em 0 0;
 }
-
 #comments .avatar-image-container img {
   border: 1px solid $(image.border.color);
 }
 /* Comments
 ----------------------------------------------- */
-
 .comments .comments-content .icon.blog-author {
   background-repeat: no-repeat;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sLFwMeCjjhcOMAAAD+SURBVDjLtZSvTgNBEIe/WRRnm3U8RC1neQdsm1zSBIU9VVF1FkUguQQsD9ITmD7ECZIJSE4OZo9stoVjC/zc7ky+zH9hXwVwDpTAWWLrgS3QAe8AZgaAJI5zYAmc8r0G4AHYHQKVwII8PZrZFsBFkeRCABYiMh9BRUhnSkPTNCtVXYXURi1FpBDgArj8QU1eVXUzfnjv7yP7kwu1mYrkWlU33vs1QNu2qU8pwN0UpKoqokjWwCztrMuBhEhmh8bD5UDqur75asbcX0BGUB9/HAMB+r32hznJgXy2v0sGLBcyAJ1EK3LFcbo1s91JeLwAbwGYu7TP/3ZGfnXYPgAVNngtqatUNgAAAABJRU5ErkJggg==);
 }
-
 .comments .comments-content .loadmore a {
   border-top: 1px solid $(widget.alternate.text.color);
   border-bottom: 1px solid $(widget.alternate.text.color);
 }
-
 .comments .comment-thread.inline-thread {
   background-color: $(post.footer.background.color);
 }
-
 .comments .continue {
   border-top: 2px solid $(widget.alternate.text.color);
 }
 /* Accents
 ---------------------------------------------- */
-
 .section-columns td.columns-cell {
   border-$startSide: 1px solid $(body.rule.color);
 }
-
 .blog-pager {
   background: $(paging.background);
 }
-
 .blog-pager-older-link,
 .home-link,
 .blog-pager-newer-link {
@@ -484,19 +431,15 @@ box-shadow: 0 0 0 rgba(0, 0, 0, .1);
 }
 /* Mobile
 ----------------------------------------------- */
-
 body.mobile {
   background-size: $(mobile.background.size);
 }
-
 .mobile .body-fauxcolumn-outer {
   background: $(mobile.background.overlay);
 }
-
 .mobile .body-fauxcolumn-outer .cap-top {
   background-size: 100% auto;
 }
-
 .mobile .content-outer {
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .15);
   box-shadow: 0 0 3px rgba(0, 0, 0, .15);
@@ -504,29 +447,23 @@ body.mobile {
   max-width: 100%;
   margin: 0 auto;
 }
-
 body.mobile .AdSense {
   margin: 0 -$(content.shadow.spread);
 }
-
 .mobile #navbar {
   display: none;
 }
-
 .mobile #Header1_headerimg {
   width: 100%;
   right: 0;
 }
-
 .mobile .top-navbar {
   right: 0;
   margin-bottom: 0;
 }
-
 .mobile .header-outer {
   margin: 0;
 }
-
 .mobile #HTML3 {
   width: 100%;
   font-size: 12px;
@@ -535,116 +472,130 @@ body.mobile .AdSense {
   padding-top: 10px;
   line-height: 35px;
 }
-
 .mobile .cta-wrapper {
   display: block;
   margin: 7px auto;
 }
-
 .mobile .cta {
   margin: 4px;
   padding: 10px;
 }
-
 .mobile .newsletter {
   float: none;
 }
-
 .mobile #HTML4 {
   background: #b40101;
   text-align: center;
   height: 25px;
   line-height: 25px;
 }
-
 .mobile #HTML4 a {
   color: white;
   margin: 10px;
   text-decoration: underline;
 }
-
 .mobile #crosscol {
   background-color: $(link.color);
 }
-
 .mobile #PageList1_select {
   background-color: $(link.color);
   color: white;
 }
-
 .mobile .tabs-inner .widget ul {
   margin-left: 0;
   margin-right: 0;
 }
-
 .mobile .post {
   margin: 0;
 }
-
 .mobile .main-inner .column-center-inner .section {
   margin: 0;
 }
-
 .mobile .date-header span {
   padding: 0.1em 10px;
   margin: 0 -10px;
 }
-
 .mobile h3.post-title {
   margin: 0;
 }
-
 .mobile .blog-pager {
   background: transparent none no-repeat scroll top center;
 }
-
 .mobile .footer-outer {
   border-top: none;
 }
-
 .mobile .main-inner,
 .mobile .footer-inner {
   background-color: $(content.background.color);
 }
-
 .mobile-index-contents {
   color: $(body.text.color);
 }
-
 .mobile-link-button {
   background-color: $(link.color);
 }
-
 .mobile-link-button a:link,
 .mobile-link-button a:visited {
   color: white;
 }
-
 .mobile .tabs-inner .section:first-child {
   border-top: none;
 }
-
 .mobile .tabs-inner .PageList .widget-content {
   background-color: $(tabs.selected.background.color);
   color: $(tabs.selected.text.color);
   border-top: $(tabs.border.width) solid $(tabs.border.color);
   border-bottom: $(tabs.border.width) solid $(tabs.border.color);
 }
-
 .mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
   border-$startSide: 1px solid $(tabs.border.color);
   color: white;
   z-index: 10;
 }
-
 .mobile footer {
  width: 100%;
 }
-/* //////////////////////////////////////////////////////////////////////////Custom styles yo~! */
 
+/* For Mobile version */
+
+.mobile .quote-box {
+  width: 80%;
+  border: solid 1px #C9C9C9;
+  padding: 20px 10px;
+  display: block;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.mobile .quote{
+  font-family: Arial, sans-serif;
+  line-height: 50px;
+  font-size: 100px;
+  color: $(link.color);
+  display: block;
+
+}
+
+.mobile .quote-left{
+  float: left;
+  position: absolute;
+}
+
+.mobile .quote-right{
+  float: right;
+}
+
+.mobile .quote-text{
+  text-align: center;
+  font-size: 20px;
+  padding: 0 10px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+/* //////////////////////////////////////////////////////////////////////////Custom styles yo~! */
 /* Navbar
 ------------------------------- */
-
 .top-navbar {
   height: 40px;
   padding: 0;
@@ -656,7 +607,6 @@ body.mobile .AdSense {
   background: $(darkbrand.color);
   color: white;
 }
-
 .top-navbar ul {
   list-style-type: none;
   line-height: 40px;
@@ -664,57 +614,45 @@ body.mobile .AdSense {
   display: inline-block;
   margin-left: 12px;
 }
-
 .top-navbar ul li {
   display: inline-block;
   padding: 0px 12px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 .top-navbar ul li:hover {
   background: $(nav.hover);
   box-shadow: inset 1px 3px 6px rgba(0, 0, 0, 0.6);
   text-shadow: 1px 1px 3px black;
 }
-
 .top-navbar ul li a {
   color: white !important;
   display: inline-block;
 }
-
 .top-navbar ul li a:hover {
   Color: white;
   text-decoration: none;
 }
-
 .top-navbar ul li .fa {
   text-align: right;
 }
-
 .socials {
   width: 245px;
   float: right;
 }
-
 .socials a {
   color: white;
 }
-
 .socials ul {
   padding-left: 0px;
 }
-
 .socials {}
-
 .socials ul {
   list-style-type: none;
 }
-
 .socials ul li {
   display: inline;
 }
-
 .socials ul li a {
   color: #fff;
   font-size: 16px;
@@ -722,30 +660,22 @@ body.mobile .AdSense {
   -webkit-transition: all 00.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
 .socials ul li a i {
   height: 14px;
   width: 14px;
   padding: 14px;
 }
-
 .socials ul li a i:hover {
   background: #37393E;
 }
-
-
-
 /* CTA's
 --------------------------------------------------  */
-
 .tabs-inner {
 	padding: 0px;
 }
-
 #crosscol {
 	margin: 0;
 }
-
 #HTML3 {
   line-height: 60px;
   width: 1000px;
@@ -753,7 +683,6 @@ body.mobile .AdSense {
   position: relative;
   background: $(darkbrand.color);
 }
-
 .cta {
   background-color: $(cta.color);
   background: linear-gradient($(cta.color), $(cta.dark.color));
@@ -769,13 +698,11 @@ body.mobile .AdSense {
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
-
 .cta:hover {
   text-decoration: none;
   background-color: $(cta.hover.light);
   background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
 }
-
 .button {
   background-color:$(cta.color);
   background: linear-gradient($(cta.color), $(cta.dark.color));
@@ -787,31 +714,26 @@ body.mobile .AdSense {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 .button:hover {
   background-color: $(cta.hover.light);
   text-decoration: none;
   background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
 }
-
 .newsletter {
   display: inline;
   float: right;
   margin-right: 1em;
 }
-
 .newsletter label {
   color: white;
   text-transform: uppercase;
 }
-
 .newsletter input[type="text"] {
   border-radius: 5px;
   width: 155px;
   padding: 0.4em;
   margin-right: 1em;
 }
-
 .newsletter input[type="submit"] {
   background-color: $(cta.color);
   background: linear-gradient($(cta.color), $(cta.dark.color));
@@ -823,15 +745,12 @@ body.mobile .AdSense {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 .newsletter input[type="submit"]:hover {
   background-color: $(cta.hover.light);
   background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
 }
-
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Right Column XXXXXXXXXXXXXX */
 /*Head Shot */
-
 .headshot {
   height: 200px;
   width: 200px;
@@ -843,13 +762,11 @@ body.mobile .AdSense {
   border: 2px solid white;
   box-shadow: 0px 0px 0px 3px $(darkbrand.color);;
 }
-
 /* Review buttons */
 .review-wrapper {
 //width: 240px;
   margin: 1em 0;
 }
-
 .review {
     width: 96%;
     max-width: 222px;
@@ -860,7 +777,6 @@ body.mobile .AdSense {
     border: 2px solid;
     text-align: center;
 }
-
 .review a:hover {
   text-decoration: none;
 }
@@ -880,11 +796,9 @@ body.mobile .AdSense {
   background: -webkit-linear-gradient(#ff1802, #c21100);
   background: linear-gradient(#ff1802, #c21100);
 }
-
 .icon-yelp {
   bottom: 23px;
 }
-
 .zillow {
   background-color: #0051a0;
   background: -webkit-linear-gradient(#0074e4, #0051a0);
@@ -896,12 +810,10 @@ body.mobile .AdSense {
   background: -webkit-linear-gradient(#1d90ff, #0074e4, #00f);
   background: linear-gradient(#1d90ff, #0074e4, #00f);
 }
-
 .icon-zillow {
     font-size: 6em;
     bottom: 29px;
 }
-
 .trulia {
   background-color: #429108;
   background: -webkit-linear-gradient(#53b50a, #429108);
@@ -943,14 +855,11 @@ body.mobile .AdSense {
   bottom: 9px;
   font-size: 11px;
 }
-
 /* Contact Form
 --------------------------------- */
-
 #contact-form {
   display: block;
 }
-
 .contact-info input {
   display: block;
   width: 90%;
@@ -962,7 +871,6 @@ body.mobile .AdSense {
   border-radius: 5px;
   padding: 10px;
 }
-
 #contact-form textarea {
   margin: 15px 0px 10px;
   width: 90%;
@@ -970,9 +878,7 @@ body.mobile .AdSense {
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px;
-  font-family: Verdana, sans-serif;
 }
-
 #contact-form input[type="submit"] {
   color: white;
   font-size: initial;
@@ -993,13 +899,11 @@ body.mobile .AdSense {
   -o-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
 }
-
 #contact-form input[type="submit"]:hover {
   outline: none;
   background-color: $(cta.hover.light);
   background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
 }
-
 #thanks {
   font-style: italic;
   font-weight: bolder;
@@ -1007,19 +911,16 @@ body.mobile .AdSense {
 }
 /* Question Form for the home page
 --------------------------------------------------  */
-
 #form-wrapper {
   width: 98%;
   padding: 1%;
   position: relative;
   text-align: left;
 }
-
 .js-warning {
   color: #f00;
   font: normal normal 10px Verdana, Arial, sans-serif;
 }
-
 #uquestion,
 input.field {
   border: solid 1px #AAA;
@@ -1030,20 +931,16 @@ input.field {
 }
 /*#form-question { width: 96%; padding: 10px 1%; margin-right: 1%; margin-bottom: 10px; }
 input.field { padding: 10px 1%; margin-right: 1%; width: 30%; min-width: 100px; }*/
-
 #uquestion {
   padding: 10px;
 }
-
 input.field {
   padding: 10px;
   margin: 10px 10px 0 0;
 }
-
 .honey {
   display: none;
 }
-
 .form-submit {
   width: 50px;
   padding: 10px;
@@ -1056,7 +953,6 @@ input.field {
   -o-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
 }
-
 .form-submit:hover {
   -moz-transform: scale(1.05);
   -webkit-transform: scale(1.05);
@@ -1064,11 +960,9 @@ input.field {
   -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
-
 .form-submit:focus {
   outline: none;
 }
-
 #form-overlay {
   width: 100%;
   height: 100%;
@@ -1077,12 +971,10 @@ input.field {
   font: normal bold 1.5em Verdana, Arial, sans-serif;
   display: none;
 }
-
 .header-inner .Header #header-inner {
   overflow: visible;
 }
 /* Form styling */
-
 .home-value label,
 .home-value input,
 .home-value select,
@@ -1090,40 +982,33 @@ input.field {
   display: block;
   margin: 10px;
 }
-
 .home-value label {
   text-align: left;
   font-weight: bold;
   font-size: large;
 }
-
 .home-value input {
   border-width: 1px;
   border-color: #aaa;
   height: 2em;
   width: 90%;
 }
-
 .home-value textarea {
   border-color: #aaa;
   min-height: 100px;
   height: 40%;
   width: 90%;
 }
-
 .home-value select {
   border-color: #aaa;
 }
-
 .home-value fieldset {
   border-color: #aaa;
   margin-top: 3em;
 }
-
 .home-value .asterisk {
   color: red;
 }
-
 .home-value .submit {
   margin: 0 auto;
   min-width: 25%;
@@ -1137,12 +1022,10 @@ input.field {
   font-size: 15px;
   border-radius: 5px;
 }
-
 .home-value .submit:hover {
   background-color: $(cta.hover.light);
   background: linear-gradient($(cta.hover.light), $(cta.hover.dark));
 }
-
 #thanks {
   font-style: italic;
   font-weight: bolder;
@@ -1150,46 +1033,37 @@ input.field {
 }
 /* Specialties and Footer Styling
 --------------------------------------------------  */
-
 #HTML1 {
   margin: 0;
 }
-
 #HTML1 .widget-content {
   text-transform: capitalize;
 }
-
 #HTML12 .widget-content {
   text-align: center;
 }
 /* Overriding Blogger styles.
 --------------------------------------------------  */
 /* Gets rid of annoying default italics */
-
 .column-right-inner aside {
 	padding: 0;
 }
-
 .date-header {
   display: none;
 }
-
 address {
   font-style: normal;
 }
 /* Capitalizes the tabs and widget titles */
-
 .tabs .widget li,
 .title {
   text-transform: capitalize;
 }
 /* Removes "powered by blogger" in footer */
-
 #Attribution1 {
   display: none;
 }
 /* Centers Tabs */
-
 .PageList {
   padding: 14px;
   width: 972px;
@@ -1199,19 +1073,16 @@ address {
   margin: 0px;
   margin-left: 0px !important;
 }
-
 .PageList li {
   display: inline !important;
   float: none !important;
 }
-
 .PageList li a {
   color: white;
   padding: 14px;
   -webkit-transition: all 00.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
 .PageList li a:hover {
   color: white;
   background-color: #37393E;
@@ -1226,11 +1097,8 @@ position: absolute;
 left: 631px;
 bottom: 296px;
 } */
-
-
 /* Footer
 -------------------------------- */
-
 footer {
   background-color: $(darkbrand.color);
   width: 1000px;
@@ -1239,7 +1107,6 @@ footer {
   border-radius: 0px 0px 4px 4px;
 }
 /*Banner CTA */
-
 .register {
   color: #b40101;
   position: absolute;
@@ -1255,14 +1122,12 @@ footer {
   -webkit-transition: all 00.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
 .register:hover {
   background-color: transparent;
   border: 3px solid white;
   color: white;
   text-decoration: none;
 }
-
 .Learnmore {
   background-color: #8C1F10;
   color: white;
@@ -1278,65 +1143,52 @@ footer {
   -webkit-transition: all 00.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
 .Learnmore:hover {
   text-decoration: none;
   color: #8C1F10 !important;
   background-color: transparent;
   border: 3px solid #8C1F10;
 }
-
 .Learnmore:visited {
   color: white;
 }
 /* background
 --------------------------------------------------  */
-
 .body-fauxcolumns {
   background-color: $(background.gradient.light);
   background: linear-gradient($(background.gradient.light), $(background.gradient.dark));
 }
-
 #Header1_headerimg {
   width: 1000px;
 /* right: 40px;*/
 }
-
 .content-inner {
   border-radius: 6px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.45);
   padding: 0px;
 }
-
 .content-outer {
   padding: 20px;
 }
 /* footer */
-
 footer {
   color: white;
 }
-
 footer a {
   color: white !important;
   text-decoration: underline !important;
 }
-
 .attribution {
   text-align: center;
   letter-spacing: 1px;
 }
-
 .icon-vyral {
   font-size: 20px;
   top: 5px;
   position: relative;
 }
-
 /* Quote box
-
 ///////////////////////////////////////////// */
-
 .quote-box {
   width: 80%;
   border: solid 1px #C9C9C9;
@@ -1345,25 +1197,20 @@ footer a {
   margin: 0 auto;
   background-color: #fff;
 }
-
 .quote{
   font-family: Arial, sans-serif;
   line-height: 50px;
   font-size: 100px;
   color: $(link.color);
   display: block;
-
 }
-
 .quote-left{
   float: left;
   position: absolute;
 }
-
 .quote-right{
   float: right;
 }
-
 .quote-text{
   text-align: center;
   font-size: 20px;
@@ -1371,47 +1218,7 @@ footer a {
   margin: 0 auto;
   font-weight: bold;
 }
-/* For Mobile version */
-
-.mobile .quote-box {
-  width: 80%;
-  border: solid 1px #C9C9C9;
-  padding: 20px 10px;
-  display: block;
-  margin: 0 auto;
-  background-color: #fff;
-}
-
-.mobile .quote{
-  font-family: Arial, sans-serif;
-  line-height: 50px;
-  font-size: 100px;
-  color: $(link.color);
-  display: block;
-
-}
-
-.mobile .quote-left{
-  float: left;
-  position: absolute;
-}
-
-.mobile .quote-right{
-  float: right;
-}
-
-.mobile .quote-text{
-  text-align: center;
-  font-size: 20px;
-  padding: 0 10px;
-  margin: 0 auto;
-  font-weight: bold;
-}
-
-
-
-    ]]>
-    </b:skin>
+    ]]></b:skin>
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='1000px'/>
       <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
@@ -1463,35 +1270,27 @@ width: 800px;
 min-width: 0;
 width: auto;
 }
-
 ]]>
     </b:template-skin>
     <b:include data='blog' name='google-analytics'/>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'/>
     <script type='text/javascript'>
-      $(document).ready(function () {
-        $(& quot;
-        a[
-          href ^=& #39;
-          http : //&#39;]&quot;).each(
-          function () {
-            if (this.href.indexOf(location.hostname) == -1) {
-              $(this).attr(& #39;
-              target & #39;, & #39;
-              _blank & #39;);
-            }
-          });
-          $(& quot;
-          a[
-            href ^=& #39;
-            https : //&#39;]&quot;).each(
-            function () {
-              if (this.href.indexOf(location.hostname) == -1) {
-                $(this).attr(& #39;
-                target & #39;, & #39;
-                _blank & #39;);
-              }
-            });});
+      $(document).ready(function() {
+        $(&quot;a[href^=&#39;http://&#39;]&quot;).each(
+          function(){
+          if(this.href.indexOf(location.hostname) == -1) {
+            $(this).attr(&#39;target&#39;, &#39;_blank&#39;);
+                         }
+                         }
+                        );
+            $(&quot;a[href^=&#39;https://&#39;]&quot;).each(
+              function(){
+              if(this.href.indexOf(location.hostname) == -1) {
+                $(this).attr(&#39;target&#39;, &#39;_blank&#39;);
+                             }
+                             }
+                            );
+              });
     </script>
   </head>
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
@@ -1503,7 +1302,8 @@ width: auto;
         </div>
         <div class='fauxborder-left'>
           <div class='fauxborder-right'/>
-          <div class='fauxcolumn-inner'></div>
+          <div class='fauxcolumn-inner'>
+          </div>
         </div>
         <div class='cap-bottom'>
           <div class='cap-left'/>
@@ -1520,7 +1320,8 @@ width: auto;
           </div>
           <div class='fauxborder-left'>
             <div class='fauxborder-right'/>
-            <div class='fauxcolumn-inner'></div>
+            <div class='fauxcolumn-inner'>
+            </div>
           </div>
           <div class='cap-bottom'>
             <div class='cap-left'/>
@@ -1548,16 +1349,16 @@ width: auto;
                     <b:section class='header' id='header' maxwidgets='3' showaddelement='no'>
                       <b:widget id='HTML1' locked='false' title='' type='HTML'>
                         <b:includable id='main'>
-                          <!-- only display title if it's non-empty -->
-                          <b:if cond='data:title != &quot;&quot;'>
-                            <h2 class='title'><data:title/></h2>
-                          </b:if>
-                          <div class='widget-content'>
-                            <data:content/>
-                          </div>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
 
-                          <b:include name='quickedit'/>
-                        </b:includable>
+  <b:include name='quickedit'/>
+</b:includable>
                       </b:widget>
                       <b:widget id='Header1' locked='false' title='Greater Richmond Area Real Estate Video Blog with Ryan Sanford (Header)' type='Header'>
                         <b:includable id='main'>
@@ -1581,9 +1382,7 @@ user is not using shrink to fit then we expand the header.
                                   <b:include name='description'/>
                                 </div>
                                 <b:else/>
-                                <div
-                                  expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                        + &quot;background-position: &quot;                        + data:backgroundPositionStyleStr + &quot;; &quot;                        + data:widthStyleStr                        + &quot;min-height: &quot; + data:height                        + &quot;_height: &quot; + data:height                        + &quot;background-repeat: no-repeat; &quot;'
-                                  id='header-inner'>
+                                <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                        + &quot;background-position: &quot;                        + data:backgroundPositionStyleStr + &quot;; &quot;                        + data:widthStyleStr                        + &quot;min-height: &quot; + data:height                        + &quot;_height: &quot; + data:height                        + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
                                   <div class='titlewrapper' style='background: transparent'>
                                     <h1 class='title' style='background: transparent; border-width: 0px'>
                                       <b:include name='title'/>
@@ -1658,19 +1457,20 @@ user is not using shrink to fit then we expand the header.
                   <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'>
                     <b:widget id='HTML3' locked='false' mobile='yes' title='' type='HTML'>
                       <b:includable id='main'>
-                        <!-- only display title if it's non-empty -->
-                        <b:if cond='data:title != &quot;&quot;'>
-                          <h2 class='title'><data:title/></h2>
-                        </b:if>
-                        <div class='widget-content'>
-                          <data:content/>
-                        </div>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
 
-                        <b:include name='quickedit'/>
-                      </b:includable>
+  <b:include name='quickedit'/>
+</b:includable>
                     </b:widget>
                   </b:section>
-                  <b:section class='tabs' id='crosscol-overflow' showaddelement='no'></b:section>
+                  <b:section class='tabs' id='crosscol-overflow' showaddelement='no'>
+                  </b:section>
                 </div>
               </div>
               <div class='tabs-cap-bottom cap-bottom'>
@@ -1694,7 +1494,8 @@ user is not using shrink to fit then we expand the header.
                       </div>
                       <div class='fauxborder-left'>
                         <div class='fauxborder-right'/>
-                        <div class='fauxcolumn-inner'></div>
+                        <div class='fauxcolumn-inner'>
+                        </div>
                       </div>
                       <div class='cap-bottom'>
                         <div class='cap-left'/>
@@ -1708,7 +1509,8 @@ user is not using shrink to fit then we expand the header.
                       </div>
                       <div class='fauxborder-left'>
                         <div class='fauxborder-right'/>
-                        <div class='fauxcolumn-inner'></div>
+                        <div class='fauxcolumn-inner'>
+                        </div>
                       </div>
                       <div class='cap-bottom'>
                         <div class='cap-left'/>
@@ -1722,7 +1524,8 @@ user is not using shrink to fit then we expand the header.
                       </div>
                       <div class='fauxborder-left'>
                         <div class='fauxborder-right'/>
-                        <div class='fauxcolumn-inner'></div>
+                        <div class='fauxcolumn-inner'>
+                        </div>
                       </div>
                       <div class='cap-bottom'>
                         <div class='cap-left'/>
@@ -1793,13 +1596,7 @@ user is not using shrink to fit then we expand the header.
                                   <b:if cond='data:top.showStars'>
                                     <script src='//www.google.com/jsapi' type='text/javascript'/>
                                     <script type='text/javascript'>
-                                      google.load(& quot;
-                                      annotations & quot;, & quot;
-                                      1 & quot;, { & quot;
-                                        locale & quot;
-                                        : & quot;
-                                        <data: top.languageCode />& quot;
-                                      });
+                                      google.load(&quot;annotations&quot;, &quot;1&quot;, {&quot;locale&quot;: &quot;<data:top.languageCode/>&quot;});
                                       function initialize() {
                                         google.annotations.setApplicationId(<data:top.blogspotReviews/>);
                                         google.annotations.createAll();
@@ -1892,9 +1689,7 @@ user is not using shrink to fit then we expand the header.
                                   <data:post.friendConnectJs/>
                                   <data:post.cmtfpIframe/>
                                   <script type='text/javascript'>
-                                    BLOG_CMT_createIframe(& #39;
-                                    <data : post.appRpcRelayPath />& #39;, & #39;
-                                    <data : post.communityId />& #39;);
+                                    BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
                                   </script>
                                 </div>
                               </b:includable>
@@ -1913,7 +1708,8 @@ user is not using shrink to fit then we expand the header.
                               </b:includable>
                               <b:includable id='comment_count_picker' var='post'>
                                 <b:if cond='data:post.commentSource == 1'>
-                                  <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.canonicalUrl'></span>
+                                  <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.canonicalUrl'>
+                                  </span>
                                   <b:else/>
                                   <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
                                     <data:post.commentLabelFull/>
@@ -2044,7 +1840,8 @@ user is not using shrink to fit then we expand the header.
                                   </b:if>
                                   <b:if cond='data:showCmtPopup'>
                                     <div id='comment-popup'>
-                                      <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'></iframe>
+                                      <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
+                                      </iframe>
                                     </div>
                                   </b:if>
                                   <div id='backlinks-container'>
@@ -2555,12 +2352,7 @@ for good G+/FB snippeting. -->
                                   </a>
                                 </b:if>
                                 <b:if cond='data:top.showBlogThisButton'>
-                                  <a
-                                    class='goog-inline-block share-button sb-blog'
-                                    expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;'
-                                    expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;'
-                                    expr:title='data:top.blogThisMsg'
-                                    target='_blank'>
+                                  <a class='goog-inline-block share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'>
                                     <span class='share-button-link-text'>
                                       <data:top.blogThisMsg/>
                                     </span>
@@ -2574,12 +2366,7 @@ for good G+/FB snippeting. -->
                                   </a>
                                 </b:if>
                                 <b:if cond='data:top.showFacebookButton'>
-                                  <a
-                                    class='goog-inline-block share-button sb-facebook'
-                                    expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;'
-                                    expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;'
-                                    expr:title='data:top.shareToFacebookMsg'
-                                    target='_blank'>
+                                  <a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'>
                                     <span class='share-button-link-text'>
                                       <data:top.shareToFacebookMsg/>
                                     </span>
@@ -2643,16 +2430,14 @@ for good G+/FB snippeting. -->
                                   <data:post.friendConnectJs/>
                                   <data:post.cmtfpIframe/>
                                   <script type='text/javascript'>
-                                    BLOG_CMT_createIframe(& #39;
-                                    <data : post.appRpcRelayPath />& #39;, & #39;
-                                    <data : post.communityId />& #39;);
+                                    BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
                                   </script>
                                 </div>
                               </b:includable>
                               <b:includable id='threaded_comment_js' var='post'>
                                 <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
                                 <script type='text/javascript'>
-                                  (function () {
+                                  (function() {
                                     var items = <data:post.commentJso/>;
                                     var msgs = <data:post.commentMsgs/>;
                                     var config = <data:post.commentConfig/>;
@@ -2661,7 +2446,7 @@ for good G+/FB snippeting. -->
                                     if (items && items.length > 0) {
                                       cursor = parseInt(items[items.length - 1].timestamp) + 1;
                                     }
-                                    var bodyFromEntry = function (entry) {
+                                    var bodyFromEntry = function(entry) {
                                       if (entry.gd$extendedProperty) {
                                         for (var k in entry.gd$extendedProperty) {
                                           if (entry.gd$extendedProperty[k].name == 'blogger.contentRemoved') {
@@ -2671,7 +2456,7 @@ for good G+/FB snippeting. -->
                                       }
                                       return entry.content.$t;
                                     }
-                                    var parse = function (data) {
+                                    var parse = function(data) {
                                       cursor = null;
                                       var comments = [];
                                       if (data && data.feed && data.feed.entry) {
@@ -2679,24 +2464,16 @@ for good G+/FB snippeting. -->
                                           var comment = {};
                                           // comment ID, parsed out of the original id format
                                           var id = /blog-(\d+).post-(\d+)/.exec(entry.id.$t);
-                                          comment.id = id
-                                            ? id[2]
-                                            : null;
+                                          comment.id = id ? id[2] : null;
                                           comment.body = bodyFromEntry(entry);
                                           comment.timestamp = Date.parse(entry.published.$t) + '';
                                           if (entry.author && entry.author.constructor === Array) {
                                             var auth = entry.author[0];
                                             if (auth) {
                                               comment.author = {
-                                                name: (auth.name
-                                                  ? auth.name.$t
-                                                  : undefined),
-                                                profileUrl: (auth.uri
-                                                  ? auth.uri.$t
-                                                  : undefined),
-                                                avatarUrl: (auth.gd$image
-                                                  ? auth.gd$image.src
-                                                  : undefined)
+                                                name: (auth.name ? auth.name.$t : undefined),
+                                                profileUrl: (auth.uri ? auth.uri.$t : undefined),
+                                                avatarUrl: (auth.gd$image ? auth.gd$image.src : undefined)
                                               };
                                             }
                                           }
@@ -2726,17 +2503,16 @@ for good G+/FB snippeting. -->
                                       }
                                       return comments;
                                     };
-                                    var paginator = function (callback) {
+                                    var paginator = function(callback) {
                                       if (hasMore()) {
                                         var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
                                         if (cursor) {
                                           url += '&published-min=' + new Date(cursor).toISOString();
                                         }
-                                        window.bloggercomments = function (data) {
+                                        window.bloggercomments = function(data) {
                                           var parsed = parse(data);
-                                          cursor = parsed.length < 50
-                                            ? null
-                                            : parseInt(parsed[parsed.length - 1].timestamp) + 1
+                                          cursor = parsed.length < 50 ? null
+                                          : parseInt(parsed[parsed.length - 1].timestamp) + 1
                                           callback(parsed);
                                           window.bloggercomments = null;
                                         }
@@ -2747,17 +2523,18 @@ for good G+/FB snippeting. -->
                                         document.getElementsByTagName('head')[0].appendChild(script);
                                       }
                                     };
-                                    var hasMore = function () {
+                                    var hasMore = function() {
                                       return !!cursor;
                                     };
-                                    var getMeta = function (key, comment) {
+                                    var getMeta = function(key, comment) {
                                       if ('iswriter' == key) {
-                                        var matches = !!comment.author && comment.author.name == config.authorName && comment.author.profileUrl == config.authorUrl;
-                                        return matches
-                                          ? 'true'
-                                          : '';
+                                        var matches = !!comment.author
+                                        && comment.author.name == config.authorName
+                                        && comment.author.profileUrl == config.authorUrl;
+                                        return matches ? 'true' : '';
                                       } else if ('deletelink' == key) {
-                                        return config.baseUri + '/delete-comment.g?blogID=' + config.blogId + '&postID=' + comment.id;
+                                        return config.baseUri + '/delete-comment.g?blogID='
+                                        + config.blogId + '&postID=' + comment.id;
                                       } else if ('deleteclass' == key) {
                                         return comment.deleteclass;
                                       }
@@ -2766,7 +2543,7 @@ for good G+/FB snippeting. -->
                                     var replybox = null;
                                     var replyUrlParts = null;
                                     var replyParent = undefined;
-                                    var onReply = function (commentId, domId) {
+                                    var onReply = function(commentId, domId) {
                                       if (replybox == null) {
                                         // lazily cache replybox, and adjust to suit this style:
                                         replybox = document.getElementById('comment-editor');
@@ -2778,15 +2555,14 @@ for good G+/FB snippeting. -->
                                       }
                                       if (replybox && (commentId !== replyParent)) {
                                         document.getElementById(domId).insertBefore(replybox, null);
-                                        replybox.src = replyUrlParts[0] + (commentId
-                                          ? '&parentID=' + commentId
-                                          : '') + '#' + replyUrlParts[1];
+                                        replybox.src = replyUrlParts[0]
+                                        + (commentId ? '&parentID=' + commentId : '')
+                                        + '#' + replyUrlParts[1];
                                         replyParent = commentId;
                                       }
                                     };
                                     var hash = (window.location.hash || '#').substring(1);
-                                    var startThread,
-                                      targetComment;
+                                    var startThread, targetComment;
                                     if (/^comment-form_/.test(hash)) {
                                       startThread = hash.substring('comment-form_'.length);
                                     } else if (/^c[0-9]+$/.test(hash)) {
@@ -2809,7 +2585,7 @@ for good G+/FB snippeting. -->
                                       'config': configJso,
                                       'messages': msgs
                                     };
-                                    var render = function () {
+                                    var render = function() {
                                       if (window.goog && window.goog.comments) {
                                         var holder = document.getElementById('comment-holder');
                                         window.goog.comments.render(holder, provider);
@@ -2825,8 +2601,7 @@ for good G+/FB snippeting. -->
                                       window.goog.comments.loadQueue.push(render);
                                     }
                                   })();
-                                  //
-                                  ]]>
+                                  // ]]>
                                 </script>
                               </b:includable>
                               <b:includable id='threaded_comments' var='post'>
@@ -2853,7 +2628,8 @@ for good G+/FB snippeting. -->
                                   </p>
                                   <b:if cond='data:showCmtPopup'>
                                     <div id='comment-popup'>
-                                      <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'></iframe>
+                                      <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
+                                      </iframe>
                                     </div>
                                   </b:if>
                                   <div id='backlinks-container'>
@@ -2924,47 +2700,69 @@ for good G+/FB snippeting. -->
                     <b:section class='foot' id='footer-3' showaddelement='no'>
                       <b:widget id='HTML12' locked='false' title='' type='HTML' mobile='yes'>
                         <b:includable id='main'>
-                          <!-- only display title if it's non-empty -->
-                          <b:if cond='data:title != &quot;&quot;'>
-                            <h2 class='title'><data:title/></h2>
-                          </b:if>
-                          <div class='widget-content'>
-                            <data:content/>
-                          </div>
-                          <p class="attribution">Proudly Brought To You By
-                            <i class="icon-vyral"></i>
-                            <a href="http://getvyral.com">yral Marketing</a>
-                          </p>
-                          <b:include name='quickedit'/>
-                        </b:includable>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+  <p class="attribution">Proudly Brought To You By <i class="icon-vyral"></i><a href="http://getvyral.com">yral Marketing</a></p>
+  <b:include name='quickedit'/>
+</b:includable>
                       </b:widget>
 
                       <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar'>
-                        <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt; function setAttributeOnload(object, attribute, val) { if(window.addEventListener) { window.addEventListener(&#39;load&#39;, function(){ object[attribute] = val; }, false); } else
-                          { window.attachEvent(&#39;onload&#39;, function(){ object[attribute] = val; }); } } &lt;/script&gt; &lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt; &lt;script type=&quot;text/javascript&quot;
-                          src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt; &lt;script type=&quot;text/javascript&quot;&gt; gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() { if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
-                          gapi.iframes.getContext().openChild({ url:
-                          &#39;https://www.blogger.com/navbar.g?targetBlogID\0756873069708082444363\46blogName\75Greater+Richmond+Area+Real+Estate+Vid...\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75//unusedvyral.blogspot.com/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://unusedvyral.blogspot.com/\46readAccessMode\75PRIVATE\46vt\75-3690409278187132295&#39;,
-                          where: document.getElementById(&quot;navbar-iframe-container&quot;), id: &quot;navbar-iframe&quot; }); } }); &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt; (function() { var script = document.createElement(&#39;script&#39;);
-                          script.type = &#39;text/javascript&#39;; script.src = &#39;//pagead2.googlesyndication.com/pagead/js/google_top_exp.js&#39;; var head = document.getElementsByTagName(&#39;head&#39;)[0]; if (head) { head.appendChild(script); }})(); &lt;/script&gt;
-                        </b:includable>
+                        <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener(&#39;load&#39;,
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent(&#39;onload&#39;, function(){ object[attribute] = val; });
+      }
+    }
+  &lt;/script&gt;
+&lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+        gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
+          if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
+            gapi.iframes.getContext().openChild({
+                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0756873069708082444363\46blogName\75Greater+Richmond+Area+Real+Estate+Vid...\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75//unusedvyral.blogspot.com/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://unusedvyral.blogspot.com/\46readAccessMode\75PRIVATE\46vt\75-3690409278187132295&#39;,
+                where: document.getElementById(&quot;navbar-iframe-container&quot;),
+                id: &quot;navbar-iframe&quot;
+            });
+          }
+        });
+      &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
+(function() {
+var script = document.createElement(&#39;script&#39;);
+script.type = &#39;text/javascript&#39;;
+script.src = &#39;//pagead2.googlesyndication.com/pagead/js/google_top_exp.js&#39;;
+var head = document.getElementsByTagName(&#39;head&#39;)[0];
+if (head) {
+head.appendChild(script);
+}})();
+&lt;/script&gt;
+</b:includable>
                       </b:widget>
                       <b:widget id='Attribution1' locked='false' title='' type='Attribution'>
                         <b:includable id='main'>
-                          <b:if cond='data:feedbackSurveyLink'>
-                            <div class='mobile-survey-link' style='text-align: center;'>
-                              <data:feedbackSurveyLink/>
-                            </div>
-                          </b:if>
+    <b:if cond='data:feedbackSurveyLink'>
+      <div class='mobile-survey-link' style='text-align: center;'>
+        <data:feedbackSurveyLink/>
+      </div>
+    </b:if>
 
-                          <div class='widget-content' style='text-align: center;'>
-                            <b:if cond='data:attribution != &quot;&quot;'>
-                              <data:attribution/>
-                            </b:if>
-                          </div>
+    <div class='widget-content' style='text-align: center;'>
+      <b:if cond='data:attribution != &quot;&quot;'>
+       <data:attribution/>
+      </b:if>
+    </div>
 
-                          <b:include name='quickedit'/>
-                        </b:includable>
+    <b:include name='quickedit'/>
+  </b:includable>
                       </b:widget>
                     </b:section>
                   </div>
@@ -2985,11 +2783,9 @@ for good G+/FB snippeting. -->
       </div>
     </div>
     <script type='text/javascript'>
-      window.setTimeout(function () {
-        document.body.className = document.body.className.replace(& #39;
-        loading & #39;, & #39;
-        &#39;);
-      }, 10);
+      window.setTimeout(function() {
+        document.body.className = document.body.className.replace(&#39;loading&#39;, &#39;&#39;);
+                                                                  }, 10);
     </script>
   </body>
   <macro:includable id='sections' var='col'>
@@ -3026,35 +2822,36 @@ for good G+/FB snippeting. -->
     </macro:if>
   </macro:includable>
 
-  <b:section-contents id='sidebar-right-1'>
-    <b:widget id='HTML2' locked='false' title='About' type='HTML'>
-      <b:includable id='main'>
-        <!-- only display title if it's non-empty -->
-        <b:if cond='data:title != &quot;&quot;'>
-          <h2 class='title'><data:title/></h2>
-        </b:if>
-        <div class='widget-content'>
-          <data:content/>
-        </div>
 
-        <b:include name='quickedit'/>
-      </b:includable>
-    </b:widget>
-    <b:widget id='HTML5' locked='false' title='Ask Me A Question' type='HTML'>
-      <b:includable id='main'>
-        <!-- only display title if it's non-empty -->
-        <b:if cond='data:title != &quot;&quot;'>
-          <h2 class='title'><data:title/></h2>
-        </b:if>
-        <div class='widget-content'>
-          <data:content/>
-        </div>
+<b:section-contents id='sidebar-right-1'>
+  <b:widget id='HTML2' locked='false' title='About' type='HTML'>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
 
-        <b:include name='quickedit'/>
-      </b:includable>
-    </b:widget>
-    <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
-      <b:includable id='main'>
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+  <b:widget id='HTML5' locked='false' title='Ask Me A Question' type='HTML'>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+  <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
+    <b:includable id='main'>
         <b:if cond='data:title'>
           <h2>
             <data:title/>
@@ -3077,7 +2874,7 @@ for good G+/FB snippeting. -->
           <b:include name='quickedit'/>
         </div>
       </b:includable>
-      <b:includable id='flat' var='data'>
+    <b:includable id='flat' var='data'>
         <ul class='flat'>
           <b:loop values='data:data' var='i'>
             <li class='archivedate'>
@@ -3091,7 +2888,7 @@ for good G+/FB snippeting. -->
           </b:loop>
         </ul>
       </b:includable>
-      <b:includable id='interval' var='intervalData'>
+    <b:includable id='interval' var='intervalData'>
         <b:loop values='data:intervalData' var='i'>
           <ul class='hierarchy'>
             <li expr:class='&quot;archivedate &quot; + data:i.expclass'>
@@ -3114,7 +2911,7 @@ for good G+/FB snippeting. -->
           </ul>
         </b:loop>
       </b:includable>
-      <b:includable id='menu' var='data'>
+    <b:includable id='menu' var='data'>
         <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
           <option value=''>
             <data:title/>
@@ -3129,7 +2926,7 @@ for good G+/FB snippeting. -->
           </b:loop>
         </select>
       </b:includable>
-      <b:includable id='posts' var='posts'>
+    <b:includable id='posts' var='posts'>
         <ul class='posts'>
           <b:loop values='data:posts' var='i'>
             <li>
@@ -3140,7 +2937,7 @@ for good G+/FB snippeting. -->
           </b:loop>
         </ul>
       </b:includable>
-      <b:includable id='toggle' var='interval'>
+    <b:includable id='toggle' var='interval'>
         <b:if cond='data:interval.toggleId'>
           <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
             <a class='toggle' href='javascript:void(0)'>
@@ -3161,5 +2958,5 @@ for good G+/FB snippeting. -->
           </b:if>
         </b:if>
       </b:includable>
-    </b:widget>
-  </b:section-contents><b:section-contents id='footer-1'/></html>
+  </b:widget>
+</b:section-contents><b:section-contents id='footer-1'/></html>
