@@ -744,6 +744,7 @@ body.mobile .AdSense {
   border-radius: 5px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 .newsletter input[type="submit"]:hover {
   background-color: $(cta.hover.light);
@@ -859,6 +860,7 @@ body.mobile .AdSense {
 --------------------------------- */
 #contact-form {
   display: block;
+  font-family: helvetica, arial, sans-serif;
 }
 .contact-info input {
   display: block;
@@ -909,6 +911,22 @@ body.mobile .AdSense {
   font-weight: bolder;
   color: green;
 }
+
+#contact-form textarea:focus {
+ outline: none;
+ border: 1px inset $(cta.hover.light);
+ transition: 0.5s;
+ -webkit-transition: 0.5s;
+}
+
+#contact-form input:focus {
+ outline: none;
+ border: 1px inset $(cta.hover.light);
+ transition: 0.5s;
+ -webkit-transition: 0.5s;
+}
+
+
 /* Question Form for the home page
 --------------------------------------------------  */
 #form-wrapper {
@@ -1218,6 +1236,28 @@ footer a {
   margin: 0 auto;
   font-weight: bold;
 }
+
+input:focus, textarea:focus{
+ outline: none;
+ border: 2px inset $(cta.hover.light);
+ transition: 0.5s;
+ -webkit-transition: 0.5s;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+
     ]]></b:skin>
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='1000px'/>
