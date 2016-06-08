@@ -596,13 +596,13 @@ body.mobile .AdSense {
 /* //////////////////////////////////////////////////////////////////////////Custom styles yo~! */
 /* Navbar
 ------------------------------- */
+
 .top-navbar {
   height: 40px;
   padding: 0;
   margin: 5px 0 0 0;
   width: 1000px;
   position: relative;
-//right: 40px;
   border-radius: 5px 5px 0px 0px;
   background: $(darkbrand.color);
   color: white;
@@ -1086,7 +1086,6 @@ address {
   padding: 14px;
   width: 972px;
   background: #000;
-//right: 40px;
   border-radius: 4px 4px 0px 0px;
   margin: 0px;
   margin-left: 0px !important;
