@@ -3,7 +3,7 @@
   <ul>
     <li><a href="/">Home</a></li>
     <li><a href="#">Our Listings</a></li>
-    <li><a href="#">Get a Loan</a></li>
+    <li><a href="#">Testimonials</a></li>
     <li><a href="#">About</a></li>
     <li><a href="#">Contact</a></li>
   </ul>
@@ -30,7 +30,7 @@
 </form>
 
 <!-- Headshot -->
-<div class="headshot"></div>
+<div class="headshot" style="background: url(IMGURE LINK);"></div>
 
 <!-- review buttons -->
 <div class="review-wrapper">
@@ -90,30 +90,6 @@ Chicago, IL 60652
 
 
 </form>
-<script>
-function setReturn(){
-  localStorage.setItem("thanks", "Your Question was sent successfully!");
-  document.getElementById("thanks").innerHTML =    localStorage.getItem("thanks");
-  localStorage.clear();
-}
-
-$("form").submit(function(e) {
-
-    var ref = $(this).find("[required]");
-
-    $(ref).each(function(){
-        if ( $(this).val() == '' )
-        {
-            alert("Required field should not be blank.");
-
-            $(this).focus();
-
-            e.preventDefault();
-            return false;
-        }
-    });  return true;
-});
-</script>
 
 <!-- Footer -->
 
@@ -129,15 +105,21 @@ $("form").submit(function(e) {
 <p>
 <a href="https://www.blogger.com/blogger.g?blogID={ID}#editor">New Post</a> | <a href="https://www.blogger.com/blogger.g?blogID={ID}#template">Design</a>
 </p>
-<script class="fluidvidjs" type="text/javascript">
-     !function(e,t,i){for(var a=t.getElementsByTagName("iframe"),o=0;o<a.length;o++){var l=a[o],s=/www.youtube.com|player.vimeo.com/;if(l.src.search(s)>0){var r=l.height/l.width*100;l.style.position="absolute",l.style.top="0",l.style.left="0",l.width="100%",l.height="100%";var d=t.createElement("div");d.className="fluid-vids",d.style.width="100%",d.style.position="relative",d.style.paddingTop=r+"%";var n=l.parentNode;n.insertBefore(d,l),d.appendChild(l)}}}(window,document);
-    </script>
 
+<!--
+ -------------------------------------- FEEEEEEEEED Burner -->
 <!--Podcast subtitle-->
-Learn all the tips, tricks and more for buyers and sellers in the Corpus Christi Area Real Estate Market
+Learn all the tips, tricks and more for buyers and sellers in the [MARKET] Area Real Estate Market
 
-<!--Description-->
-If you are looking to buy or sell a home, get all the information and the latest updates, tips, and tricks from The Stern Team- your professional Salt Lake City Real Estate Agents.
+<!--Podcast Summary-->
+If you are looking to buy or sell a home, get all the information and the latest updates, tips, and tricks from [CLIENT]- your professional [MARKET] Real Estate Agent[s].
+
+<!--Generic Keywords-->
+Real Estate for sale, Real Estate agents, top real estate agents, local real estate agents, find a real estate agent, houses for sale in (location) home selling tips, home for sale, home buying, home buying process, property finder, property search, property,
+real estate market, estate agent, realestate, real estate listings, buying a house, homes for sale, mls, home buyer
+
+
+
 
 <!-- Mortgage -->
 
@@ -157,9 +139,7 @@ Boost your Career with Veteran Real Estate Agent Nancy Seraphin Midvale Real Est
 buyers and sellers By Omaha's premiere Realtor Adam Briley of Briley Homes.
 <!--End Descripitons-->
 
-<!--Generic Keywords-->
-Real Estate for sale, Real Estate agents, top real estate agents, local real estate agents, find a real estate agent, houses for sale in (location) home selling tips, home for sale, home buying, home buying process, property finder, property search, property,
-real estate market, estate agent, realestate, real estate listings, buying a house, homes for sale, mls, home buyer
+
 <!--End Generic Keywords-->
 
 <!-- make a widget appear only on the homepage. switch data:blog.homepageurl to a different page if need be. add in element's id i.e. "#HTML1"-->

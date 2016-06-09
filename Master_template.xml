@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns='http://www.w3.org/1999/xhtml'>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
     <b:if cond='data:blog.pageType == &quot;index&quot;'>
       <title>
@@ -13,15 +13,15 @@
         <data:blog.title/>
       </title>
     </b:if>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="https://file.myfontastic.com/AGdMHYPf5fbfSxbxhsCEam/icons.css" rel="stylesheet"/>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <link href='https://file.myfontastic.com/AGdMHYPf5fbfSxbxhsCEam/icons.css' rel='stylesheet'/>
       <b:include data='blog' name='all-head-content'/>
       <title>
         <data:blog.pageTitle/>
       </title>
-      <b:skin>
-        <![CDATA[
+      <b:skin><![CDATA[
+
 /*
 -----------------------------------------------
 Blogger Template Style
@@ -31,10 +31,10 @@ URL:      www.BryceStradling.com
 ----------------------------------------------- */
 /* Variable definitions
 ====================
-<Variable name="client.headshot" description="client.headshot" type="string" default="http://fillmurray.com/200/200" value="http://placehold.it/200x200"/>
+<Variable name="client.headshot" description="client.headshot" type="string" default="http://fillmurray.com/200/200" value=""/>
 <Group description="Background Gradient" selector=".background-fauxcolumns">
-<Variable name="background.gradient.light" description="Background Gradient Light" type="color" default="#797979"  value="#797979"/>
-<Variable name="background.gradient.dark" description="Background Gradient Dark" type="color" default="#323232"  value="#323232"/>
+<Variable name="background.gradient.light" description="Background Gradient Light" type="color" default="#797979"  value="#ffffff"/>
+<Variable name="background.gradient.dark" description="Background Gradient Dark" type="color" default="#323232"  value="#eeeeee"/>
 </Group>
 <Group description="Footer/nav Color" selector=".dark-brand">
 <Variable name="darkbrand.color" description="Dark Footer/Nav Color" type="color" default="#000000" value="#070707"/>
@@ -107,7 +107,7 @@ default="normal bold 11px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value=
 <Group description="Images" selector=".main-inner">
 <Variable name="image.background.color" description="Background Color" type="color" default="#ffffff" value="#ffffff"/>
 <Variable name="image.border.color" description="Border Color" type="color" default="#eeeeee" value="#eeeeee"/>
-<Variable name="image.text.color" description="Caption Text Color" type="color" default="$(body.text.color)" value="$(body.text.color)"/>
+<Variable name="image.text.color" description="Caption Text Color" type="color" default="$(body.text.color)" value="#000000"/>
 </Group>
 <Group description="Accents" selector=".content-inner">
 <Variable name="body.rule.color" description="Separator Line Color" type="color" default="#eeeeee" value="transparent"/>
@@ -1386,7 +1386,7 @@ width: auto;
                   <div class='fauxborder-right header-fauxborder-right'/>
                   <div class='region-inner header-inner'>
                     <b:section class='header' id='header' maxwidgets='3' showaddelement='no'>
-                      <b:widget id='HTML1' locked='false' title='' type='HTML'>
+                      <b:widget id='HTML1' locked='false' title='' type='HTML' visible='true'>
                         <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -1399,7 +1399,7 @@ width: auto;
   <b:include name='quickedit'/>
 </b:includable>
                       </b:widget>
-                      <b:widget id='Header1' locked='false' title='Greater Richmond Area Real Estate Video Blog with Ryan Sanford (Header)' type='Header'>
+                      <b:widget id='Header1' locked='false' title='Justice Is Without Mercy (Header)' type='Header' version='1' visible='true'>
                         <b:includable id='main'>
                           <b:if cond='data:useImage'>
                             <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
@@ -1494,7 +1494,7 @@ user is not using shrink to fit then we expand the header.
                 <div class='fauxborder-right tabs-fauxborder-right'/>
                 <div class='region-inner tabs-inner'>
                   <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'>
-                    <b:widget id='HTML3' locked='false' mobile='yes' title='' type='HTML'>
+                    <b:widget id='HTML3' locked='false' mobile='yes' title='' type='HTML' visible='true'>
                       <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -1508,8 +1508,7 @@ user is not using shrink to fit then we expand the header.
 </b:includable>
                     </b:widget>
                   </b:section>
-                  <b:section class='tabs' id='crosscol-overflow' showaddelement='no'>
-                  </b:section>
+                  <b:section class='tabs' id='crosscol-overflow' showaddelement='no'/>
                 </div>
               </div>
               <div class='tabs-cap-bottom cap-bottom'>
@@ -1576,7 +1575,7 @@ user is not using shrink to fit then we expand the header.
                       <div class='column-center-outer'>
                         <div class='column-center-inner'>
                           <b:section class='main' id='main' showaddelement='no'>
-                            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+                            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1' visible='true'>
                               <b:includable id='main' var='top'>
                                 <b:if cond='data:mobile == &quot;false&quot;'>
                                   <!-- posts -->
@@ -2737,7 +2736,7 @@ for good G+/FB snippeting. -->
                     </macro:include>
                     <!-- outside of the include in order to lock Attribution widget -->
                     <b:section class='foot' id='footer-3' showaddelement='no'>
-                      <b:widget id='HTML12' locked='false' title='' type='HTML' mobile='yes'>
+                      <b:widget id='HTML12' locked='false' mobile='yes' title='' type='HTML' version='1' visible='true'>
                         <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -2746,62 +2745,9 @@ for good G+/FB snippeting. -->
   <div class='widget-content'>
     <data:content/>
   </div>
-  <p class="attribution">Proudly Brought To You By <i class="icon-vyral"></i><a href="http://getvyral.com">yral Marketing</a></p>
+  <p class='attribution'>Proudly Brought To You By <i class='icon-vyral'/><a href='http://getvyral.com'>yral Marketing</a></p>
   <b:include name='quickedit'/>
 </b:includable>
-                      </b:widget>
-
-                      <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar'>
-                        <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
-    function setAttributeOnload(object, attribute, val) {
-      if(window.addEventListener) {
-        window.addEventListener(&#39;load&#39;,
-          function(){ object[attribute] = val; }, false);
-      } else {
-        window.attachEvent(&#39;onload&#39;, function(){ object[attribute] = val; });
-      }
-    }
-  &lt;/script&gt;
-&lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-        gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
-          if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
-            gapi.iframes.getContext().openChild({
-                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0756873069708082444363\46blogName\75Greater+Richmond+Area+Real+Estate+Vid...\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75//unusedvyral.blogspot.com/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://unusedvyral.blogspot.com/\46readAccessMode\75PRIVATE\46vt\75-3690409278187132295&#39;,
-                where: document.getElementById(&quot;navbar-iframe-container&quot;),
-                id: &quot;navbar-iframe&quot;
-            });
-          }
-        });
-      &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
-(function() {
-var script = document.createElement(&#39;script&#39;);
-script.type = &#39;text/javascript&#39;;
-script.src = &#39;//pagead2.googlesyndication.com/pagead/js/google_top_exp.js&#39;;
-var head = document.getElementsByTagName(&#39;head&#39;)[0];
-if (head) {
-head.appendChild(script);
-}})();
-&lt;/script&gt;
-</b:includable>
-                      </b:widget>
-                      <b:widget id='Attribution1' locked='false' title='' type='Attribution'>
-                        <b:includable id='main'>
-    <b:if cond='data:feedbackSurveyLink'>
-      <div class='mobile-survey-link' style='text-align: center;'>
-        <data:feedbackSurveyLink/>
-      </div>
-    </b:if>
-
-    <div class='widget-content' style='text-align: center;'>
-      <b:if cond='data:attribution != &quot;&quot;'>
-       <data:attribution/>
-      </b:if>
-    </div>
-
-    <b:include name='quickedit'/>
-  </b:includable>
                       </b:widget>
                     </b:section>
                   </div>
@@ -2826,6 +2772,15 @@ head.appendChild(script);
         document.body.className = document.body.className.replace(&#39;loading&#39;, &#39;&#39;);
                                                                   }, 10);
     </script>
+    <script type='text/javascript'>
+//<![CDATA[
+//Fluid JS
+ !function(e,t,i){for(var a=t.getElementsByTagName("iframe"),o=0;o<a.length;o++){var l=a[o],s=/www.youtube.com|player.vimeo.com/;if(l.src.search(s)>0){var r=l.height/l.width*100;l.style.position="absolute",l.style.top="0",l.style.left="0",l.width="100%",l.height="100%";var d=t.createElement("div");d.className="fluid-vids",d.style.width="100%",d.style.position="relative",d.style.paddingTop=r+"%";var n=l.parentNode;n.insertBefore(d,l),d.appendChild(l)}}}(window,document);
+//Contact Form
+function setReturn(){localStorage.setItem("thanks","Your Question was sent successfully!"),document.getElementById("thanks").innerHTML=localStorage.getItem("thanks"),localStorage.clear()}$("form").submit(function(e){var t=$(this).find("[required]");return $(t).each(function(){return""==$(this).val()?(alert("Required field should not be blank."),$(this).focus(),e.preventDefault(),!1):void 0}),!0});
+
+//]]>
+</script>
   </body>
   <macro:includable id='sections' var='col'>
     <macro:if cond='data:col.num == 0'>
@@ -2863,7 +2818,7 @@ head.appendChild(script);
 
 
 <b:section-contents id='sidebar-right-1'>
-  <b:widget id='HTML2' locked='false' title='About' type='HTML'>
+  <b:widget id='HTML2' locked='false' title='About' type='HTML' visible='true'>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -2876,7 +2831,7 @@ head.appendChild(script);
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
-  <b:widget id='HTML5' locked='false' title='Ask Me A Question' type='HTML'>
+  <b:widget id='HTML5' locked='false' title='Ask Me A Question' type='HTML' visible='true'>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -2889,7 +2844,7 @@ head.appendChild(script);
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
-  <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
+  <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive' version='1' visible='true'>
     <b:includable id='main'>
         <b:if cond='data:title'>
           <h2>
