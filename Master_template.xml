@@ -777,6 +777,7 @@ body.mobile .AdSense {
     border-radius: 6px;
     border: 2px solid;
     text-align: center;
+    cursor: pointer;
 }
 .review a:hover {
   text-decoration: none;
@@ -2776,8 +2777,11 @@ for good G+/FB snippeting. -->
 //<![CDATA[
 //Fluid JS
  !function(e,t,i){for(var a=t.getElementsByTagName("iframe"),o=0;o<a.length;o++){var l=a[o],s=/www.youtube.com|player.vimeo.com/;if(l.src.search(s)>0){var r=l.height/l.width*100;l.style.position="absolute",l.style.top="0",l.style.left="0",l.width="100%",l.height="100%";var d=t.createElement("div");d.className="fluid-vids",d.style.width="100%",d.style.position="relative",d.style.paddingTop=r+"%";var n=l.parentNode;n.insertBefore(d,l),d.appendChild(l)}}}(window,document);
+
 //Contact Form
-function setReturn(){localStorage.setItem("thanks","Your Question was sent successfully!"),document.getElementById("thanks").innerHTML=localStorage.getItem("thanks"),localStorage.clear()}$("form").submit(function(e){var t=$(this).find("[required]");return $(t).each(function(){return""==$(this).val()?(alert("Required field should not be blank."),$(this).focus(),e.preventDefault(),!1):void 0}),!0});
+function setReturn(){localStorage.setItem("thanks","Your Question was sent successfully!"),document.getElementById("thanks").innerHTML=localStorage.getItem("thanks"),localStorage.clear()}
+
+$('#contact-form').submit(function(e){var t=$(this).find("[required]");return $(t).each(function(){return""==$(this).val()?(alert("Required field should not be blank."),$(this).focus(),e.preventDefault(),!1):void 0}),!0});
 
 //]]>
 </script>
