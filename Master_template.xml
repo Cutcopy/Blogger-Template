@@ -570,28 +570,25 @@ body.mobile .AdSense {
   background: url(https://s3.amazonaws.com/vyralmarketing/vyral-marketing/quotation.svg) no-repeat;
   background-size: contain;
 }
-
 .mobile .quote{
   margin 0;
   display: none;
 }
-
 .mobile .left{
     float: left;
     display: none;
 }
-
 .mobile .right{
   float: right;
   display: none;
 }
-
 .mobile .quote-text{
   font-size: 20px;
   margin: 0;
   padding: 0;
   color: $(link-color);
   text-transform: uppercase;
+  text-align: left;
   font-family: Arial, sans-serif;
 }
 
@@ -1207,35 +1204,32 @@ footer a {
   top: 5px;
   position: relative;
 }
-/* Quote box
-///////////////////////////////////////////// */
+/*Quote Box
+--------------------------------------*/
 .quote-box{
   display: block;
   margin: 20px auto 20px 40px;
   background: url(https://s3.amazonaws.com/vyralmarketing/vyral-marketing/quotation.svg) no-repeat;
   background-size: contain;
 }
-
 .quote{
   margin 0;
   display: none;
 }
-
 .left{
     float: left;
     display: none;
 }
-
 .right{
   float: right;
   display: none;
 }
-
 .quote-text{
   font-size: 20px;
   margin: 0;
   padding: 0;
   color: $(link.color);
+  text-align: left;
   text-transform: uppercase;
   font-family: Arial, sans-serif;
 }
