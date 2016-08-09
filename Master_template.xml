@@ -874,6 +874,7 @@ body.mobile .AdSense {
   padding: 10px;
 }
 #contact-form textarea {
+  font-family: helvetica, arial, sans-serif;
   margin: 15px 0px 10px;
   width: 90%;
   min-height: 100px;
