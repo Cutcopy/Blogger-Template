@@ -564,39 +564,35 @@ body.mobile .AdSense {
 
 /* For Mobile version */
 
-.mobile .quote-box {
-  width: 80%;
-  border: solid 1px #C9C9C9;
-  padding: 20px 10px;
+.mobile .quote-box{
   display: block;
-  margin: 0 auto;
-  background-color: #fff;
+  margin: 20px auto 20px 40px;
+  background: url(https://s3.amazonaws.com/vyralmarketing/vyral-marketing/quotation.svg) no-repeat;
+  background-size: contain;
 }
 
 .mobile .quote{
-  font-family: Arial, sans-serif;
-  line-height: 50px;
-  font-size: 100px;
-  color: $(link.color);
-  display: block;
-
+  margin 0;
+  display: none;
 }
 
-.mobile .quote-left{
-  float: left;
-  position: absolute;
+.mobile .left{
+    float: left;
+    display: none;
 }
 
-.mobile .quote-right{
+.mobile .right{
   float: right;
+  display: none;
 }
 
 .mobile .quote-text{
-  text-align: center;
   font-size: 20px;
-  padding: 0 10px;
-  margin: 0 auto;
-  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  color: $(link-color);
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
 }
 
 /* //////////////////////////////////////////////////////////////////////////Custom styles yo~! */
@@ -1213,34 +1209,35 @@ footer a {
 }
 /* Quote box
 ///////////////////////////////////////////// */
-.quote-box {
-  width: 80%;
-  border: solid 1px #C9C9C9;
-  padding: 20px 10px;
+.quote-box{
   display: block;
-  margin: 0 auto;
-  background-color: #fff;
+  margin: 20px auto 20px 40px;
+  background: url(https://s3.amazonaws.com/vyralmarketing/vyral-marketing/quotation.svg) no-repeat;
+  background-size: contain;
 }
+
 .quote{
-  font-family: Arial, sans-serif;
-  line-height: 50px;
-  font-size: 100px;
-  color: $(link.color);
-  display: block;
+  margin 0;
+  display: none;
 }
-.quote-left{
-  float: left;
-  position: absolute;
+
+.left{
+    float: left;
+    display: none;
 }
-.quote-right{
+
+.right{
   float: right;
+  display: none;
 }
+
 .quote-text{
-  text-align: center;
   font-size: 20px;
-  padding: 0 10px;
-  margin: 0 auto;
-  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  color: $(link.color);
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
 }
 
 input:focus, textarea:focus{
