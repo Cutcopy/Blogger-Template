@@ -570,28 +570,36 @@ body.mobile .AdSense {
   background: url(https://s3.amazonaws.com/vyralmarketing/vyral-marketing/quotation.svg) no-repeat;
   background-size: contain;
 }
-
 .mobile .quote{
   margin 0;
   display: none;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 33e9fc8e814abf2037b7c747173317615f1ad2a2
 .mobile .left{
     float: left;
     display: none;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 33e9fc8e814abf2037b7c747173317615f1ad2a2
 .mobile .right{
   float: right;
   display: none;
 }
-
 .mobile .quote-text{
   font-size: 20px;
   margin: 0;
   padding: 0;
   color: $(link-color);
   text-transform: uppercase;
+<<<<<<< HEAD
+=======
+  text-align: left;
+>>>>>>> 33e9fc8e814abf2037b7c747173317615f1ad2a2
   font-family: Arial, sans-serif;
 }
 
@@ -877,6 +885,7 @@ body.mobile .AdSense {
   padding: 10px;
 }
 #contact-form textarea {
+  font-family: helvetica, arial, sans-serif;
   margin: 15px 0px 10px;
   width: 90%;
   min-height: 100px;
@@ -1207,8 +1216,13 @@ footer a {
   top: 5px;
   position: relative;
 }
+<<<<<<< HEAD
 /* Quote box
 ///////////////////////////////////////////// */
+=======
+/*Quote Box
+--------------------------------------*/
+>>>>>>> 33e9fc8e814abf2037b7c747173317615f1ad2a2
 .quote-box{
   display: block;
   margin: 20px auto 20px 40px;
@@ -1220,12 +1234,18 @@ footer a {
   margin 0;
   display: none;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 33e9fc8e814abf2037b7c747173317615f1ad2a2
 .left{
     float: left;
     display: none;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 33e9fc8e814abf2037b7c747173317615f1ad2a2
 .right{
   float: right;
   display: none;
@@ -1236,6 +1256,10 @@ footer a {
   margin: 0;
   padding: 0;
   color: $(link.color);
+<<<<<<< HEAD
+=======
+  text-align: left;
+>>>>>>> 33e9fc8e814abf2037b7c747173317615f1ad2a2
   text-transform: uppercase;
   font-family: Arial, sans-serif;
 }
