@@ -2752,7 +2752,7 @@ for good G+/FB snippeting. -->
   <div class='widget-content'>
     <data:content/>
   </div>
-  <p class='attribution'>Proudly Brought To You By <i class='icon-vyral'/><a href='http://getvyral.com'>yral Marketing</a></p>
+  <p class='attribution'>Proudly Brought To You By <a href='http://getvyral.com'>Vyral Marketing</a><br /><i class='icon-vyral'/></p>
   <b:include name='quickedit'/>
 </b:includable>
                       </b:widget>
