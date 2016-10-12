@@ -81,7 +81,7 @@ Chicago, IL 60652
 <input type="hidden" value="someone@email.com" name="emailTo" />
 <p id="thanks"></p>
 <div class="contact-info">
-<input placeholder="Name*" type="text" name="name" required />
+<input id="contact-form-name" placeholder="Name*" type="text" name="name" required />
 <input placeholder="Email*" type="Email" name="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required />
 </div>
 <textarea placeholder="Message*" name="message" required></textarea>
@@ -140,7 +140,7 @@ buyers and sellers By Omaha's premiere Realtor Adam Briley of Briley Homes.
 
 <!-- make a widget appear only on the homepage. switch data:blog.homepageurl to a different page if need be. add in element's id i.e. "#HTML1"-->
 <b:if cond='data:blog.url == data:blog.homepageUrl'>
-  #ID {
+  #HTML5 {
     display: none
   }
 </b:if>
