@@ -2831,6 +2831,33 @@ $('#contact-form').submit(function(e){var t=$(this).find("[required]");return $(
     </macro:if>
   </macro:includable>
 
+<div class='columns-inner'>
+    <div class='column-center-outer'>
+        <div class='column-center-inner'>
+            <b:section class='main' id='main' showaddelement='no'>
+                <b:widget id='HTML4' locked='false' title='Welcome to my Video Blog' type='HTML'>
+                              <b:includable id='main'>
+                                <b:if cond='data:blog.url == data:blog.homepageUrl'>
+                                  <!-- only display title if it's non-empty -->
+                                  <b:if cond='data:title != &quot;&quot;'>
+                                    <h2 class='title'>
+                                      <data:title/>
+                                    </h2>
+                                  </b:if>
+                                  <div class='widget-content'>
+                                    <data:content/>
+                                  </div>
+                                  <b:include name='quickedit'/>
+                                </b:if>
+                                			<b:if cond='data:blog.url != data:blog.homepageUrl'>
+			  <style>
+					#HTML4 {
+				    display: none;
+				  }
+				</style>
+			</b:if>
+                              </b:includable>
+                            </b:widget>
 
 <b:section-contents id='sidebar-right-1'>
   <b:widget id='HTML2' locked='false' title='About' type='HTML' visible='true'>
@@ -2848,13 +2875,6 @@ $('#contact-form').submit(function(e){var t=$(this).find("[required]");return $(
   </b:widget>
   <b:widget id='HTML5' locked='false' title='Ask Me A Question' type='HTML' visible='true'>
     <b:includable id='main'>
-			<b:if cond='data:blog.url == data:blog.homepageUrl'>
-			  <style>
-					#HTML5 {
-				    display: none;
-				  }
-				</style>
-			</b:if>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
     <h2 class='title'><data:title/></h2>
