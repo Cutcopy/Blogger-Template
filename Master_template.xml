@@ -2852,7 +2852,7 @@ $('#contact-form').submit(function(e){var t=$(this).find("[required]");return $(
 </style>
                                 </b:if>
 
-  <b:include name='quickedit'/>
+
 </b:includable>
                             </b:widget>
 
