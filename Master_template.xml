@@ -2838,23 +2838,22 @@ $('#contact-form').submit(function(e){var t=$(this).find("[required]");return $(
                 <b:widget id='HTML4' locked='false' title='Welcome to my Video Blog' type='HTML'>
                               <b:includable id='main'>
                                   <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-<b:if cond='data:blog.url != data:blog.homepageUrl'>
- <style>
-#HTML4 {
-   display: none;
- }
-</style>
-                                </b:if>
-
-
-</b:includable>
-                            </b:widget>
+                                      <b:if cond='data:title != &quot;&quot;'>
+                                        <h2 class='title'><data:title/></h2>
+                                      </b:if>
+                                      <div class='widget-content'>
+                                        <data:content/>
+                                     </div>
+                                    <b:if cond='data:blog.url != data:blog.homepageUrl'>
+                                         <style>
+                                            #HTML4 {
+                                                 display: none;
+                                                 }
+                                        </style>
+                                    </b:if>
+                                  <b:include name='quickedit'/>
+                            </b:includable>
+                 </b:widget>
 
 <b:section-contents id='sidebar-right-1'>
   <b:widget id='HTML2' locked='false' title='About' type='HTML' visible='true'>
