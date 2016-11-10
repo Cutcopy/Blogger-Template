@@ -1,0 +1,67 @@
+Our mission at [team name] is to be your best resource for real estate advice. Whether you are a buyer, seller, or investor, our team of professionals can answer any questions you might have about real estate. Subscribe to this blog to get the latest news on local market trends and receive expert tips for buying or selling a home. 
+
+As your [area] real estate agent [Realtor], I want to be your resource for all things real estate. Whether you are buying, selling, or investing in real estate, I am here to guide you through the process. Subscribe to this blog to learn all of the latest news from our local market and receive expert tips for buying or selling a home. 
+
+Learn More About Your Local Market 
+Expert Tips for Home Buyers & Sellers 
+Expert Tips for Navigating the Real Estate Market
+Make Smarter Real Estate Decisions
+Get Educated About Real Estate
+Be Your Own Real Estate Expert
+Find Out What You Need to Know About Your Market
+Don’t Navigate the Real Estate Market Without Us
+Your Ticket Into the Real Estate World
+The Easiest Way to Become a Real Estate Pro
+Educate Yourself on Current Market Conditions
+We Have The Latest Real Estate Market News
+We Want to Help You Become a Real Estate Expert
+Use Our Real Estate Expertise to Your Advantage
+
+
+
+<style>.opt-in {
+  display: inline;
+  align: center;
+  margin-right: 1em;
+}
+.opt-in label {
+  color: black;
+  text-transform: uppercase;
+}
+.opt-in input[type="text"] {
+  width: 500px;
+  padding: 0.4em;
+  margin-right: 1em;
+  border: 1px solid #ccc;
+}
+.opt-in input[type="submit"] {
+    background: linear-gradient(#b40101, #600000);
+  border-radius: 5px;
+  border: 1px solid #b40101;
+  color: white;
+  font: normal normal 14px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+  padding: 0.3em;
+  width: 110px;
+  font-size: 14px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.opt-in input[type="submit"]:hover {
+    background: linear-gradient(#cc0000, #b40101);
+  border: 1px solid #999;
+}</style>
+
+<p style="font:normal bold 32px 'arial', 'helvetica', sans-serif; margin:0px; text-align:center;">
+REPLACE WITH HEADLINE
+</p>
+
+<p style="text-align:center;">
+REPLACE WITH PARAGRAPH TEXT.
+</p>
+
+<form class="opt-in" method="post" action="#" target="vr_optin_popup" onsubmit="window.open( 'http://www.verticalresponse.com', 'vr_optin_popup', 'scrollbars=yes,width=600,height=450' ); return true;">
+ <input name="email_address" type="text" placeholder="Enter Your Best Email Here" required/>
+ <input type="text" style="display: none;" class="honeypot" />
+ <input type="submit" value="Sign Me Up!" />
+</form>
