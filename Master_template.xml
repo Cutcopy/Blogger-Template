@@ -1400,29 +1400,29 @@ width: auto;
                     <b:section class='header' id='header' maxwidgets='3' showaddelement='no'>
                       <b:widget id='HTML1' locked='false' title='' type='HTML' visible='true'>
                         <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
+												  <!-- only display title if it's non-empty -->
+												  <b:if cond='data:title != &quot;&quot;'>
+												    <h2 class='title'><data:title/></h2>
+												  </b:if>
+												  <div class='widget-content'>
+												    <data:content/>
+												  </div>
 
-  <b:include name='quickedit'/>
-</b:includable>
+												  <b:include name='quickedit'/>
+												</b:includable>
                       </b:widget>
                       <b:widget id='Header1' locked='false' title='Justice Is Without Mercy (Header)' type='Header' version='1' visible='true'>
                         <b:includable id='main'>
                           <b:if cond='data:useImage'>
                             <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
                               <!--
-Show image as background to text. You can't really calculate the width
-reliably in JS because margins are not taken into account by any of
-clientWidth, offsetWidth or scrollWidth, so we don't force a minimum
-width if the user is using shrink to fit.
-This results in a margin-width's worth of pixels being cropped. If the
-user is not using shrink to fit then we expand the header.
--->
+											Show image as background to text. You can't really calculate the width
+											reliably in JS because margins are not taken into account by any of
+											clientWidth, offsetWidth or scrollWidth, so we don't force a minimum
+											width if the user is using shrink to fit.
+											This results in a margin-width's worth of pixels being cropped. If the
+											user is not using shrink to fit then we expand the header.
+											-->
                               <b:if cond='data:mobile'>
                                 <div id='header-inner'>
                                   <div class='titlewrapper' style='background: transparent'>
@@ -1508,16 +1508,15 @@ user is not using shrink to fit then we expand the header.
                   <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'>
                     <b:widget id='HTML3' locked='false' mobile='yes' title='' type='HTML' visible='true'>
                       <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
+											  <!-- only display title if it's non-empty -->
+											  <b:if cond='data:title != &quot;&quot;'>
+											    <h2 class='title'><data:title/></h2>
+											  </b:if>
+											  <div class='widget-content'>
+											    <data:content/>
+											  </div>
+											  <b:include name='quickedit'/>
+											  </b:includable>
                     </b:widget>
                   </b:section>
                   <b:section class='tabs' id='crosscol-overflow' showaddelement='no'/>
@@ -2834,7 +2833,7 @@ $('#contact-form').submit(function(e){var t=$(this).find("[required]");return $(
 <div class='columns-inner'>
     <div class='column-center-outer'>
         <div class='column-center-inner'>
-            <b:section class='main' id='main' showaddelement='no'>
+            <b:section class='main' id='main2' showaddelement='no'>
                 <b:widget id='HTML4' locked='false' title='Welcome to my Video Blog' type='HTML'>
                               <b:includable id='main'>
                                   <!-- only display title if it's non-empty -->
@@ -2854,7 +2853,10 @@ $('#contact-form').submit(function(e){var t=$(this).find("[required]");return $(
                                   <b:include name='quickedit'/>
                             </b:includable>
                  </b:widget>
-
+							</b:section>
+						</div>
+					</div>
+				</div>
 <b:section-contents id='sidebar-right-1'>
   <b:widget id='HTML2' locked='false' title='About' type='HTML' visible='true'>
     <b:includable id='main'>
